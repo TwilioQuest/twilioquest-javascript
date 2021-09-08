@@ -109,18 +109,6 @@
                  "y":84
                 }, 
                 {
-                 "gid":10013,
-                 "height":72,
-                 "id":152,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":24,
-                 "x":792,
-                 "y":222
-                }, 
-                {
                  "gid":5333,
                  "height":24,
                  "id":163,
@@ -137,6 +125,12 @@
                  "height":48,
                  "id":183,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"visitor-signin"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -149,6 +143,12 @@
                  "height":48,
                  "id":184,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"visitor-signin"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -161,6 +161,12 @@
                  "height":48,
                  "id":185,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"visitor-signin"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -173,6 +179,12 @@
                  "height":48,
                  "id":186,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"visitor-signin"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -197,6 +209,36 @@
                  "width":0,
                  "x":690,
                  "y":222
+                }, 
+                {
+                 "gid":10047,
+                 "height":48,
+                 "id":191,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":24,
+                 "x":792,
+                 "y":215
+                }, 
+                {
+                 "gid":10048,
+                 "height":32,
+                 "id":192,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"conversation",
+                         "type":"string",
+                         "value":"visitor-signin-scientist"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":597,
+                 "y":191
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -367,7 +409,7 @@
          "y":0
         }],
  "nextlayerid":48,
- "nextobjectid":188,
+ "nextobjectid":193,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.6.0",

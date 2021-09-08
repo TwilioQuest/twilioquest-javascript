@@ -1,7 +1,4 @@
-const createObjectiveCompletionResponderConfig = require("../../scripts/objectiveCompletionResponder");
-
 module.exports = {
-  ...createObjectiveCompletionResponderConfig({ shouldPlayAnimations: false }),
   spriteSheets: {
     twilioQuestPylonGreen: {
       fileName: "icon.png",

@@ -1,0 +1,12 @@
+{
+  "title": "Green Keycard Checkpoint",
+  "description": "This checkpoint requires a green keycard to allow you through.",
+  "validation_fields": [
+    {
+      "name": "keyCard",
+      "type": "prompt",
+      "label": "Green Keycard holders ONLY allowed through this point."
+    }
+  ],
+  "rewards": {}
+}

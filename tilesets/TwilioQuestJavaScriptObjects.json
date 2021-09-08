@@ -8,7 +8,7 @@
  "margin":0,
  "name":"TwilioQuestJavaScriptObjects",
  "spacing":0,
- "tilecount":2,
+ "tilecount":4,
  "tiledversion":"1.6.0",
  "tileheight":48,
  "tiles":[
@@ -71,8 +71,95 @@
              "y":0
             },
          "type":"pylon_green"
+        }, 
+        {
+         "id":2,
+         "image":"..\/objects\/keycard-station\/icon.png",
+         "imageheight":48,
+         "imagewidth":24,
+         "objectgroup":
+            {
+             "draworder":"index",
+             "id":2,
+             "name":"",
+             "objects":[
+                    {
+                     "height":12,
+                     "id":1,
+                     "name":"",
+                     "rotation":0,
+                     "type":"",
+                     "visible":true,
+                     "width":16,
+                     "x":4,
+                     "y":36
+                    }],
+             "opacity":1,
+             "type":"objectgroup",
+             "visible":true,
+             "x":0,
+             "y":0
+            },
+         "properties":[
+                {
+                 "name":"accessLevel",
+                 "type":"string",
+                 "value":"green"
+                }, 
+                {
+                 "name":"interactable",
+                 "type":"bool",
+                 "value":true
+                }, 
+                {
+                 "name":"targetKey",
+                 "type":"string",
+                 "value":"visitor-signin"
+                }],
+         "type":"keycard-terminal"
+        }, 
+        {
+         "id":3,
+         "image":"..\/objects\/scientist\/scientist1.png",
+         "imageheight":32,
+         "imagewidth":32,
+         "objectgroup":
+            {
+             "draworder":"index",
+             "id":4,
+             "name":"",
+             "objects":[
+                    {
+                     "height":8,
+                     "id":3,
+                     "name":"",
+                     "rotation":0,
+                     "type":"",
+                     "visible":true,
+                     "width":13,
+                     "x":9,
+                     "y":24
+                    }],
+             "opacity":1,
+             "type":"objectgroup",
+             "visible":true,
+             "x":0,
+             "y":0
+            },
+         "properties":[
+                {
+                 "name":"conversation",
+                 "type":"string",
+                 "value":"scientist-default"
+                }, 
+                {
+                 "name":"conversationAvatar",
+                 "type":"string",
+                 "value":"scientist1.png"
+                }],
+         "type":"scientist"
         }],
- "tilewidth":24,
+ "tilewidth":32,
  "type":"tileset",
  "version":"1.6"
 }

@@ -1,0 +1,19 @@
+// Responses
+- 
+  const STATE_KEY = 'TQ_JAVASCRIPT_WORLD_STATE';
+  const worldState = getState(STATE_KEY) || {};
+  const newWorldState = {
+    ...worldState,
+    accessLevels: { ...worldState.accessLevels, green: { opened: [] } }
+  }
+  setState(STATE_KEY, newWorldState);
+
+conversation(display_name="Scientist")
+  statement#default
+  responses
+  statements
+    statement#default
+      text.
+        Hello, Operator! Welcome to the JavaScript Test Lab! We've been expecting you. Here's a visitor access #[span.highlight green keycard]. You'll need this to get into the main lab concourse.
+        
+
