@@ -1,37 +1,38 @@
 { "columns":0,
  "grid":
     {
-     "height":1,
+     "height":32,
      "orientation":"orthogonal",
-     "width":1
+     "width":32
     },
  "margin":0,
- "name":"MyCustomObjects",
+ "name":"TwilioQuestJavaScriptObjects",
  "spacing":0,
  "tilecount":2,
  "tiledversion":"1.6.0",
- "tileheight":24,
+ "tileheight":48,
  "tiles":[
         {
          "id":0,
-         "image":"..\/objects\/light-green\/icon.png",
-         "imageheight":24,
+         "image":"..\/objects\/pylon_blue\/icon.png",
+         "imageheight":48,
          "imagewidth":24,
          "objectgroup":
             {
              "draworder":"index",
+             "id":2,
              "name":"",
              "objects":[
                     {
-                     "height":5,
-                     "id":1,
+                     "height":24,
+                     "id":2,
                      "name":"",
                      "rotation":0,
                      "type":"",
                      "visible":true,
-                     "width":9,
-                     "x":7,
-                     "y":16
+                     "width":24,
+                     "x":0,
+                     "y":24
                     }],
              "opacity":1,
              "type":"objectgroup",
@@ -39,34 +40,29 @@
              "x":0,
              "y":0
             },
-         "properties":[
-                {
-                 "name":"objectiveName",
-                 "type":"string",
-                 "value":"example_objective"
-                }],
-         "type":"light-green"
+         "type":"pylon_blue"
         }, 
         {
          "id":1,
-         "image":"..\/objects\/globe\/icon.png",
-         "imageheight":24,
+         "image":"..\/objects\/pylon_green\/icon.png",
+         "imageheight":48,
          "imagewidth":24,
          "objectgroup":
             {
              "draworder":"index",
+             "id":2,
              "name":"",
              "objects":[
                     {
-                     "height":8,
+                     "height":24,
                      "id":1,
                      "name":"",
                      "rotation":0,
                      "type":"",
                      "visible":true,
-                     "width":9,
-                     "x":7,
-                     "y":16
+                     "width":24,
+                     "x":0,
+                     "y":24
                     }],
              "opacity":1,
              "type":"objectgroup",
@@ -74,13 +70,7 @@
              "x":0,
              "y":0
             },
-         "properties":[
-                {
-                 "name":"interactable",
-                 "type":"bool",
-                 "value":true
-                }],
-         "type":"globe"
+         "type":"pylon_green"
         }],
  "tilewidth":24,
  "type":"tileset",
