@@ -114,7 +114,7 @@
                 {
                  "name":"targetKey",
                  "type":"string",
-                 "value":"visitor-signin"
+                 "value":"example_key_here"
                 }],
          "type":"keycard-terminal"
         }, 
