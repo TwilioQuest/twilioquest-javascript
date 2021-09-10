@@ -16,6 +16,7 @@ function createObjectiveCompletionResponderConfig(props = {}) {
   const {
     renderObjectiveCompleted = () => {},
     renderObjectiveNotCompleted = () => {},
+    shouldPlayAnimations = true,
   } = props;
 
   return {
@@ -43,14 +44,22 @@ function createObjectiveCompletionResponderConfig(props = {}) {
     },
     render: function (self, world) {
       if (self.state.isCompleting) {
-        self.playAnimation("objectiveCompleting").then(() => {
+        if (shouldPlayAnimations) {
+          self.playAnimation("objectiveCompleting").then(() => {
+            self.setState({ isCompleting: false, isCompleted: true });
+          });
+        } else {
           self.setState({ isCompleting: false, isCompleted: true });
-        });
+        }
       } else if (self.state.isCompleted) {
-        self.playAnimation("objectiveCompleted", true);
+        if (shouldPlayAnimations) {
+          self.playAnimation("objectiveCompleted", true);
+        }
         renderObjectiveCompleted(self, world);
       } else {
-        self.playAnimation("objectiveNotCompleted", true);
+        if (shouldPlayAnimations) {
+          self.playAnimation("objectiveNotCompleted", true);
+        }
         renderObjectiveNotCompleted(self, world);
       }
     },
