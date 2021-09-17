@@ -1,19 +1,77 @@
-// Responses
-- 
+-
+  // After conversation happens once, Operator gets green card
   const STATE_KEY = 'TQ_JAVASCRIPT_WORLD_STATE';
   const worldState = getState(STATE_KEY) || {};
+
+// Responses
+mixin security_tight
+  response#security_tight.
+    Security seems pretty tight aboard the station - why's that?
+
+mixin about
+  response#about.
+    What kind of research are you doing aboard the station?
+
+conversation(display_name="TwilioQuest Scientist")
+  case lastResponse
+    when "about"
+      statement#about
+      responses
+        +security_tight
+
+    when "security_tight"
+      statement#security_tight
+      responses
+        +about
+
+    default
+      if worldState.accessLevels && worldState.accessLevels.green 
+        statement#default_alt
+      else
+        statement#default
+      responses
+        +security_tight
+        +about
+
+  statements
+    
+    statement#security_tight
+      text.
+        While JavaScript is the single most used programming language in the
+        world, our work here on the station goes much deeper than toggling the 
+        visibility of DOM elements. We are doing cutting edge research on 
+        the foundational elements of the language, to understand how it is able 
+        to hold the virtual universe of The Cloud together.<br/><br/>
+        While vital and exciting, this research can also be dangerous. We need 
+        to ensure only trained staff are permitted to engage in this research.
+
+    statement#about
+      text.
+        There are numerous programs underway, but our most mature program is our 
+        research on Ducktypium, one of the critical constituent elements of
+        JavaScript. The team is on the verge of some truly explosive results.<br/><br/>
+        You should check out the project! Once you clear the green checkpoint,
+        proceed to the north research module. It will be the only lab module you 
+        can access with your current keycard.
+
+    statement#default_alt
+      text.
+        Hi Operator! Thanks for your help inspecting our security systems!
+
+    statement#default
+      text.
+        Hello, Operator! Welcome to the JavaScript Test Lab! We've been expecting 
+        you. I understand you'll be inspecting our security system?<br/><br/>
+        To get you started, I can provide you a #[span.highlight green keycard]. 
+        This should enable you to access the main concourse, and the Ducktypium 
+        research module.
+
+-
+  // After conversation happens once, Operator gets green card
   const newWorldState = {
     ...worldState,
     accessLevels: { ...worldState.accessLevels, green: { opened: [] } }
   }
   setState(STATE_KEY, newWorldState);
-
-conversation(display_name="Scientist")
-  statement#default
-  responses
-  statements
-    statement#default
-      text.
-        Hello, Operator! Welcome to the JavaScript Test Lab! We've been expecting you. Here's a visitor access #[span.highlight green keycard]. You'll need this to get into the main lab concourse.
         
 

@@ -1,0 +1,48 @@
+// Responses
+mixin where_should_go
+  response#where_should_go.
+    Do you know where I should go next?
+
+mixin about
+  response#about.
+    What kind of research are you doing aboard the station?
+
+conversation(display_name="Libation Bot")
+  case lastResponse
+    when "about"
+      statement#about
+      responses
+        +where_should_go
+
+    when "where_should_go"
+      statement#where_should_go
+      responses
+        +about
+
+    default
+      statement#default
+      responses
+        +where_should_go
+        +about
+
+  statements
+    
+    statement#where_should_go
+      text.
+        Your current access card enables travel to the Ducktypium lab module.
+        You can enter this lab module by proceeding through the hallway behind 
+        this unit's recreational liquid storage cache.<br/><br/>
+        <i>[After staring quizzically at the robot for a moment, you determine he 
+        means you should walk through the doorway behind the bar.]</i>
+
+    statement#about
+      text.
+        Error. This platform is authorized to dispense directional 
+        information and situationally appropriate thirst mitigation technology.
+        May I interest you in a MANGO DRAGONFRUIT LIQUID INFUSION? I can
+        administer this content for oral consumption, or intravenously.
+
+    statement#default
+      text.
+        Greetings. I am Libation Bot. I am authorized to dispense directional 
+        information and situationally appropriate thirst mitigation technology.
