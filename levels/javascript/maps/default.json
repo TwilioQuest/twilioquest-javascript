@@ -126,7 +126,7 @@
                  "y":264
                 }, 
                 {
-                 "gid":10043,
+                 "gid":11044,
                  "height":72,
                  "id":149,
                  "name":"",
@@ -990,7 +990,7 @@
  "nextobjectid":204,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.7.2",
+ "tiledversion":"1.6.0",
  "tileheight":24,
  "tilesets":[
         {
@@ -1011,11 +1011,11 @@
          "source":"..\/..\/..\/..\/.bundled\/tilesets\/TwilioQuestObjects.json"
         }, 
         {
-         "firstgid":10016,
+         "firstgid":11017,
          "source":"..\/..\/..\/..\/.bundled\/tilesets\/TwilioQuestNPCs.json"
         }, 
         {
-         "firstgid":10028,
+         "firstgid":11029,
          "source":"..\/..\/..\/..\/twilioquest-base\/tilesets\/TwilioQuestObjects.json"
         }],
  "tilewidth":24,
