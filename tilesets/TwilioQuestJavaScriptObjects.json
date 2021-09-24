@@ -8,7 +8,7 @@
  "margin":0,
  "name":"TwilioQuestJavaScriptObjects",
  "spacing":0,
- "tilecount":4,
+ "tilecount":6,
  "tiledversion":"1.6.0",
  "tileheight":48,
  "tiles":[
@@ -154,6 +154,20 @@
                  "value":"scientist1.png"
                 }],
          "type":"scientist"
+        }, 
+        {
+         "id":4,
+         "image":"..\/objects\/lab-door-left\/leftDoor.png",
+         "imageheight":48,
+         "imagewidth":24,
+         "type":"lab-door-left"
+        }, 
+        {
+         "id":5,
+         "image":"..\/objects\/lab-door-right\/rightDoor.png",
+         "imageheight":48,
+         "imagewidth":24,
+         "type":"lab-door-right"
         }],
  "tilewidth":32,
  "type":"tileset",

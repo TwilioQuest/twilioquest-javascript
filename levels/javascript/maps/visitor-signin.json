@@ -651,6 +651,51 @@
                  "width":24,
                  "x":1104,
                  "y":336
+                }, 
+                {
+                 "height":7,
+                 "id":228,
+                 "name":"exit",
+                 "properties":[
+                        {
+                         "name":"levelName",
+                         "type":"string",
+                         "value":"javascript"
+                        }, 
+                        {
+                         "name":"mapName",
+                         "type":"string",
+                         "value":"decontamination"
+                        }, 
+                        {
+                         "name":"playerEntryPoint",
+                         "type":"string",
+                         "value":"player_entry1"
+                        }],
+                 "rotation":0,
+                 "type":"levelChange",
+                 "visible":true,
+                 "width":120,
+                 "x":1104,
+                 "y":0
+                }, 
+                {
+                 "height":0,
+                 "id":229,
+                 "name":"player_entry2",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"initialFacing",
+                         "type":"string",
+                         "value":"down"
+                        }],
+                 "rotation":0,
+                 "type":"player",
+                 "visible":true,
+                 "width":0,
+                 "x":1146,
+                 "y":60
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -821,7 +866,7 @@
          "y":0
         }],
  "nextlayerid":48,
- "nextobjectid":228,
+ "nextobjectid":230,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.6.0",
