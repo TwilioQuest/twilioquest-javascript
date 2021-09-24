@@ -8,7 +8,7 @@
  "margin":0,
  "name":"TwilioQuestJavaScriptObjects",
  "spacing":0,
- "tilecount":6,
+ "tilecount":9,
  "tiledversion":"1.6.0",
  "tileheight":48,
  "tiles":[
@@ -152,6 +152,11 @@
                  "name":"conversationAvatar",
                  "type":"string",
                  "value":"scientist1.png"
+                }, 
+                {
+                 "name":"scientist",
+                 "type":"string",
+                 "value":"scientist1"
                 }],
          "type":"scientist"
         }, 
@@ -168,6 +173,144 @@
          "imageheight":48,
          "imagewidth":24,
          "type":"lab-door-right"
+        }, 
+        {
+         "id":6,
+         "image":"..\/objects\/scientist\/scientist2.png",
+         "imageheight":32,
+         "imagewidth":32,
+         "objectgroup":
+            {
+             "draworder":"index",
+             "id":2,
+             "name":"",
+             "objects":[
+                    {
+                     "height":8,
+                     "id":1,
+                     "name":"",
+                     "rotation":0,
+                     "type":"",
+                     "visible":true,
+                     "width":13,
+                     "x":9,
+                     "y":24
+                    }],
+             "opacity":1,
+             "type":"objectgroup",
+             "visible":true,
+             "x":0,
+             "y":0
+            },
+         "properties":[
+                {
+                 "name":"conversation",
+                 "type":"string",
+                 "value":"scientist-default"
+                }, 
+                {
+                 "name":"conversationAvatar",
+                 "type":"string",
+                 "value":"scientist2.png"
+                }, 
+                {
+                 "name":"scientist",
+                 "type":"string",
+                 "value":"scientist2"
+                }],
+         "type":"scientist"
+        }, 
+        {
+         "id":7,
+         "image":"..\/objects\/scientist\/scientist3.png",
+         "imageheight":32,
+         "imagewidth":32,
+         "objectgroup":
+            {
+             "draworder":"index",
+             "id":2,
+             "name":"",
+             "objects":[
+                    {
+                     "height":8,
+                     "id":1,
+                     "name":"",
+                     "rotation":0,
+                     "type":"",
+                     "visible":true,
+                     "width":13,
+                     "x":9,
+                     "y":24
+                    }],
+             "opacity":1,
+             "type":"objectgroup",
+             "visible":true,
+             "x":0,
+             "y":0
+            },
+         "properties":[
+                {
+                 "name":"conversation",
+                 "type":"string",
+                 "value":"scientist-default"
+                }, 
+                {
+                 "name":"conversationAvatar",
+                 "type":"string",
+                 "value":"scientist3.png"
+                }, 
+                {
+                 "name":"scientist",
+                 "type":"string",
+                 "value":"scientist3"
+                }],
+         "type":"scientist"
+        }, 
+        {
+         "id":8,
+         "image":"..\/objects\/scientist\/scientist4.png",
+         "imageheight":32,
+         "imagewidth":32,
+         "objectgroup":
+            {
+             "draworder":"index",
+             "id":2,
+             "name":"",
+             "objects":[
+                    {
+                     "height":8,
+                     "id":1,
+                     "name":"",
+                     "rotation":0,
+                     "type":"",
+                     "visible":true,
+                     "width":13,
+                     "x":9,
+                     "y":24
+                    }],
+             "opacity":1,
+             "type":"objectgroup",
+             "visible":true,
+             "x":0,
+             "y":0
+            },
+         "properties":[
+                {
+                 "name":"conversation",
+                 "type":"string",
+                 "value":"scientist-default"
+                }, 
+                {
+                 "name":"conversationAvatar",
+                 "type":"string",
+                 "value":"scientist4.png"
+                }, 
+                {
+                 "name":"scientist",
+                 "type":"string",
+                 "value":"scientist4"
+                }],
+         "type":"scientist"
         }],
  "tilewidth":32,
  "type":"tileset",
