@@ -8,9 +8,9 @@
  "margin":0,
  "name":"TwilioQuestJavaScriptObjects",
  "spacing":0,
- "tilecount":9,
+ "tilecount":14,
  "tiledversion":"1.6.0",
- "tileheight":48,
+ "tileheight":120,
  "tiles":[
         {
          "id":0,
@@ -311,8 +311,43 @@
                  "value":"scientist4"
                 }],
          "type":"scientist"
+        }, 
+        {
+         "id":13,
+         "image":"..\/objects\/ducktypium-container\/ducktypium-contained.png",
+         "imageheight":72,
+         "imagewidth":24,
+         "type":"ducktypium-container"
+        }, 
+        {
+         "id":14,
+         "image":"..\/objects\/laser-left\/laser-left-active.png",
+         "imageheight":48,
+         "imagewidth":96,
+         "type":"laser-left"
+        }, 
+        {
+         "id":15,
+         "image":"..\/objects\/laser-right\/laser-right-active.png",
+         "imageheight":48,
+         "imagewidth":96,
+         "type":"laser-right"
+        }, 
+        {
+         "id":17,
+         "image":"..\/objects\/laser-down\/laser-down-active.png",
+         "imageheight":96,
+         "imagewidth":24,
+         "type":"laser-down"
+        }, 
+        {
+         "id":18,
+         "image":"..\/objects\/laser-up\/laser-up-active.png",
+         "imageheight":120,
+         "imagewidth":24,
+         "type":"laser-up"
         }],
- "tilewidth":32,
+ "tilewidth":96,
  "type":"tileset",
  "version":"1.6"
 }
