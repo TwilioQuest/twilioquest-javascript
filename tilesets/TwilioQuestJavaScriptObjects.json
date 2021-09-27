@@ -8,7 +8,7 @@
  "margin":0,
  "name":"TwilioQuestJavaScriptObjects",
  "spacing":0,
- "tilecount":14,
+ "tilecount":19,
  "tiledversion":"1.6.0",
  "tileheight":120,
  "tiles":[
@@ -324,6 +324,29 @@
          "image":"..\/objects\/laser-left\/laser-left-active.png",
          "imageheight":48,
          "imagewidth":96,
+         "objectgroup":
+            {
+             "draworder":"index",
+             "id":3,
+             "name":"",
+             "objects":[
+                    {
+                     "height":15,
+                     "id":2,
+                     "name":"",
+                     "rotation":0,
+                     "type":"",
+                     "visible":true,
+                     "width":22,
+                     "x":73,
+                     "y":28
+                    }],
+             "opacity":1,
+             "type":"objectgroup",
+             "visible":true,
+             "x":0,
+             "y":0
+            },
          "type":"laser-left"
         }, 
         {
@@ -331,6 +354,29 @@
          "image":"..\/objects\/laser-right\/laser-right-active.png",
          "imageheight":48,
          "imagewidth":96,
+         "objectgroup":
+            {
+             "draworder":"index",
+             "id":2,
+             "name":"",
+             "objects":[
+                    {
+                     "height":15,
+                     "id":1,
+                     "name":"",
+                     "rotation":0,
+                     "type":"",
+                     "visible":true,
+                     "width":22,
+                     "x":1,
+                     "y":28
+                    }],
+             "opacity":1,
+             "type":"objectgroup",
+             "visible":true,
+             "x":0,
+             "y":0
+            },
          "type":"laser-right"
         }, 
         {
@@ -338,6 +384,29 @@
          "image":"..\/objects\/laser-down\/laser-down-active.png",
          "imageheight":96,
          "imagewidth":24,
+         "objectgroup":
+            {
+             "draworder":"index",
+             "id":2,
+             "name":"",
+             "objects":[
+                    {
+                     "height":15,
+                     "id":1,
+                     "name":"",
+                     "rotation":0,
+                     "type":"",
+                     "visible":true,
+                     "width":22,
+                     "x":1,
+                     "y":31
+                    }],
+             "opacity":1,
+             "type":"objectgroup",
+             "visible":true,
+             "x":0,
+             "y":0
+            },
          "type":"laser-down"
         }, 
         {
@@ -345,7 +414,157 @@
          "image":"..\/objects\/laser-up\/laser-up-active.png",
          "imageheight":120,
          "imagewidth":24,
+         "objectgroup":
+            {
+             "draworder":"index",
+             "id":2,
+             "name":"",
+             "objects":[
+                    {
+                     "height":15,
+                     "id":1,
+                     "name":"",
+                     "rotation":0,
+                     "type":"",
+                     "visible":true,
+                     "width":22,
+                     "x":1,
+                     "y":103
+                    }],
+             "opacity":1,
+             "type":"objectgroup",
+             "visible":true,
+             "x":0,
+             "y":0
+            },
          "type":"laser-up"
+        }, 
+        {
+         "id":19,
+         "image":"..\/objects\/laser-left-off\/laser-left.png",
+         "imageheight":48,
+         "imagewidth":48,
+         "objectgroup":
+            {
+             "draworder":"index",
+             "id":2,
+             "name":"",
+             "objects":[
+                    {
+                     "height":15,
+                     "id":1,
+                     "name":"",
+                     "rotation":0,
+                     "type":"",
+                     "visible":true,
+                     "width":22,
+                     "x":25,
+                     "y":28
+                    }],
+             "opacity":1,
+             "type":"objectgroup",
+             "visible":true,
+             "x":0,
+             "y":0
+            },
+         "type":"laser-left-off"
+        }, 
+        {
+         "id":20,
+         "image":"..\/objects\/laser-right-off\/laser-right.png",
+         "imageheight":48,
+         "imagewidth":48,
+         "objectgroup":
+            {
+             "draworder":"index",
+             "id":2,
+             "name":"",
+             "objects":[
+                    {
+                     "height":15,
+                     "id":1,
+                     "name":"",
+                     "rotation":0,
+                     "type":"",
+                     "visible":true,
+                     "width":22,
+                     "x":1,
+                     "y":29
+                    }],
+             "opacity":1,
+             "type":"objectgroup",
+             "visible":true,
+             "x":0,
+             "y":0
+            },
+         "type":"laser-right-off"
+        }, 
+        {
+         "id":21,
+         "image":"..\/objects\/laser-down-off\/laser-down.png",
+         "imageheight":48,
+         "imagewidth":24,
+         "objectgroup":
+            {
+             "draworder":"index",
+             "id":2,
+             "name":"",
+             "objects":[
+                    {
+                     "height":15,
+                     "id":1,
+                     "name":"",
+                     "rotation":0,
+                     "type":"",
+                     "visible":true,
+                     "width":22,
+                     "x":1,
+                     "y":32
+                    }],
+             "opacity":1,
+             "type":"objectgroup",
+             "visible":true,
+             "x":0,
+             "y":0
+            },
+         "type":"laser-down-off"
+        }, 
+        {
+         "id":22,
+         "image":"..\/objects\/laser-up-off\/laser-up.png",
+         "imageheight":48,
+         "imagewidth":24,
+         "objectgroup":
+            {
+             "draworder":"index",
+             "id":2,
+             "name":"",
+             "objects":[
+                    {
+                     "height":15,
+                     "id":1,
+                     "name":"",
+                     "rotation":0,
+                     "type":"",
+                     "visible":true,
+                     "width":22,
+                     "x":1,
+                     "y":30
+                    }],
+             "opacity":1,
+             "type":"objectgroup",
+             "visible":true,
+             "x":0,
+             "y":0
+            },
+         "type":"laser-up-off"
+        }, 
+        {
+         "id":23,
+         "image":"..\/objects\/ducktypium-container-released\/ducktypium-released.png",
+         "imageheight":72,
+         "imagewidth":24,
+         "type":"ducktypium-container-released"
         }],
  "tilewidth":96,
  "type":"tileset",
