@@ -1,14 +1,13 @@
-const path = require('path');
-const jetpack = require('fs-jetpack');
-const { executeCodeString } = require('../../validation');
+const path = require("path");
+const jetpack = require("fs-jetpack");
+const {
+  executeCodeString,
+} = require("../../../../scripts/objectiveValidation");
 
-module.exports = async helper => {
+module.exports = async (helper) => {
   try {
     const { TQ_NODE_EXE, TQ_JAVASCRIPT_WORKSPACE_PATH } = helper.env;
-    const programPath = path.join(
-      TQ_JAVASCRIPT_WORKSPACE_PATH, 
-      'sayPlease.js'
-    );
+    const programPath = path.join(TQ_JAVASCRIPT_WORKSPACE_PATH, "sayPlease.js");
 
     const exists = await jetpack.existsAsync(programPath);
     if (!exists) {
@@ -24,7 +23,7 @@ module.exports = async helper => {
 
     const { stdout } = await executeCodeString(TQ_NODE_EXE, userCode);
 
-    if (!stdout.includes('please')) {
+    if (!stdout.includes("please")) {
       helper.fail(`
         When we executed your script, it didn't print out the "magic word". 
         <br/><br/>

@@ -261,7 +261,7 @@
                         {
                          "name":"objectiveName",
                          "type":"string",
-                         "value":"js_enable_laser"
+                         "value":"js_split_west_laser"
                         }],
                  "rotation":0,
                  "type":"",
@@ -546,7 +546,7 @@
                         {
                          "name":"objectiveName",
                          "type":"string",
-                         "value":"js_enable_laser"
+                         "value":"js_split_north_laser"
                         }],
                  "rotation":0,
                  "type":"",
@@ -564,7 +564,7 @@
                         {
                          "name":"objectiveName",
                          "type":"string",
-                         "value":"js_enable_laser"
+                         "value":"js_split_east_laser"
                         }],
                  "rotation":0,
                  "type":"",
@@ -582,7 +582,7 @@
                         {
                          "name":"objectiveName",
                          "type":"string",
-                         "value":"js_enable_laser"
+                         "value":"js_split_south_laser"
                         }],
                  "rotation":0,
                  "type":"",
