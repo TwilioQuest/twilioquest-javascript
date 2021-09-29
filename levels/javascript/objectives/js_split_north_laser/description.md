@@ -1,5 +1,5 @@
 <%
-const worldState = levelState.javascriptWorldState;
+const worldState = levelState.TQ_JAVASCRIPT_WORLD_STATE;
 const isObjectiveReady = worldState.northWing &&
 worldState.northWing.hadSavedConversation;
 %>
@@ -94,11 +94,11 @@ This class's constructor should take one argument - an object literal containing
 
 Your `TargetingSolution` constructor should store the the following three properties as instance variables from the configuration object.
 
-| property | type          |
-| -------- | ------------- |
-| x   | number        |
-| y    | number |
-| z    | number |
+| property | type   |
+| -------- | ------ |
+| x        | number |
+| y        | number |
+| z        | number |
 
 In addition, your class must implement an instance function called `target` which returns a formatted string containing the instance's target coordinates in the format `(x, y, z)`, including the parens, spaces, and commas.
 
@@ -108,7 +108,7 @@ Here is example usage of the class you must create.
 const sln = new TargetingSolution({
   x: 45,
   y: 12,
-  z: -1
+  z: -1,
 });
 
 console.log(sln.target()); // Should output a string of (45, 12, -1)
@@ -116,7 +116,7 @@ console.log(sln.target()); // Should output a string of (45, 12, -1)
 
 **Note that your target function must use the exact formatting and spacing as shown!**
 
-As always, code you can use as a starting point can be found on the Help tab. Once your code is ready, click the *HACK* button to bring this laser back online!
+As always, code you can use as a starting point can be found on the Help tab. Once your code is ready, click the _HACK_ button to bring this laser back online!
 
 <% } else { %>
 

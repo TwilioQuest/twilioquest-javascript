@@ -1,15 +1,16 @@
-const vm = require('vm');
-const path = require('path');
-const jetpack = require('fs-jetpack');
+const vm = require("vm");
+const path = require("path");
+const jetpack = require("fs-jetpack");
 
-const isFunction = function(obj) {
+const isFunction = function (obj) {
   return !!(obj && obj.constructor && obj.call && obj.apply);
 };
 
-module.exports = async helper => {
-  const { javascriptWorldState } = helper.context.levelState;
-  const isObjectiveReady = javascriptWorldState.eastWing &&
-    javascriptWorldState.eastWing.hadSavedConversation;
+module.exports = async (helper) => {
+  const { TQ_JAVASCRIPT_WORLD_STATE } = helper.context.levelState;
+  const isObjectiveReady =
+    TQ_JAVASCRIPT_WORLD_STATE.eastWing &&
+    TQ_JAVASCRIPT_WORLD_STATE.eastWing.hadSavedConversation;
 
   // The player needs to enable the other beams first
   if (!isObjectiveReady) {
@@ -22,8 +23,8 @@ module.exports = async helper => {
   try {
     const { TQ_JAVASCRIPT_WORKSPACE_PATH } = helper.env;
     const programPath = path.join(
-      TQ_JAVASCRIPT_WORKSPACE_PATH, 
-      'laserPower.js'
+      TQ_JAVASCRIPT_WORKSPACE_PATH,
+      "laserPower.js"
     );
 
     const exists = await jetpack.existsAsync(programPath);
@@ -39,7 +40,7 @@ module.exports = async helper => {
     const userCode = await jetpack.readAsync(programPath);
     const scriptContext = {
       process: process,
-      __TQ: {} 
+      __TQ: {},
     };
     const testCode = `
       ${userCode};
@@ -65,7 +66,7 @@ module.exports = async helper => {
 
     if (tq.error) {
       console.log(tq.error);
-      if (tq.error.name === 'ReferenceError') {
+      if (tq.error.name === "ReferenceError") {
         return helper.fail(`
           It looks like a <span class="highlight">calculatePower</span> 
           function was not defined in your
@@ -99,9 +100,7 @@ module.exports = async helper => {
     // Check functionality
     try {
       const result = tq.calculatePower([]);
-      const result2 = tq.calculatePower(
-        [4, 1, 10]
-      );
+      const result2 = tq.calculatePower([4, 1, 10]);
 
       if (result === undefined || result === null) {
         return helper.fail(`
@@ -121,17 +120,14 @@ module.exports = async helper => {
         `);
       }
 
-      if (
-        result !== 0 || result2 !== 30
-      ) {
+      if (result !== 0 || result2 !== 30) {
         return helper.fail(`
           Your function returned a number, but not the number we were looking 
           for. Check the Help and Objective tabs to ensure you are returning
           the right numeric value.
         `);
       }
-
-    } catch(ee) {
+    } catch (ee) {
       return helper.fail(`
         There was an error executing your calculatePower function. Please 
         ensure that you can exercise your function from the command line 

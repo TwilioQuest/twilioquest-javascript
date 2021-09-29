@@ -9,10 +9,10 @@ module.exports = async (helper) => {
     const { TQ_NODE_EXE, TQ_JAVASCRIPT_WORKSPACE_PATH } = helper.env;
     const programPath = path.join(TQ_JAVASCRIPT_WORKSPACE_PATH, "sortOrder.js");
 
-    const { javascriptWorldState } = helper.context.levelState;
+    const { TQ_JAVASCRIPT_WORLD_STATE } = helper.context.levelState;
     const isObjectiveReady =
-      javascriptWorldState.eastWing &&
-      javascriptWorldState.southWing.hadSavedConversation;
+      TQ_JAVASCRIPT_WORLD_STATE.eastWing &&
+      TQ_JAVASCRIPT_WORLD_STATE.southWing.hadSavedConversation;
 
     // The player needs to enable the other beams first
     if (!isObjectiveReady) {

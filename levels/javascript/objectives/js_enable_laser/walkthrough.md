@@ -1,12 +1,12 @@
 <%
-const worldState = levelState.javascriptWorldState;
+const worldState = levelState.TQ_JAVASCRIPT_WORLD_STATE;
 %>
 
 <% if (worldState.room1.passwordFound) { %>
 
 # Password, Please
 
-After a series of trials, you discovered that the laser password is `PEW PEW PEW!` - enter the password in the text field on the right and click *HACK*. For science!
+After a series of trials, you discovered that the laser password is `PEW PEW PEW!` - enter the password in the text field on the right and click _HACK_. For science!
 
 <% } else { %>
 

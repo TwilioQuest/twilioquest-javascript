@@ -1,7 +1,7 @@
 <%
-const worldState = levelState.javascriptWorldState;
-const isObjectiveReady = worldState.northWing && 
-  worldState.northWing.hadSavedConversation;
+const worldState = levelState.TQ_JAVASCRIPT_WORLD_STATE;
+const isObjectiveReady = worldState.northWing &&
+worldState.northWing.hadSavedConversation;
 %>
 
 # Objective Help
@@ -32,21 +32,20 @@ class TargetingSolution {
 const m = new TargetingSolution({
   x: 10,
   y: 15,
-  z: 900
+  z: 900,
 });
 
 console.log(m.target()); // would print "(10, 15, 900)"
 ```
 
-When your function works as directed in the objective, click the *HACK* button to validate your work. You can do this!
+When your function works as directed in the objective, click the _HACK_ button to validate your work. You can do this!
 
 ## Useful links
 
-* [JavaScript.info - Classes](https://javascript.info/class)
-* [MDN - Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
-* [JavaScript.info - Object literal notation](https://javascript.info/object#literals-and-properties)
-* [MDN - Object Initialization](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
-
+- [JavaScript.info - Classes](https://javascript.info/class)
+- [MDN - Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+- [JavaScript.info - Object literal notation](https://javascript.info/object#literals-and-properties)
+- [MDN - Object Initialization](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
 
 <% } else { %>
 

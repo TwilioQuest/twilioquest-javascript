@@ -1,20 +1,21 @@
-const vm = require('vm');
-const path = require('path');
-const jetpack = require('fs-jetpack');
+const vm = require("vm");
+const path = require("path");
+const jetpack = require("fs-jetpack");
 
 function isFunction(obj) {
   return !!(obj && obj.constructor && obj.call && obj.apply);
 }
 
 function isClassDeclaration(obj) {
-  return isFunction(obj) && obj.toString && obj.toString().includes('class');
+  return isFunction(obj) && obj.toString && obj.toString().includes("class");
 }
 
-module.exports = async helper => {
-  const { javascriptWorldState } = helper.context.levelState;
-  const isObjectiveReady = javascriptWorldState.beamTwoOnline &&
-    javascriptWorldState.beamThreeOnline &&
-    javascriptWorldState.beamFourOnline;
+module.exports = async (helper) => {
+  const { TQ_JAVASCRIPT_WORLD_STATE } = helper.context.levelState;
+  const isObjectiveReady =
+    TQ_JAVASCRIPT_WORLD_STATE.beamTwoOnline &&
+    TQ_JAVASCRIPT_WORLD_STATE.beamThreeOnline &&
+    TQ_JAVASCRIPT_WORLD_STATE.beamFourOnline;
 
   // The player needs to enable the other beams first
   if (!isObjectiveReady) {
@@ -28,7 +29,7 @@ module.exports = async helper => {
     const { TQ_JAVASCRIPT_WORKSPACE_PATH } = helper.env;
     const programPath = path.join(
       TQ_JAVASCRIPT_WORKSPACE_PATH,
-      'ducktypium.js'
+      "ducktypium.js"
     );
 
     const exists = await jetpack.existsAsync(programPath);
@@ -70,7 +71,7 @@ module.exports = async helper => {
 
     if (tq.error) {
       console.log(tq.error);
-      if (tq.error.name === 'ReferenceError') {
+      if (tq.error.name === "ReferenceError") {
         return helper.fail(`
           It looks like a <span class="highlight">Ducktypium</span> 
           class was not defined in your
@@ -105,21 +106,21 @@ module.exports = async helper => {
     try {
       // First ensure it errors out on an incorrect input
       try {
-        const badColor = new tq.Ducktypium('mauve');
-        
+        const badColor = new tq.Ducktypium("mauve");
+
         // If we get to this point, it's actually a failure
         return helper.fail(`
           Your constructor should only accept "red", "yellow", or "blue" as
           arguments.
         `);
-      } catch(colorError) {
+      } catch (colorError) {
         // This is actually what we want, so continue...
       }
 
       // Create a test instance
-      const dt = new tq.Ducktypium('blue');
+      const dt = new tq.Ducktypium("blue");
 
-      if (dt.color !== 'blue') {
+      if (dt.color !== "blue") {
         return helper.fail(`
           Your constructor should set the "color" property of the new
           Ducktypium instance to the first argument to the constructor.
@@ -147,14 +148,14 @@ module.exports = async helper => {
       }
 
       // Check functionality of methods
-      if (dt.refract('blue') !== 'blue') {
+      if (dt.refract("blue") !== "blue") {
         return helper.fail(`
           The refract method should return the Ducktypium object's color
           property if the same color is passed in to the method.
         `);
       }
 
-      if (dt.refract('yellow') !== 'green') {
+      if (dt.refract("yellow") !== "green") {
         return helper.fail(`
           The refract method should return color you get when its "color"
           property is combined with another primary color. See the color
@@ -162,8 +163,8 @@ module.exports = async helper => {
         `);
       }
 
-      dt.color = 'red';
-      if (dt.refract('yellow') !== 'orange') {
+      dt.color = "red";
+      if (dt.refract("yellow") !== "orange") {
         return helper.fail(`
           The refract method should return color you get when its "color"
           property is combined with another primary color. See the color
@@ -171,8 +172,8 @@ module.exports = async helper => {
         `);
       }
 
-      dt.color = 'yellow';
-      if (dt.refract('blue') !== 'green') {
+      dt.color = "yellow";
+      if (dt.refract("blue") !== "green") {
         return helper.fail(`
           The refract method should return color you get when its "color"
           property is combined with another primary color. See the color
@@ -192,7 +193,6 @@ module.exports = async helper => {
           the Ducktypium instance to an array as described in the objective tab.
         `);
       }
-
     } catch (ee) {
       console.log(ee);
       return helper.fail(`

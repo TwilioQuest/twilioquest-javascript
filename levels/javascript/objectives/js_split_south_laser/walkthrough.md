@@ -1,9 +1,8 @@
 <%
-const worldState = levelState.javascriptWorldState;
-const isObjectiveReady = worldState.southWing && 
-  worldState.southWing.hadSavedConversation;
+const worldState = levelState.TQ_JAVASCRIPT_WORLD_STATE;
+const isObjectiveReady = worldState.southWing &&
+worldState.southWing.hadSavedConversation;
 %>
-
 
 # Restarting The Laser
 
@@ -42,17 +41,16 @@ node sortOrder.js dogs cats
 
 It should print `1`, since `dogs` comes after `cats` alphabetically.
 
-
 Your code will need to [compare strings with alphabeitcally, as demonstrated here](https://javascript.info/comparison#string-comparison). Also, you may need to convert the strings to the same case before comparison using [toLowerCase](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase).
 
 This should be very similar to the tasks you needed to complete in the south wing of the lab - go back and reference that code if you need to.
 
-Click *HACK* when your script behaves as described in the Objective. You can do this!
+Click _HACK_ when your script behaves as described in the Objective. You can do this!
 
 ## Useful Resources
 
-* [MDN conditionals reference](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-* [JavaScript.info - string comparison](https://javascript.info/comparison#string-comparison)
+- [MDN conditionals reference](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [JavaScript.info - string comparison](https://javascript.info/comparison#string-comparison)
 
 <% } else { %>
 

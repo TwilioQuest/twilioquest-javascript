@@ -1,19 +1,20 @@
-const vm = require('vm');
-const path = require('path');
-const jetpack = require('fs-jetpack');
+const vm = require("vm");
+const path = require("path");
+const jetpack = require("fs-jetpack");
 
 function isFunction(obj) {
   return !!(obj && obj.constructor && obj.call && obj.apply);
 }
 
 function isClassDeclaration(obj) {
-  return isFunction(obj) && obj.toString && obj.toString().includes('class');
+  return isFunction(obj) && obj.toString && obj.toString().includes("class");
 }
 
-module.exports = async helper => {
-  const { javascriptWorldState } = helper.context.levelState;
-  const isObjectiveReady = javascriptWorldState.northWing &&
-    javascriptWorldState.northWing.hadSavedConversation;
+module.exports = async (helper) => {
+  const { TQ_JAVASCRIPT_WORLD_STATE } = helper.context.levelState;
+  const isObjectiveReady =
+    TQ_JAVASCRIPT_WORLD_STATE.northWing &&
+    TQ_JAVASCRIPT_WORLD_STATE.northWing.hadSavedConversation;
 
   // The player needs to enable the other beams first
   if (!isObjectiveReady) {
@@ -27,7 +28,7 @@ module.exports = async helper => {
     const { TQ_JAVASCRIPT_WORKSPACE_PATH } = helper.env;
     const programPath = path.join(
       TQ_JAVASCRIPT_WORKSPACE_PATH,
-      'targetingSolution.js'
+      "targetingSolution.js"
     );
 
     const exists = await jetpack.existsAsync(programPath);
@@ -69,7 +70,7 @@ module.exports = async helper => {
 
     if (tq.error) {
       console.log(tq.error);
-      if (tq.error.name === 'ReferenceError') {
+      if (tq.error.name === "ReferenceError") {
         return helper.fail(`
           It looks like a <span class="highlight">TargetingSolution</span> 
           class was not defined in your
@@ -102,10 +103,10 @@ module.exports = async helper => {
 
     // Check functionality
     try {
-      const result1 = new tq.TargetingSolution({ 
-        x: 32.891, 
+      const result1 = new tq.TargetingSolution({
+        x: 32.891,
         y: 120.012,
-        z: 345.12
+        z: 345.12,
       });
 
       if (!isFunction(result1.target)) {
@@ -116,7 +117,7 @@ module.exports = async helper => {
 
       const result1Target = result1.target().trim();
 
-      if (result1Target !== '(32.891, 120.012, 345.12)') {
+      if (result1Target !== "(32.891, 120.012, 345.12)") {
         return helper.fail(`
           The <span class="highlight">target</span> function of your
           <span class="highlight">TargetingSolution</span> class did not return
@@ -125,7 +126,6 @@ module.exports = async helper => {
           commas.
         `);
       }
-
     } catch (ee) {
       return helper.fail(`
         There was an error executing your TargetingSolution constructor or functions. Please ensure that you can exercise your function from the command line 

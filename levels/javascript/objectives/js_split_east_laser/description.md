@@ -1,9 +1,8 @@
 <%
-const worldState = levelState.javascriptWorldState;
-const isObjectiveReady = worldState.eastWing && 
-  worldState.eastWing.hadSavedConversation;
+const worldState = levelState.TQ_JAVASCRIPT_WORLD_STATE;
+const isObjectiveReady = worldState.eastWing &&
+worldState.eastWing.hadSavedConversation;
 %>
-
 
 # Enable Beam 3
 
@@ -95,11 +94,11 @@ You'll have to draw on everything you've learned about arrays to overcome this c
 
 Create a file called `laserPower.js` in your code folder. Inside this file, [create a JavaScript function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions) called `calculatePower`.
 
-This function should take one argument - an array of numbers. This array contains the aggregate power settings for the laser, but the input numbers are off by a little bit.  
+This function should take one argument - an array of numbers. This array contains the aggregate power settings for the laser, but the input numbers are off by a little bit.
 
 Your `calculatePower` function should first adjust all the values in the input array by **multiplying them by two**. Afterward, you must **add all those numbers together**, and **return the result** from your function.
 
-Once your code is ready, click the *HACK* button to bring this laser back online!
+Once your code is ready, click the _HACK_ button to bring this laser back online!
 
 <% } else { %>
 

@@ -1,7 +1,7 @@
 <%
-const worldState = levelState.javascriptWorldState;
-const isObjectiveReady = worldState.southWing && 
-  worldState.southWing.hadSavedConversation;
+const worldState = levelState.TQ_JAVASCRIPT_WORLD_STATE;
+const isObjectiveReady = worldState.southWing &&
+worldState.southWing.hadSavedConversation;
 %>
 
 # Enable Beam 2
@@ -99,11 +99,11 @@ node sortOrder.js cats dogs
 
 Your script should determine if the first string is before, after, or in the same position (equal) to the second string, alphabetically. For each case, you should print out a number with `console.log` as described below.
 
-* When the first argument is **earlier** in the alphabet than the second, your script should print `-1`.
-* When the first argument is the **same** as the second, your script should print `0`.
-* When the first argument is **later** in the alphabet than the second, your function should print `1`.
+- When the first argument is **earlier** in the alphabet than the second, your script should print `-1`.
+- When the first argument is the **same** as the second, your script should print `0`.
+- When the first argument is **later** in the alphabet than the second, your function should print `1`.
 
-When your script implements this comparison functionality, click the *HACK* button to restart this laser!
+When your script implements this comparison functionality, click the _HACK_ button to restart this laser!
 
 <% } else { %>
 

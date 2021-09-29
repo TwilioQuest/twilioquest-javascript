@@ -1,8 +1,8 @@
 <%
-const worldState = levelState.javascriptWorldState;
+const worldState = levelState.TQ_JAVASCRIPT_WORLD_STATE;
 const isObjectiveReady = worldState.beamTwoOnline &&
-  worldState.beamThreeOnline &&
-  worldState.beamFourOnline;
+worldState.beamThreeOnline &&
+worldState.beamFourOnline;
 %>
 
 # Enable the Final Beam
@@ -83,7 +83,7 @@ if (isObjectiveReady) {
 <% } %>
 </div>
 
-<% 
+<%
 if (isObjectiveReady) {
 %>
 
@@ -107,14 +107,14 @@ One of the required methods describes the refractive properties of ducktypium wh
 
 The `refract` method must take a single string argument, which must be one of `red`, `blue`, or `yellow`. The method should [throw an error](https://javascript.info/try-catch#throwing-our-own-errors) if the argument is any other string, just like the constructor. This function should **return a single string**, which is the color produced by the combination of the instance's `color` property and the color passed in to the `refract` function.
 
-* If the instance's `color` property is the same as the argument passed in, return that value
-* If the combination of colors is different, it should return a string which is the combination of those two [primary colors](https://en.wikipedia.org/wiki/Primary_color). 
+- If the instance's `color` property is the same as the argument passed in, return that value
+- If the combination of colors is different, it should return a string which is the combination of those two [primary colors](https://en.wikipedia.org/wiki/Primary_color).
 
 For reference, primary colors combine in the following ways:
 
-* <span style="color:red">red</span> + <span style="color:blue">blue</span> = <span style="color:purple">purple</span>
-* <span style="color:red">red</span> + <span style="color:#ad9400">yellow</span> = <span style="color:orange">orange</span>
-* <span style="color:#ad9400">yellow</span> + <span style="color:blue">blue</span> = <span style="color:green">green</span>
+- <span style="color:red">red</span> + <span style="color:blue">blue</span> = <span style="color:purple">purple</span>
+- <span style="color:red">red</span> + <span style="color:#ad9400">yellow</span> = <span style="color:orange">orange</span>
+- <span style="color:#ad9400">yellow</span> + <span style="color:blue">blue</span> = <span style="color:green">green</span>
 
 ## The `calibrate` method
 
@@ -122,9 +122,9 @@ The other required method creates a calibration sequence required to stabilize a
 
 The `calibrate` method takes a single argument, an array of numbers. With this input array, you must do the following:
 
-* Sort the numbers from smallest to largest
-* Multiply each number in the array by `3`
-* Assign the resulting array to the `Ducktypium` instance's `calibrationSequence` variable.
+- Sort the numbers from smallest to largest
+- Multiply each number in the array by `3`
+- Assign the resulting array to the `Ducktypium` instance's `calibrationSequence` variable.
 
 ## Example usage
 
@@ -133,18 +133,18 @@ When completed, your Ducktypium class should behave as in the following example.
 ```js
 // The following would produce an error
 try {
-  const badColor = new Ducktypium('pink');
-} catch(e) {
-  console.log('Color must be red, yellow, or blue!');
+  const badColor = new Ducktypium("pink");
+} catch (e) {
+  console.log("Color must be red, yellow, or blue!");
 }
 
 // Create a new instance of the class
-const dt = new Ducktypium('red');
+const dt = new Ducktypium("red");
 
 console.log(dt.color); // prints 'red'
 
-console.log(dt.refract('blue')); // prints 'purple'
-console.log(dt.refract('red')); // prints 'red'
+console.log(dt.refract("blue")); // prints 'purple'
+console.log(dt.refract("red")); // prints 'red'
 
 dt.calibrate([3, 5, 1]);
 
@@ -153,7 +153,7 @@ console.log(dt.calibrationSequence); // prints [3, 9, 15]
 
 Example code you may use as a starting point may be found on the Help tab. This will take all your JavaScript skills, but you can do it! The fate of The Cloud hangs in the balance.
 
-When your `ducktypium.js` script is ready, click the *HACK* button to reverse the experiment!
+When your `ducktypium.js` script is ready, click the _HACK_ button to reverse the experiment!
 
 <% } else { %>
 To reverse the failed ducktypium experiment, you must **bring all four stasis beams back online**, including this one (Beam 1). Beams 2, 3, and 4 must go back online first before this beam can be enabled.

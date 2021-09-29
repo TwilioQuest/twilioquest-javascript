@@ -22,6 +22,10 @@ const INITIAL_STATE = {
       west: false,
     },
   },
+  southWing: {
+    hadIntroConversation: false,
+    hadSavedConversation: false,
+  },
 };
 
 module.exports = function (event, world) {
@@ -31,6 +35,36 @@ module.exports = function (event, world) {
     if (event.target.stasisBeamPassword) {
       worldState.room1.passwordFound = true;
     }
+  }
+
+  console.log({ worldState });
+
+  if (event.name === "triggerAreaWasEntered") {
+    if (
+      event.target.key === "botanistDialogTrigger" &&
+      !worldState.southWing.hadSavedConversation
+    ) {
+      world.forEachEntities("botanistViewpoint", async (viewpoint) => {
+        world.disablePlayerMovement();
+
+        await world.tweenCameraToPosition({
+          x: viewpoint.startX,
+          y: viewpoint.startY,
+        });
+
+        world.startConversation("botanist_distant", "scientist2.png");
+      });
+    }
+  }
+
+  if (
+    event.name === "conversationDidEnd" &&
+    event.npc.conversation === "botanist_distant"
+  ) {
+    (async function () {
+      await world.tweenCameraToPlayer();
+      world.enablePlayerMovement();
+    })();
   }
 
   // Handle first run experience aboard Fog Owl
