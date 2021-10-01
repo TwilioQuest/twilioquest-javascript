@@ -1,7 +1,11 @@
 const { WORLD_STATE_KEY } = require("../../scripts/config");
 const handleGeniusBar = require("./events/handleGeniusBar");
 const handleDoorControls = require("./events/handleDoorControls");
-const { processLaserEvents, renderLaserState } = require("./events/lasers");
+const {
+  processLaserEvents,
+  renderLaserState,
+  areAllLasersEnabled,
+} = require("./events/lasers");
 const merge = require("lodash.merge");
 
 const INITIAL_STATE = {
@@ -31,13 +35,25 @@ const INITIAL_STATE = {
 module.exports = function (event, world) {
   const worldState = merge(INITIAL_STATE, world.getState(WORLD_STATE_KEY));
 
+  if (areAllLasersEnabled(worldState)) {
+    world.disableTransitionAreas("exit-default-room1");
+    world.disableTransitionAreas("exit-default-room1-split");
+    world.enableTransitionAreas("exit-default-room1-final");
+  } else if (worldState.room1.explosionTriggered) {
+    world.disableTransitionAreas("exit-default-room1");
+    world.enableTransitionAreas("exit-default-room1-split");
+    world.disableTransitionAreas("exit-default-room1-final");
+  } else {
+    world.enableTransitionAreas("exit-default-room1");
+    world.disableTransitionAreas("exit-default-room1-split");
+    world.disableTransitionAreas("exit-default-room1-final");
+  }
+
   if (event.name === "playerDidInteract") {
     if (event.target.stasisBeamPassword) {
       worldState.room1.passwordFound = true;
     }
   }
-
-  console.log({ worldState });
 
   if (event.name === "triggerAreaWasEntered") {
     if (
@@ -83,15 +99,8 @@ module.exports = function (event, world) {
   renderLaserState(world, worldState, event);
 
   // TODO:
-  // handle getting the note
-  // turning the laser on
-  // showing the laser off initially
-  // playing the explosion cinematic
-  // transitioning to the split version of the wing
   // updating decontamination to link here after explosion
   // test this whole sequence
-
-  console.log(worldState);
 
   world.setState(WORLD_STATE_KEY, worldState);
 };

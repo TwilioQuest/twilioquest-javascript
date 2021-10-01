@@ -114,6 +114,11 @@
                  "name":"exit",
                  "properties":[
                         {
+                         "name":"key",
+                         "type":"string",
+                         "value":"exit-default-room1"
+                        }, 
+                        {
                          "name":"levelName",
                          "type":"string",
                          "value":"javascript"
@@ -334,6 +339,70 @@
                  "width":144,
                  "x":192,
                  "y":288
+                }, 
+                {
+                 "height":7,
+                 "id":254,
+                 "name":"exit",
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"exit-default-room1-split"
+                        }, 
+                        {
+                         "name":"levelName",
+                         "type":"string",
+                         "value":"javascript"
+                        }, 
+                        {
+                         "name":"mapName",
+                         "type":"string",
+                         "value":"ducktypium-wing-split"
+                        }, 
+                        {
+                         "name":"playerEntryPoint",
+                         "type":"string",
+                         "value":"player_entry1"
+                        }],
+                 "rotation":0,
+                 "type":"levelChange",
+                 "visible":true,
+                 "width":120,
+                 "x":207,
+                 "y":1
+                }, 
+                {
+                 "height":7,
+                 "id":255,
+                 "name":"exit",
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"exit-default-room1-final"
+                        }, 
+                        {
+                         "name":"levelName",
+                         "type":"string",
+                         "value":"javascript"
+                        }, 
+                        {
+                         "name":"mapName",
+                         "type":"string",
+                         "value":"ducktypium-wing-final"
+                        }, 
+                        {
+                         "name":"playerEntryPoint",
+                         "type":"string",
+                         "value":"player_entry1"
+                        }],
+                 "rotation":0,
+                 "type":"levelChange",
+                 "visible":true,
+                 "width":120,
+                 "x":206,
+                 "y":1
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -420,7 +489,7 @@
          "y":0
         }],
  "nextlayerid":48,
- "nextobjectid":253,
+ "nextobjectid":256,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.6.0",

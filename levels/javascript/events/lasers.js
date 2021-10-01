@@ -93,8 +93,18 @@ function renderLaserState(world, worldState, event) {
   }
 }
 
+function areAllLasersEnabled(worldState) {
+  return (
+    worldState.room1_split.lasers.north &&
+    worldState.room1_split.lasers.south &&
+    worldState.room1_split.lasers.east &&
+    worldState.room1_split.lasers.west
+  );
+}
+
 module.exports = {
   scheduleLaserExplosionTimeouts,
   processLaserEvents,
   renderLaserState,
+  areAllLasersEnabled,
 };
