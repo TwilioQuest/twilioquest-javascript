@@ -30,6 +30,9 @@ const INITIAL_STATE = {
     hadIntroConversation: false,
     hadSavedConversation: false,
   },
+  eastWing: {
+    showedNoInfiniteLoopMessage: false,
+  },
 };
 
 module.exports = function (event, world) {
@@ -69,6 +72,31 @@ module.exports = function (event, world) {
         });
 
         world.startConversation("botanist_distant", "scientist2.png");
+      });
+    }
+
+    if (
+      event.target.key === "airLockTrigger" &&
+      !worldState.eastWing.showedNoInfiniteLoopMessage
+    ) {
+      world.forEachEntities("airLockViewpoint", async (viewpoint) => {
+        worldState.eastWing.showedNoInfiniteLoopMessage = true;
+
+        world.disablePlayerMovement();
+
+        await world.tweenCameraToPosition({
+          x: viewpoint.startX,
+          y: viewpoint.startY,
+        });
+
+        world.showNotification(`
+          The science vessel the "Infinite Loop" should've been docked right here! I must need to <span class=\"highlight\">wait for a new game update</span> to finish saving this scientist.
+        `);
+
+        await world.wait(3000);
+        await world.tweenCameraToPlayer();
+
+        world.enablePlayerMovement();
       });
     }
   }

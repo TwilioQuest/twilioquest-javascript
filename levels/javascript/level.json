@@ -23,7 +23,8 @@
     "officeBookshelf": "There are lots of different past experiment notebooks in here. Mutations, tranformations, prototypes, and more stuff.",
     "opensMar2020": "The adventure continues this way in <span class=\"highlight\">early May 2020</span> - check back later this month, <a href=\"https://twitter.com/TwilioQuest\">follow Cedric on Twitter</a>, and <a href=\"https://www.twilio.com/quest#email\">sign up for our newsletter</a> to be the first to know when this area opens up!",
     "playerPlantedTree": "Your very own tree! It represents an actual tree that will be planted in Australia to help recover from the recent wildfires there.",
-    "loopLockInfo": "This strange room displays a number, just like the numbers outside the secure cargo holds on the ship. I wonder if they're connected? I should <span class=\"highlight\">take a walk around this room</span> to see what happens..."
+    "loopLockInfo": "This strange room displays a number, just like the numbers outside the secure cargo holds on the ship. I wonder if they're connected? I should <span class=\"highlight\">take a walk around this room</span> to see what happens...",
+    "infiniteLoopNotReady": "The science vessel the \"Infinite Loop\" should've been docked right here! I must need to <span class=\"highlight\">wait for a new game update</span> to finish saving this scientist."
   },
   "objectives": []
 }
