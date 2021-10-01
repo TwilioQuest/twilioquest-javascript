@@ -380,6 +380,11 @@
                          "name":"hidden",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"split_east_laser_on"
                         }],
                  "rotation":0,
                  "type":"",
@@ -402,7 +407,7 @@
                         {
                          "name":"key",
                          "type":"string",
-                         "value":"yourLaserOn"
+                         "value":"split_west_laser_on"
                         }],
                  "rotation":0,
                  "type":"",
@@ -421,6 +426,11 @@
                          "name":"hidden",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"split_north_laser_on"
                         }],
                  "rotation":0,
                  "type":"",
@@ -439,6 +449,11 @@
                          "name":"hidden",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"split_south_laser_on"
                         }],
                  "rotation":0,
                  "type":"",
@@ -470,6 +485,12 @@
                  "height":48,
                  "id":323,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"split_east_laser_off"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -486,7 +507,7 @@
                         {
                          "name":"key",
                          "type":"string",
-                         "value":"yourLaserOff"
+                         "value":"split_west_laser_off"
                         }],
                  "rotation":0,
                  "type":"",
@@ -500,6 +521,12 @@
                  "height":48,
                  "id":325,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"split_south_laser_off"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -512,6 +539,12 @@
                  "height":48,
                  "id":326,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"split_north_laser_off"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,

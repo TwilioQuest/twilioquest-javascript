@@ -77,19 +77,23 @@ function renderLaserState(world, worldState, event) {
   }
 
   if (worldState.room1_split.lasers.west) {
-    world.showEntities("split_west_laser");
+    world.showEntities("split_west_laser_on");
+    world.hideEntities("split_west_laser_off");
   }
 
   if (worldState.room1_split.lasers.south) {
-    world.showEntities("split_south_laser");
+    world.showEntities("split_south_laser_on");
+    world.hideEntities("split_south_laser_off");
   }
 
   if (worldState.room1_split.lasers.east) {
-    world.showEntities("split_east_laser");
+    world.showEntities("split_east_laser_on");
+    world.hideEntities("split_east_laser_off");
   }
 
   if (worldState.room1_split.lasers.north) {
-    world.showEntities("split_north_laser");
+    world.showEntities("split_north_laser_on");
+    world.hideEntities("split_north_laser_off");
   }
 }
 
