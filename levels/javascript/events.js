@@ -1,3 +1,4 @@
+const merge = require("lodash.merge");
 const { WORLD_STATE_KEY } = require("../../scripts/config");
 const handleGeniusBar = require("./events/handleGeniusBar");
 const handleDoorControls = require("./events/handleDoorControls");
@@ -6,7 +7,7 @@ const {
   renderLaserState,
   areAllLasersEnabled,
 } = require("./events/lasers");
-const merge = require("lodash.merge");
+const { scheduleSummonAnim } = require("./events/summons");
 
 const INITIAL_STATE = {
   accessLevels: {},
@@ -33,6 +34,12 @@ const INITIAL_STATE = {
   eastWing: {
     showedNoInfiniteLoopMessage: false,
   },
+  northWing: {
+    summonAnimStarted: false,
+    summonAnimFinished: false,
+    hadSavedConversation: false,
+    hadIntroConversation: false,
+  },
 };
 
 module.exports = function (event, world) {
@@ -50,6 +57,15 @@ module.exports = function (event, world) {
     world.enableTransitionAreas("exit-default-room1");
     world.disableTransitionAreas("exit-default-room1-split");
     world.disableTransitionAreas("exit-default-room1-final");
+  }
+
+  if (
+    !worldState.northWing.summonAnimStarted &&
+    world.isObjectiveCompleted("instantiation") &&
+    world.isObjectiveCompleted("classes") &&
+    event.name === "objectiveDidClose"
+  ) {
+    scheduleSummonAnim(world, worldState);
   }
 
   if (event.name === "playerDidInteract") {

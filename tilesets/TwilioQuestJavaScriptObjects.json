@@ -154,6 +154,11 @@
                  "value":"scientist1.png"
                 }, 
                 {
+                 "name":"interactable",
+                 "type":"bool",
+                 "value":true
+                }, 
+                {
                  "name":"scientist",
                  "type":"string",
                  "value":"scientist1"
@@ -182,7 +187,6 @@
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -214,6 +218,11 @@
                  "value":"scientist2.png"
                 }, 
                 {
+                 "name":"interactable",
+                 "type":"bool",
+                 "value":true
+                }, 
+                {
                  "name":"scientist",
                  "type":"string",
                  "value":"scientist2"
@@ -228,7 +237,6 @@
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -260,6 +268,11 @@
                  "value":"scientist3.png"
                 }, 
                 {
+                 "name":"interactable",
+                 "type":"bool",
+                 "value":true
+                }, 
+                {
                  "name":"scientist",
                  "type":"string",
                  "value":"scientist3"
@@ -274,7 +287,6 @@
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -306,6 +318,11 @@
                  "value":"scientist4.png"
                 }, 
                 {
+                 "name":"interactable",
+                 "type":"bool",
+                 "value":true
+                }, 
+                {
                  "name":"scientist",
                  "type":"string",
                  "value":"scientist4"
@@ -327,7 +344,6 @@
          "objectgroup":
             {
              "draworder":"index",
-             "id":3,
              "name":"",
              "objects":[
                     {
@@ -357,7 +373,6 @@
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -387,7 +402,6 @@
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -417,7 +431,6 @@
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -447,7 +460,6 @@
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -477,7 +489,6 @@
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -507,7 +518,6 @@
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -537,7 +547,6 @@
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
