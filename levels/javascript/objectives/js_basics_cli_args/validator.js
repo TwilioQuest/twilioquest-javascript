@@ -1,13 +1,15 @@
-const path = require('path');
-const jetpack = require('fs-jetpack');
-const { executeCodeString } = require('../../validation');
+const path = require("path");
+const jetpack = require("fs-jetpack");
+const {
+  executeCodeString,
+} = require("../../../../scripts/objectiveValidation");
 
-module.exports = async helper => {
+module.exports = async (helper) => {
   try {
     const { TQ_NODE_EXE, TQ_JAVASCRIPT_WORKSPACE_PATH } = helper.env;
     const programPath = path.join(
-      TQ_JAVASCRIPT_WORKSPACE_PATH, 
-      'divideByTwo.js'
+      TQ_JAVASCRIPT_WORKSPACE_PATH,
+      "divideByTwo.js"
     );
 
     const exists = await jetpack.existsAsync(programPath);
@@ -22,9 +24,9 @@ module.exports = async helper => {
 
     const userCode = await jetpack.readAsync(programPath);
 
-    const { stdout } = await executeCodeString(TQ_NODE_EXE, userCode, ['128']);
+    const { stdout } = await executeCodeString(TQ_NODE_EXE, userCode, ["128"]);
 
-    if (!stdout.includes('64')) {
+    if (!stdout.includes("64")) {
       helper.fail(`
         When we executed your script, it didn't print out the result of dividing
         the input number by two.
