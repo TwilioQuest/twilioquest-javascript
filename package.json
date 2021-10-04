@@ -5,5 +5,11 @@
   "engines": {
     "twilioquest": "3.1.44"
   },
-  "dependencies": {}
+  "dependencies": {
+    "command-exists": "^1.2.9",
+    "esprima": "^4.0.1",
+    "fs-jetpack": "^4.1.1",
+    "lodash.merge": "^4.6.2",
+    "uuid": "^8.3.2"
+  }
 }
