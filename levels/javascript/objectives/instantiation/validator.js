@@ -146,7 +146,6 @@ module.exports = async helper => {
         duration: 1000,
       };
 
-      debugger;
       const result1MissingKeys = getMissingKeys(expected1, result1);
       if (result1MissingKeys.length > 0) {
         return helper.fail(`
