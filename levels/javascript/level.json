@@ -1,8 +1,8 @@
 {
   "title": "JavaScript Test Lab",
-  "description": "The TwilioQuest Program maintains this high-tech research facility studying the latest advancements in JavaScript technology. There's not much to see here yet, though!",
+  "description": "The TwilioQuest Program maintains this high-tech research facility studying the latest advancements in JavaScript technology. They have an asked an Operator to visit the station and review their security posture.",
   "questTitle": "JavaScript Test Lab",
-  "questDescription": "Not much to see yet - return to the Fog Owl!",
+  "questDescription": "Investigate the station and help the research team!",
   "navMap": {
     "x": 25,
     "y": 25,
