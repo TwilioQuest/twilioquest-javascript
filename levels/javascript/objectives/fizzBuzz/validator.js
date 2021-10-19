@@ -38,18 +38,29 @@ module.exports = async (helper) => {
     }
 
     const userCode = await jetpack.readAsync(programPath);
-    const testNumbers = Array.from(Array(30).keys());
+    const testNumbers = [4, 24, 25, 30];
+    let results = [];
 
+    for (let i = 0, l = testNumbers.length; i < l; i++) {
+      let result = await executeCodeString(
+        TQ_NODE_EXE, userCode, [testNumbers[i]]
+      );
+      let n = result.stdout ? result.stdout.trim() : "";
+      results.push(n);
+    }
+
+    /*
     const promises = testNumbers.map(async (num) => {
       let result = await executeCodeString(TQ_NODE_EXE, userCode, [num]);
       return result.stdout ? result.stdout.trim() : "";
     });
     const results = await Promise.all(promises);
+    */
 
     // Process results against solution
     for (let i = 0, l = results.length; i < l; i++) {
       let result = results[i];
-      let correct = correctDecrypt(i);
+      let correct = correctDecrypt(testNumbers[i]);
       if (result !== correct) {
         return helper.fail(`
           While testing your script, we passed in "${i}" but got "${result}" instead
