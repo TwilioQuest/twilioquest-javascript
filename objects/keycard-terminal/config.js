@@ -32,7 +32,8 @@ module.exports = {
         return;
       }
 
-      const javaScriptWorldState = world.getState(WORLD_STATE_KEY) ?? {};
+      const javaScriptWorldState = world.getState(WORLD_STATE_KEY) ? 
+        world.getState(WORLD_STATE_KEY) : {};
       const { accessLevels = {} } = javaScriptWorldState;
 
       const accessLevelState = accessLevels[self.accessLevel];
