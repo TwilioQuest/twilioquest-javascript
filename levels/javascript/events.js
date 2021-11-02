@@ -8,6 +8,8 @@ const {
   areAllLasersEnabled,
 } = require("./events/lasers");
 const { scheduleSummonAnim } = require("./events/summons");
+const updateQuestLogWhenComplete = require("./events/updateQuestLogWhenComplete");
+const packageInfo = require("../../package.json");
 
 const INITIAL_STATE = {
   accessLevels: {},
@@ -141,6 +143,16 @@ module.exports = function (event, world) {
   }
 
   renderLaserState(world, worldState, event);
+
+  updateQuestLogWhenComplete({
+    notification:
+      'I\'ve completed everything in the <span class="highlight">JavaScript Test Lab</span> for now!',
+    log: "I've completed everything in the JavaScript Test Lab for now!",
+    event,
+    world,
+    worldStateKey: WORLD_STATE_KEY,
+    version: packageInfo.version,
+  });
 
   // TODO:
   // updating decontamination to link here after explosion

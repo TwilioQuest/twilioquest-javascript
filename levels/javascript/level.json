@@ -26,5 +26,24 @@
     "loopLockInfo": "This strange room displays a number, just like the numbers outside the secure cargo holds on the ship. I wonder if they're connected? I should <span class=\"highlight\">take a walk around this room</span> to see what happens...",
     "infiniteLoopNotReady": "The science vessel the \"Infinite Loop\" should've been docked right here! I must need to <span class=\"highlight\">wait for a new game update</span> to finish saving this scientist."
   },
-  "objectives": []
+  "objectives": [
+    "js_node_env_setup",
+    "classes",
+    "fizzBuzz",
+    "instantiation",
+    "js_basics_cli_args",
+    "js_declare_function",
+    "js_declare_variable",
+    "js_enable_laser",
+    "js_function_arguments",
+    "js_declare_variable_multiple",
+    "js_node_workspace",
+    "js_north_bridge",
+    "js_scientist_bridge",
+    "js_south_bridge",
+    "js_split_north_laser",
+    "js_split_south_laser",
+    "js_unlock_door",
+    "js_west_bridge"
+  ]
 }
