@@ -1,7 +1,7 @@
 {
   "name": "twilioquest-javascript",
   "description": "This is the JavaScript Test Lab extension for TwilioQuest.",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "engines": {
     "twilioquest": "3.1.44"
   },
