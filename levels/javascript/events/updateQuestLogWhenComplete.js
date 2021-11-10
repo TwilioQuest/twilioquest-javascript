@@ -7,9 +7,11 @@ async function updateQuestLogWhenComplete({
   version,
 }) {
   if (
-    !event.name === "levelDidLoad" ||
-    !event.name === "mapDidLoad" ||
-    !event.name === "objectiveDidClose"
+    !(
+      event.name === "levelDidLoad" ||
+      event.name === "mapDidLoad" ||
+      event.name === "objectiveDidClose"
+    )
   ) {
     return;
   }
