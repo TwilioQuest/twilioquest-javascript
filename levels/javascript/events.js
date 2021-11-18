@@ -70,6 +70,12 @@ module.exports = function (event, world) {
     scheduleSummonAnim(world, worldState);
   }
 
+  if (event.name === "mapDidLoad") {
+    if (worldState.northWing.summonAnimFinished) {
+      world.showEntities("physicist");
+    }
+  }
+
   if (event.name === "playerDidInteract") {
     if (event.target.stasisBeamPassword) {
       worldState.room1.passwordFound = true;
