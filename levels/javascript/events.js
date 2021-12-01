@@ -9,6 +9,11 @@ const {
 } = require("./events/lasers");
 const { scheduleSummonAnim } = require("./events/summons");
 const updateQuestLogWhenComplete = require("./events/updateQuestLogWhenComplete");
+const {
+  incrementIndexNumber,
+  decrementIndexNumber,
+  displayIndexNumber,
+} = require("./events/indexDisplay");
 const packageInfo = require("../../package.json");
 
 const INITIAL_STATE = {
@@ -35,6 +40,8 @@ const INITIAL_STATE = {
   },
   eastWing: {
     showedNoInfiniteLoopMessage: false,
+    lastEnteredLoopTrigger: null,
+    indexCounter: 0,
   },
   northWing: {
     summonAnimStarted: false,
@@ -123,6 +130,32 @@ module.exports = function (event, world) {
         world.enablePlayerMovement();
       });
     }
+
+    // Is this a different trigger area than was previously entered?
+    if (
+      event.target.key === "loopRightTrigger" ||
+      event.target.key === "loopLeftTrigger"
+    ) {
+      if (
+        worldState.eastWing.lastEnteredLoopTrigger &&
+        event.target.key !== worldState.eastWing.lastEnteredLoopTrigger
+      ) {
+        if (event.target.key === "loopRightTrigger") {
+          // previous trigger was left, so we're moving L -> R, counterclockwise
+          decrementIndexNumber(worldState);
+          worldState.eastWing.lastEnteredLoopTrigger = null;
+        }
+
+        if (event.target.key === "loopLeftTrigger") {
+          // previous trigger was right, so we're moving R -> L, clockwise
+          incrementIndexNumber(worldState);
+          worldState.eastWing.lastEnteredLoopTrigger = null;
+        }
+      } else {
+        // track latest entered trigger area
+        worldState.eastWing.lastEnteredLoopTrigger = event.target.key;
+      }
+    }
   }
 
   if (
@@ -160,9 +193,7 @@ module.exports = function (event, world) {
     version: packageInfo.version,
   });
 
-  // TODO:
-  // updating decontamination to link here after explosion
-  // test this whole sequence
+  displayIndexNumber(world, worldState);
 
   world.setState(WORLD_STATE_KEY, worldState);
 };
