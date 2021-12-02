@@ -15,6 +15,7 @@ const {
   displayIndexNumber,
 } = require("./events/indexDisplay");
 const packageInfo = require("../../package.json");
+const { renderPressurePlates } = require("./events/pressurePlates");
 
 const INITIAL_STATE = {
   accessLevels: {},
@@ -157,6 +158,8 @@ module.exports = function (event, world) {
       }
     }
   }
+
+  renderPressurePlates(event, world, worldState);
 
   if (
     event.name === "conversationDidEnd" &&
