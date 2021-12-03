@@ -16,6 +16,10 @@ const {
 } = require("./events/indexDisplay");
 const packageInfo = require("../../package.json");
 const { renderPressurePlates } = require("./events/pressurePlates");
+const {
+  renderDoors,
+  fixDoorWallDepthSorting,
+} = require("./events/eastWingDoors");
 
 const INITIAL_STATE = {
   accessLevels: {},
@@ -197,6 +201,9 @@ module.exports = function (event, world) {
   });
 
   displayIndexNumber(world, worldState);
+
+  fixDoorWallDepthSorting(event, world);
+  renderDoors(world, worldState);
 
   world.setState(WORLD_STATE_KEY, worldState);
 };
