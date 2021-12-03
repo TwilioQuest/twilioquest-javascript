@@ -20,6 +20,7 @@ const {
   renderDoors,
   fixDoorWallDepthSorting,
 } = require("./events/eastWingDoors");
+const { processEastWingEvents } = require("./events/eastWing");
 
 const INITIAL_STATE = {
   accessLevels: {},
@@ -202,6 +203,7 @@ module.exports = function (event, world) {
 
   displayIndexNumber(world, worldState);
 
+  processEastWingEvents(event, world, worldState);
   fixDoorWallDepthSorting(event, world);
   renderDoors(world, worldState);
 
