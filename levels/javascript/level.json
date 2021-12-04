@@ -43,6 +43,8 @@
     "js_south_bridge",
     "js_split_north_laser",
     "js_split_south_laser",
+    "js_split_east_laser",
+    "js_split_west_laser",
     "js_unlock_door",
     "js_west_bridge",
     "array2D",
