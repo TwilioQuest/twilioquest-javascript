@@ -57,6 +57,10 @@ const INITIAL_STATE = {
   },
 };
 
+function areAllLasersUnlocked(worldState) {
+  return Object.values(worldState.room1_split.lasers).every((isOn) => isOn);
+}
+
 module.exports = function (event, world) {
   const worldState = merge(INITIAL_STATE, world.getState(WORLD_STATE_KEY));
 
@@ -206,6 +210,40 @@ module.exports = function (event, world) {
   processEastWingEvents(event, world, worldState);
   fixDoorWallDepthSorting(event, world);
   renderDoors(world, worldState);
+
+  if (areAllLasersUnlocked(worldState)) {
+    // update transition areas
+    // from default room to room1
+    world.disableTransitionAreas("exit-default-room1");
+    world.disableTransitionAreas("exit-default-room1-split");
+    world.enableTransitionAreas("exit-default-room1-final");
+
+    // from east wing to room1
+    world.disableTransitionAreas("exit-east-wing-room1-split");
+    world.enableTransitionAreas("exit-east-wing-room1-final");
+
+    // from north wing to room1
+    world.disableTransitionAreas("exit-north-wing-room1-split");
+    world.enableTransitionAreas("exit-north-wing-room1-final");
+
+    // move north wing scientist to office
+    world.destroyEntities("physicist");
+
+    // update freighter scientist to final dialog
+    world.destroyEntities("scientist3");
+
+    if (world.getCurrentMapName() === "ducktypium-wing-split") {
+      // This is a temporary warp only, we will also need to track this in a
+      // permanent state object in the shipped version
+      world.setContext({
+        currentLevel: {
+          levelName: "javascript",
+          playerEntryPoint: "player_entry2",
+          levelMapName: "ducktypium-wing-final",
+        },
+      });
+    }
+  }
 
   world.setState(WORLD_STATE_KEY, worldState);
 };
