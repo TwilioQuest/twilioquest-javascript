@@ -1,0 +1,15 @@
+{
+  "title": "Laboratório de JavaScript: Inverta o experimento",
+  "description": "A tentativa anterior de estabilizar o ducktypium terminou em desastre. Agora, você deve colocar os quatro feixes estabilizadores novamente on-line para reverter o experimento!",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Clique em <em>HACK</em> quando tiver satisfeito os critérios para este objetivo."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

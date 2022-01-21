@@ -1,0 +1,15 @@
+{
+  "title": "Laboratório de JavaScript: Comece o grande teste",
+  "description": "A equipe de pesquisa <strong>ducktypium</strong> está à beira de uma descoberta explosiva! Ajude-os a retomar o experimento paralisado.",
+  "validation_fields": [
+    {
+      "name": "laserPassword",
+      "type": "text",
+      "placeholder": "",
+      "label": "Insira a senha de ativação do laser abaixo. Fale com a cientista chefe (encontrada nesta sala) para obter ajuda."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Laboratório de JavaScript: Sua primeira condicional",
+  "description": "Saiba mais sobre um componente básico essencial de programação, a <strong>instrução if</strong>!",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Escreva um programa conforme indicado na guia Objective (objetivo) e clique em <span class='highlight'>HACK</span>."
+    }
+  ],
+  "show_ide": false,
+  "rewards": {
+    "xp": 100
+  }
+}

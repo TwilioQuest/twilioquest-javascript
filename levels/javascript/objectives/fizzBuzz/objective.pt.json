@@ -1,0 +1,15 @@
+{
+  "title": "Laboratório de JavaScript: Baú antigo empoeirado",
+  "description": "Este baú está bloqueado com algum tipo de mecanismo bizarro... Eu me pergunto como ele se abre?",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Escreva um programa conforme indicado na guia Objective (objetivo) e clique em <span class='highlight'>HACK</span>."
+    }
+  ],
+  "rewards": {
+    "xp": 500
+  }
+}

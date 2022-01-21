@@ -1,0 +1,15 @@
+{
+  "title": "Laboratório de JavaScript: Água, se necessário",
+  "description": "Aprenda a usar <strong>condições mais complexas</strong> em suas instruções if.",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Escreva um programa conforme indicado na guia Objective (objetivo) e clique em <span class='highlight'>HACK</span>."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

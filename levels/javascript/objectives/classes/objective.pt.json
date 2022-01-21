@@ -1,0 +1,16 @@
+{
+  "title": "Laboratório de JavaScript: Ato de classe",
+  "description": "Você usou objetos incorporados, como strings e números. Agora, aprenda a criar <strong>seus próprios novos objetos</strong> com o próprio comportamento.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "Crie um programa conforme descrito no objetivo e clique em <span class='highlight'>HACK</span>."
+    }
+  ],
+  "rewards": {
+    "xp": 100,
+    "items": []
+  }
+}

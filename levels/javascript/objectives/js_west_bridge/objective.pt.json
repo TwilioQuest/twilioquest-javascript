@@ -1,0 +1,15 @@
+{
+  "title": "Laboratório de JavaScript: Se Alive, então Ponte",
+  "description": "Estenda a ponte leste aprendendo a usar uma <strong>instrução else</strong> na lógica condicional.",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Escreva um programa conforme indicado na guia Objective (objetivo) e clique em <span class='highlight'>HACK</span>."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

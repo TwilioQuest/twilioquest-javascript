@@ -1,0 +1,12 @@
+{
+  "title": "Ponto de verificação do cartão-chave verde",
+  "description": "Esse ponto de verificação requer um cartão-chave verde para permitir que você passe.",
+  "validation_fields": [
+    {
+      "name": "keyCard",
+      "type": "prompt",
+      "label": "Somente titulares de cartão-chave verde são permitidos a partir deste ponto."
+    }
+  ],
+  "rewards": {}
+}

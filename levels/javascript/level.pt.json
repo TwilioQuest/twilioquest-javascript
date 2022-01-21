@@ -1,0 +1,52 @@
+{
+  "title": "Laboratório de teste JavaScript",
+  "description": "O programa TwilioQuest mantém essa instalação de pesquisa de alta tecnologia estudando os últimos avanços na tecnologia JavaScript. Eles pediram a um operador que visse à estação e revisasse a postura de segurança.",
+  "questTitle": "Laboratório de teste JavaScript",
+  "questDescription": "Investigue a estação e ajude a equipe de pesquisa!",
+  "navMap": {
+    "x": 25,
+    "y": 25,
+    "sprite": "nav_map/javascript_lab.png"
+  },
+  "is_mission": false,
+  "priority": 3,
+  "backgroundMusic": "fascinatingarea_108253b",
+  "backgroundEffect": {
+    "key": "starfield",
+    "options": {
+      "baseSpeed": 0.03,
+      "direction": "rightToLeft"
+    }
+  },
+  "flavorTextOverrides": {
+    "bookshelf": "Hmmm... Muitos clássicos aqui. “Você não conhece JS”, “JavaScript: As partes boas”, e muito mais.",
+    "ducktypium": "Uau, este é um Ducktypium puro. Potente, mas altamente instável. Se o JavaScript neste laboratório for equipado com esse material, não é de se admirar que haja uma reivindicação de seguro ocasional.",
+    "passwordDeskNote": "Escrito em uma nota adesiva em sua mesa: “Senha do Stasis Beam: <span class=\"highlight\">PEW PEW PEW!</span>\"",
+    "officeTerminal": "Essa tela monitora a temperatura na sala do Ducktypium. Estão agradáveis 21°C",
+    "officeBookshelf": "Há muitos cadernos de experiências anteriores diferentes aqui. Mutações, transformações, protótipos e muito mais.",
+    "opensMar2020": "A aventura continua assim no <span class=\"highlight\">início de maio de 2020</span>. Volte no final deste mês, <a href=\"https://twitter.com/TwilioQuest\">siga Cedric no Twitter</a> e <a href=\"https://www.twilio.com/quest#email\">inscreva-se em nosso boletim informativo</a> para ser o primeiro a saber quando esta área for aberta!",
+    "playerPlantedTree": "Sua própria árvore! Ela representa uma árvore real que será plantada na Austrália para ajudar na recuperação dos recentes incêndios florestais lá.",
+    "loopLockInfo": "Esta sala estranha exibe um número, assim como os números fora dos porões de carga seguros no navio. Eu me pergunto se eles estão conectados Eu deveria <span class=\"highlight\">dar uma volta nesta sala</span> para ver o que acontece...",
+    "infiniteLoopNotReady": "A embarcação da ciência, o “Loop Infinito”, deveria ter sido ancorado aqui! Devo <span class=\"highlight\">esperar por uma nova atualização do jogo para terminar</span> de salvar este cientista."
+  },
+  "objectives": [
+    "js_node_env_setup",
+    "classes",
+    "fizzBuzz",
+    "instantiation",
+    "js_basics_cli_args",
+    "js_declare_function",
+    "js_declare_variable",
+    "js_enable_laser",
+    "js_function_arguments",
+    "js_declare_variable_multiple",
+    "js_node_workspace",
+    "js_north_bridge",
+    "js_scientist_bridge",
+    "js_south_bridge",
+    "js_split_north_laser",
+    "js_split_south_laser",
+    "js_unlock_door",
+    "js_west_bridge"
+  ]
+}

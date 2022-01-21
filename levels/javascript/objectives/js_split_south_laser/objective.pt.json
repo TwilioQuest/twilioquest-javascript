@@ -1,0 +1,15 @@
+{
+  "title": "Laboratório de JavaScript: Ative o Feixe 2",
+  "description": "Use o <strong>código de ativação do botânico</strong> e seu conhecimento sobre <strong>lógica booleana</strong> para ativar esse feixe stasis.",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Clique em <em>HACK</em> quando tiver concluído o objetivo, conforme descrito à esquerda."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

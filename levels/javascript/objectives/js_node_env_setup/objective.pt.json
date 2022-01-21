@@ -1,0 +1,15 @@
+{
+  "title": "Laboratório de JavaScript: Configure seu ambiente Node.js",
+  "description": "O laboratório de teste de JavaScript requer que toda a equipe tenha um <strong>Node.js JavaScript runtime</strong> instalado antes de prosseguir para o laboratório. Instale o Node.js neste desafio.",
+  "validation_fields": [
+    {
+      "name": "nodePath",
+      "type": "text",
+      "placeholder": "/usr/local/bin/node",
+      "label": "Cole no caminho do executável Node.js, conforme descrito no objetivo."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

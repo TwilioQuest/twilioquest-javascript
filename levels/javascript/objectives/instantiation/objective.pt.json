@@ -1,0 +1,16 @@
+{
+  "title": "Laboratório de JavaScript: Objeto do meu afeto",
+  "description": "Aprenda a criar <strong>estruturas de dados</strong> mais complexas usando <strong>notação literal de objeto</strong>.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "Crie um programa conforme descrito no objetivo e clique em <span class='highlight'>HACK</span>."
+    }
+  ],
+  "rewards": {
+    "xp": 100,
+    "items": []
+  }
+}

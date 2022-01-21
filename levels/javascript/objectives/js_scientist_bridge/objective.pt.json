@@ -1,0 +1,15 @@
+{
+  "title": "Laboratório de JavaScript: Se árvore, então ponte",
+  "description": "Aprenda a fazer um branch da lógica condicional <strong>em várias direções</strong> enquanto estende a ponte em direção ao botânico.",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Escreva um programa conforme indicado na guia Objective (objetivo) e clique em <span class='highlight'>HACK</span>."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

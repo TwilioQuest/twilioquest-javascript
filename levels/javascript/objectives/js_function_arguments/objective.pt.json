@@ -1,0 +1,14 @@
+{
+  "title": "Laboratório de JavaScript: Argumentos de função",
+  "description": "Aprenda a criar uma função que aceite <strong>argumentos</strong>, para que seus bits reutilizáveis de código possam produzir resultados diferentes com entradas diferentes.",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "Crie um programa conforme descrito no objetivo e clique em <span class='highlight'>HACK</span>."
+    }
+  ],
+  "rewards": {
+    "xp": 200
+  }
+}

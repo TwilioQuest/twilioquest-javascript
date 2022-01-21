@@ -1,0 +1,16 @@
+{
+  "title": "Laboratório de JavaScript: Monitore seu trabalho",
+  "description": "Faça backup do seu trabalho em um <strong>repositório git local</strong>.",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Clique em HACK quando tiver inicializado um repositório git em seu espaço de trabalho JavaScript e feito o commit inicial!"
+    }
+  ],
+  "show_ide": false,
+  "rewards": {
+    "xp": 100
+  }
+}

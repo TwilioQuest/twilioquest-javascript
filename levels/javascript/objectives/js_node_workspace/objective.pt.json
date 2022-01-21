@@ -1,0 +1,15 @@
+{
+  "title": "Laboratório de JavaScript: Criar um espaço de trabalho",
+  "description": "Espera-se que o pessoal do laboratório <strong>crie uma pasta no computador</strong> em que todos os códigos JavaScript vão estar. Crie essa pasta neste desafio.",
+  "validation_fields": [
+    {
+      "name": "workspacePath",
+      "type": "text",
+      "placeholder": "C:\\Users\\jane\\twilioquest\\js",
+      "label": "Cole no caminho completo para uma pasta em seu computador em que você manterá todo o seu código JavaScript TwilioQuest."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

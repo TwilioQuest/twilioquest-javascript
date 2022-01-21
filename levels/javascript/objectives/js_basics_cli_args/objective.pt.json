@@ -1,0 +1,15 @@
+{
+  "title": "Laboratório de JavaScript: Argumentos de script",
+  "description": "Escreva o código que usa dados passados por meio de <strong>argumentos de linha de comando</strong>.",
+  "validation_fields": [
+    {
+      "name": "one",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Crie um programa conforme descrito no objetivo e clique em <span class='highlight'>HACK</span>."
+    }
+  ],
+  "rewards": {
+    "xp": 200
+  }
+}
