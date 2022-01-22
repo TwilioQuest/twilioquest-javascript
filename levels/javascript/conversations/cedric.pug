@@ -3,11 +3,11 @@
 // Responses
 mixin what_research
   response#what_research.
-    What sort of research is conducted here?
+    !{getTranslatedString('javascript.cedric.what_research')}
 
 mixin what_can_i_learn
   response#what_can_i_learn.
-    What can I learn about JavaScript at the lab?
+    !{getTranslatedString('javascript.cedric.what_can_i_learn')}
 
 conversation(display_name="Cedric")
   - const savedDay = worldState && Object.values(worldState.room1_split.lasers).every(isOn => isOn);
@@ -37,64 +37,35 @@ conversation(display_name="Cedric")
   statements
     statement#saved_day
       text.
-        It would appear the dimensional rift caused by the lab explosion has
-        been eliminated. Well done! I knew you were up to the task.
+        !{getTranslatedString('javascript.cedric.saved_day_text')}
       speech
         prosody(rate="110%").
-          It would appear the dimensional rift caused by the lab explosion has
-          been eliminated. Well done! I knew you were up to the task.
+          !{getTranslatedString('javascript.cedric.saved_day_speech')}
 
     statement#please_hurry
       text.
-        Operator - our intelligence indicates that the
-        #[span.red dimensional rift] caused by the explosion in the lab is
-        still expanding.<br/><br/>Please #[span.highlight coordinate with the lead scientist] 
-        in the room to the right. She is currently working on a
-        solution.
+        !{getTranslatedString('javascript.cedric.please_hurry_text')}
       speech
         prosody(rate="110%").
-          Operator. Our intelligence indicates that the
-          dimensional rift caused by the explosion in the lab is
-          still expanding. Please coordinate with the lead 
-          scientist in the room to the right. She is currently working on a
-          solution.
+          !{getTranslatedString('javascript.cedric.please_hurry_speech')}
 
     statement#what_can_i_learn
       text.
-        Navigating the laboratory will require that you become familiar with
-        the JavaScript programming language. In doing so, you will also install
-        the #[a(href="https://www.nodejs.org") Node.js] JavaScript runtime on
-        your computer, enabling you to write and execute JavaScript code.
+        !{getTranslatedString('javascript.cedric.what_can_i_learn_text')}
       speech
         prosody(rate="110%").
-          Navigating the laboratory will require that you become familiar with
-          the JavaScript programming language. In doing so, you will also install
-          the node jay S JavaScript runtime on
-          your computer, enabling you to write and execute JavaScript code.
+          !{getTranslatedString('javascript.cedric.what_can_i_learn_speech')}
 
     statement#what_research
       text.
-        Presently, our research team is studying the energy-producing 
-        properties of #[span.highlight ducktypium], a newly discovered element
-        that we believe is the source of JavaScript's power. Proceed through the
-        security barriers on the right to examine our research data yourself.
+        !{getTranslatedString('javascript.cedric.what_research_text')}
       speech
         prosody(rate="110%").
-          Presently, our research team is studying the energy-producing 
-          properties of ducktypeum. a newly discovered element
-          that we believe is the source of JavaScript's power. Proceed through 
-          the security barriers on the right to examine our research data 
-          yourself.
+          !{getTranslatedString('javascript.cedric.what_research_speech')}
 
     statement#default
       text.
-        Operator - I am pleased you have come to observe our work at the
-        #[span.highlight JavaScript Test Lab]. TwilioQuest scientists are making
-        significant progress unlocking the potential of the JavaScript
-        programming language.
+        !{getTranslatedString('javascript.cedric.default_text')}
       speech
         prosody(rate="110%").
-          Operator. I am pleased you have come to observe our work at the
-          JavaScript test lab. TwilioQuest scientists are making
-          significant progress unlocking the potential of the JavaScript
-          programming language.
+          !{getTranslatedString('javascript.cedric.default_speech')}

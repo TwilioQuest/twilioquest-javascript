@@ -2,30 +2,30 @@
 
 mixin welcome
   response#welcome.
-    I was happy to help.
+    !{getTranslatedString('javascript.scientist3_final.welcome')}
 
 mixin follow_up
   response#follow_up.
-    Were you able to salvage the freight from the Infinite Loop?
+    !{getTranslatedString('javascript.scientist3_final.follow_up')}
 
 conversation(display_name="TwilioQuest Engineer")
   if lastResponse === "welcome"
     statement.
-      Well, The Cloud needs more people like you. If there's ever anything we can do to help you out, don't hesitate to let us know.
+      !{getTranslatedString('javascript.scientist3_final.welcome.lastResponse')}
 
     responses
       +follow_up
 
   else if lastResponse === "follow_up"
     statement.
-      Thankfully, the cargo bound for the lab managed to escape relatively unscathed. Now that our project has shifted into high gear, I'll have my work cut out for me building the tools the research team needs. But I'd rather be busy than trapped aboard that freighter - I owe you one.
+      !{getTranslatedString('javascript.scientist3_final.follow_up.statement')}
 
     responses
       +welcome
 
   else
     statement.
-      So - you stabilized the #[span.highlight ducktypium] molecule and saved the day. I'd expect nothing less from an Operator with your reputation!
+      !{getTranslatedString('javascript.scientist3_final.follow_up.else.statement')}
 
     responses
       +welcome

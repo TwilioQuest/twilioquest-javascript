@@ -3,23 +3,23 @@
 // Responses
 mixin funny_way
   response#funny_way.
-    You have a funny way of showing gratitude.
+    !{getTranslatedString('javascript.botanist.funny_way')}
 
 conversation(display_name="TwilioQuest Botanist")
   if lastResponse === "funny_way"
     statement.
-      What, do you want a medal for demonstrating you're not a complete simpleton? I have none to give, so my acknowledgment of your not-useless programming skills will have to suffice.
+      !{getTranslatedString('javascript.botanist.funny_way_statement')}
 
   else if worldState.southWing.hadSavedConversation
     statement.
-      You already have #[span.highlight my access code for Beam 2] in the main experiment room. Do you need something else, or do you intend to waste even more of my time while I try to collect my research materials?
+      !{getTranslatedString('javascript.botanist.hadSavedConversation')}
     responses
       +funny_way
 
   else
     - worldState.southWing.hadSavedConversation = true;
     statement.
-      Well it's about time. Here - #[span.highlight take my access code for Beam 2] in the main experiment room, if you must. I will remain a moment longer to collect my research materials before I evacuate.<br/><br/>... I'll admit that you're not as hopeless as I originally suspected.
+      !{getTranslatedString('javascript.botanist.hadSavedConversation_true')}
     responses
       +funny_way
 

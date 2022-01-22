@@ -6,11 +6,11 @@
 // Responses
 mixin security_tight
   response#security_tight.
-    Security seems pretty tight aboard the station - why's that?
+    !{getTranslatedString('javascript.visitor-signin-scientists.security_tight')}
 
 mixin about
   response#about.
-    What kind of research are you doing aboard the station?
+    !{getTranslatedString('javascript.visitor-signin-scientists.about')}
 
 conversation(display_name="TwilioQuest Scientist")
   case lastResponse
@@ -37,34 +37,19 @@ conversation(display_name="TwilioQuest Scientist")
     
     statement#security_tight
       text.
-        While JavaScript is the single most used programming language in the
-        world, our work here on the station goes much deeper than toggling the 
-        visibility of DOM elements. We are doing cutting edge research on 
-        the foundational elements of the language, to understand how it is able 
-        to hold the virtual universe of The Cloud together.<br/><br/>
-        While vital and exciting, this research can also be dangerous. We need 
-        to ensure only trained staff are permitted to engage in this research.
+        !{getTranslatedString('javascript.visitor-signin-scientists.statements.security_tight')}
 
     statement#about
       text.
-        There are numerous programs underway, but our most mature program is our 
-        research on Ducktypium, one of the critical constituent elements of
-        JavaScript. The team is on the verge of some truly explosive results.<br/><br/>
-        You should check out the project! Once you clear the green checkpoint,
-        proceed to the north research module. It will be the only lab module you 
-        can access with your current keycard.
+        !{getTranslatedString('javascript.visitor-signin-scientists.statements.about')}
 
     statement#default_alt
       text.
-        Hi Operator! Thanks for your help inspecting our security systems!
+        !{getTranslatedString('javascript.visitor-signin-scientists.statements.default_alt')}
 
     statement#default
       text.
-        Hello, Operator! Welcome to the JavaScript Test Lab! We've been expecting 
-        you. I understand you'll be inspecting our security system?<br/><br/>
-        To get you started, I can provide you a #[span.highlight green keycard]. 
-        This should enable you to access the main concourse, and the Ducktypium 
-        research module.
+        !{getTranslatedString('javascript.visitor-signin-scientists.statements.default')}
 
 -
   // After conversation happens once, Operator gets green card
