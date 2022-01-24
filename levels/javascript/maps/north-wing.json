@@ -119,6 +119,11 @@
                  "name":"exit",
                  "properties":[
                         {
+                         "name":"key",
+                         "type":"string",
+                         "value":"exit-north-wing-ducktypium-split"
+                        }, 
+                        {
                          "name":"levelName",
                          "type":"string",
                          "value":"javascript"
@@ -257,6 +262,38 @@
                  "width":24,
                  "x":528,
                  "y":336
+                }, 
+                {
+                 "height":8,
+                 "id":492,
+                 "name":"exit",
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"exit-north-wing-ducktypium-final"
+                        }, 
+                        {
+                         "name":"levelName",
+                         "type":"string",
+                         "value":"javascript"
+                        }, 
+                        {
+                         "name":"mapName",
+                         "type":"string",
+                         "value":"ducktypium-wing-final"
+                        }, 
+                        {
+                         "name":"playerEntryPoint",
+                         "type":"string",
+                         "value":"player_entry5"
+                        }],
+                 "rotation":0,
+                 "type":"levelChange",
+                 "visible":true,
+                 "width":120,
+                 "x":504,
+                 "y":879
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -399,10 +436,10 @@
          "y":0
         }],
  "nextlayerid":51,
- "nextobjectid":492,
+ "nextobjectid":493,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.6.0",
+ "tiledversion":"1.7.2",
  "tileheight":24,
  "tilesets":[
         {

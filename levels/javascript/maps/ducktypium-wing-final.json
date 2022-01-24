@@ -117,7 +117,7 @@
                         {
                          "name":"conversation",
                          "type":"string",
-                         "value":"scientist1"
+                         "value":"scientist1_final"
                         }],
                  "rotation":0,
                  "type":"",
@@ -757,6 +757,42 @@
                  "width":24,
                  "x":721,
                  "y":398
+                }, 
+                {
+                 "gid":12053,
+                 "height":32,
+                 "id":445,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"conversation",
+                         "type":"string",
+                         "value":"scientist4_final"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":678,
+                 "y":432
+                }, 
+                {
+                 "gid":12052,
+                 "height":32,
+                 "id":446,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"conversation",
+                         "type":"string",
+                         "value":"scientist3_final"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":804,
+                 "y":564
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1119,7 +1155,7 @@
          "y":0
         }],
  "nextlayerid":48,
- "nextobjectid":445,
+ "nextobjectid":447,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.7.2",

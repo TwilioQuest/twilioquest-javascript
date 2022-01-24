@@ -224,12 +224,12 @@ module.exports = function (event, world) {
     world.enableTransitionAreas("exit-default-room1-final");
 
     // from east wing to room1
-    world.disableTransitionAreas("exit-east-wing-room1-split");
-    world.enableTransitionAreas("exit-east-wing-room1-final");
+    world.disableTransitionAreas("exit-east-wing-ducktypium-split");
+    world.enableTransitionAreas("exit-east-wing-ducktypium-final");
 
     // from north wing to room1
-    world.disableTransitionAreas("exit-north-wing-room1-split");
-    world.enableTransitionAreas("exit-north-wing-room1-final");
+    world.disableTransitionAreas("exit-north-wing-ducktypium-split");
+    world.enableTransitionAreas("exit-north-wing-ducktypium-final");
 
     // move north wing scientist to office
     world.destroyEntities("physicist");
