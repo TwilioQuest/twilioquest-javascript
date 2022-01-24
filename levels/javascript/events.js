@@ -21,6 +21,7 @@ const {
   fixDoorWallDepthSorting,
 } = require("./events/eastWingDoors");
 const { processEastWingEvents } = require("./events/eastWing");
+const { updateLayerState, renderLayers } = require("./events/layers");
 
 const INITIAL_STATE = {
   accessLevels: {},
@@ -40,6 +41,7 @@ const INITIAL_STATE = {
       west: false,
     },
   },
+  layers: { current: "upper", lastTriggerEntered: "layerTriggerUpper" },
   southWing: {
     hadIntroConversation: false,
     hadSavedConversation: false,
@@ -206,6 +208,9 @@ module.exports = function (event, world) {
   });
 
   displayIndexNumber(world, worldState);
+
+  updateLayerState(event, world, worldState);
+  renderLayers(world, worldState);
 
   processEastWingEvents(event, world, worldState);
   fixDoorWallDepthSorting(event, world);

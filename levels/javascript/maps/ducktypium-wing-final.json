@@ -468,7 +468,7 @@
                         {
                          "name":"mapName",
                          "type":"string",
-                         "value":"south-wing"
+                         "value":"south-wing-final"
                         }, 
                         {
                          "name":"playerEntryPoint",
