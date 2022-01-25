@@ -3,7 +3,7 @@ const esprima = require("esprima");
 const { spawn } = require("child_process");
 const { remote } = require("electron");
 const jetpack = require("fs-jetpack");
-const v4 = require("uuid");
+const { v4 } = require("uuid");
 
 const appDataPath = path.resolve(remote.app.getPath("appData"), "TwilioQuest");
 const codeStoragePath = path.join(appDataPath, "QuestIDE");

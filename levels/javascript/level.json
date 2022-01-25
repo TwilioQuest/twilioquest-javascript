@@ -43,7 +43,19 @@
     "js_south_bridge",
     "js_split_north_laser",
     "js_split_south_laser",
+    "js_split_east_laser",
+    "js_split_west_laser",
     "js_unlock_door",
-    "js_west_bridge"
+    "js_west_bridge",
+    "arrays",
+    "arrays2",
+    "arrayFunctions",
+    "array2D",
+    "forEach",
+    "freighterFinalPuzzle",
+    "loopFilter",
+    "loopGetIndexes",
+    "loopMap",
+    "loopReduce"
   ]
 }
