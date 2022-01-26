@@ -15,7 +15,7 @@ You find the bit of code causing this barrier to remain closed. Like the previou
 
 ## Slicing and sorting
 
-Create a file called `getFirstAmountSorted.js` in your code folder. Inside it, create a function called `getFirstAmountSorted`. This function will take **two arguments**. The first arugment should be an array. The second argument should be a number. Your function must do the following:
+Create a file called `getFirstAmountSorted.js` in your code folder. Inside it, create a function called `getFirstAmountSorted`. This function will take **two arguments**. The first argument should be an array. The second argument should be a number. Your function must do the following:
 
 * Begin by sorting the input array (the first argument) into alphabetical order
 * Once the input array is sorted, **return a new array array** which is the first `N` elements of the input array, where `N` is the value of the second argument to your function
