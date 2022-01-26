@@ -19,10 +19,7 @@ module.exports = async (helper) => {
 
   // The player needs to enable the other beams first
   if (!isObjectiveReady) {
-    return helper.fail(`
-      You can't restart this laser until the other three beams are enabled.
-      See the objective tab for more information.
-    `);
+    return helper.fail(helper.world.getTranslatedString('javascript.js_split_west_laser.validator.isObjectiveReady_fail'));
   }
 
   try {
@@ -35,8 +32,7 @@ module.exports = async (helper) => {
     const exists = await jetpack.existsAsync(programPath);
     if (!exists) {
       helper.fail(`
-        We couldn't find your "ducktypium.js" script in your 
-        JavaScript code folder. Does the file below exist? <br/><br/>
+        ${helper.world.getTranslatedString('javascript.js_split_west_laser.validator.exists')}
         <span style="word-wrap:break-word">${programPath}</span>
       `);
       return;
@@ -72,19 +68,10 @@ module.exports = async (helper) => {
     if (tq.error) {
       console.log(tq.error);
       if (tq.error.name === "ReferenceError") {
-        return helper.fail(`
-          It looks like a <span class="highlight">Ducktypium</span> 
-          class was not defined in your
-          code. At least, we didn't see it in the global scope of your script.
-          <br/><br/>
-          Did you name the class 
-          "<span class="highlight">Ducktypium</span>"? Maybe 
-          double-check your spelling?
-        `);
+        return helper.fail(helper.world.getTranslatedString('javascript.js_split_west_laser.validator.fail_ducktypium'));
       } else {
         return helper.fail(`
-          There was a problem validating your code. The error we got was:
-          <br/><br/>
+          ${helper.world.getTranslatedString('javascript.classes.validator.error.validation')}
           ${tq.error}
         `);
       }
@@ -92,13 +79,7 @@ module.exports = async (helper) => {
 
     // Check type of the function
     if (!isClassDeclaration(tq.Ducktypium)) {
-      let message = `
-        We found a variable called 
-        <span class="highlight">Ducktypium</span>, but it's not a
-        class. Check the Help section for more guidance on creating
-        a JavaScript class.
-      `;
-
+      let message = helper.world.getTranslatedString('javascript.js_split_west_laser.validator.is_class_declaration_ducktypium');
       return helper.fail(message);
     }
 
@@ -109,10 +90,7 @@ module.exports = async (helper) => {
         const badColor = new tq.Ducktypium("mauve");
 
         // If we get to this point, it's actually a failure
-        return helper.fail(`
-          Your constructor should only accept "red", "yellow", or "blue" as
-          arguments.
-        `);
+        return helper.fail(helper.world.getTranslatedString('javascript.js_split_west_laser.validator.fail_bad_color'));
       } catch (colorError) {
         // This is actually what we want, so continue...
       }
@@ -121,38 +99,25 @@ module.exports = async (helper) => {
       const dt = new tq.Ducktypium("blue");
 
       if (dt.color !== "blue") {
-        return helper.fail(`
-          Your constructor should set the "color" property of the new
-          Ducktypium instance to the first argument to the constructor.
-        `);
+        return helper.fail(helper.world.getTranslatedString('javascript.js_split_west_laser.validator.fail_blue'));
       }
 
       if (!dt.calibrationSequence || dt.calibrationSequence.length !== 0) {
-        return helper.fail(`
-          Your constructor should set the "calibrationSequence" property of the 
-          new Ducktypium instance to an empty array.
-        `);
+        return helper.fail(helper.world.getTranslatedString('javascript.js_split_west_laser.validator.calibration_sequence'));
       }
 
       // Ensure functions are defined
       if (!dt.refract || !isFunction(dt.refract)) {
-        return helper.fail(`
-          Your Ducktypium object does not have a "refract" instance method.
-        `);
+        return helper.fail(helper.world.getTranslatedString('javascript.js_split_west_laser.validator.fail_refract'));
       }
 
       if (!dt.calibrate || !isFunction(dt.calibrate)) {
-        return helper.fail(`
-          Your Ducktypium object does not have a "calibrate" instance method.
-        `);
+        return helper.fail(helper.world.getTranslatedString('javascript.js_split_west_laser.validator.fail_calibrate'));
       }
 
       // Check functionality of methods
       if (dt.refract("blue") !== "blue") {
-        return helper.fail(`
-          The refract method should return the Ducktypium object's color
-          property if the same color is passed in to the method.
-        `);
+        return helper.fail(helper.world.getTranslatedString('javascript.js_split_west_laser.validator.fail_refract_blue'));
       }
 
       if (dt.refract("yellow") !== "green") {
@@ -161,24 +126,17 @@ module.exports = async (helper) => {
           property is combined with another primary color. See the color
           combinations in the "Objective" tab.
         `);
+        helper.world.getTranslatedString('javascript.js_split_west_laser.validator.isObjectiveReady_fail')
       }
 
       dt.color = "red";
       if (dt.refract("yellow") !== "orange") {
-        return helper.fail(`
-          The refract method should return color you get when its "color"
-          property is combined with another primary color. See the color
-          combinations in the "Objective" tab.
-        `);
+        return helper.fail(helper.world.getTranslatedString('javascript.js_split_west_laser.validator.fail_refract_color'));
       }
 
       dt.color = "yellow";
       if (dt.refract("blue") !== "green") {
-        return helper.fail(`
-          The refract method should return color you get when its "color"
-          property is combined with another primary color. See the color
-          combinations in the "Objective" tab.
-        `);
+        return helper.fail(helper.world.getTranslatedString('javascript.js_split_west_laser.validator.fail_refract_color'));
       }
 
       dt.calibrate([10, 20, 1]);
@@ -188,33 +146,20 @@ module.exports = async (helper) => {
         dt.calibrationSequence[1] !== 30 ||
         dt.calibrationSequence[2] !== 60
       ) {
-        return helper.fail(`
-          The calibrate method should set the "calibrationSequence" property of
-          the Ducktypium instance to an array as described in the objective tab.
-        `);
+        return helper.fail(helper.world.getTranslatedString('javascript.js_split_west_laser.validator.fail_calibrate_sequence'));
       }
     } catch (ee) {
       console.log(ee);
       return helper.fail(`
-        There was an error executing your Ducktypium constructor or functions. 
-        Please ensure that you can exercise your function from the command line 
-        successfully and try again. Use the starter code in the Help section if
-        you are stuck. Here's the error we got from trying to call your 
-        function: <br/><br/>
+        ${helper.world.getTranslatedString('javascript.js_split_west_laser.validator.fail_constructor')}
         <span class="highlight">${ee}</span>
       `);
     }
 
-    helper.success(`
-      The final laser flashes to life! You can feel reality bend and twist around
-      you, and darkness creeps in from the corners of your eyes to cloud your 
-      vision. In a moment, the darkness fades, and you take a look around...
-    `);
+    helper.success(helper.world.getTranslatedString('javascript.js_split_west_laser.validator.success'));
   } catch (e) {
     helper.fail(`
-      There was an error executing your JavaScript code. Please ensure that you
-      can run it from the command line successfully and try again. Here's the 
-      error we got: <br/><br/>
+      ${helper.world.getTranslatedString('javascript.classes.validator.error.executingJS')} <br/><br/>
       <span class="highlight">${e}</span>
     `);
   }

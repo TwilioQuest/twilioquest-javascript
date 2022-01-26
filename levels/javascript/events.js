@@ -107,9 +107,7 @@ module.exports = function (event, world) {
           y: viewpoint.startY,
         });
 
-        world.showNotification(`
-          The science vessel the "Infinite Loop" should've been docked right here! I must need to <span class=\"highlight\">wait for a new game update</span> to finish saving this scientist.
-        `);
+        world.showNotification(world.getTranslatedString('javascript.events.scienceVessel.notification'));
 
         await world.wait(3000);
         await world.tweenCameraToPlayer();

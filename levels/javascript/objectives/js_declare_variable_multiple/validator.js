@@ -13,8 +13,7 @@ module.exports = async helper => {
     const exists = await jetpack.existsAsync(programPath);
     if (!exists) {
       helper.fail(`
-        We couldn't find your "chestConfiguration.js" script in your 
-        JavaScript code folder. Does the file below exist? <br/><br/>
+        ${helper.world.getTranslatedString('javascript.js_declare_variable_multiple.validator.error.scriptNotFound')} <br/><br/>
         <span style="word-wrap:break-word">${programPath}</span>
       `);
       return;
@@ -57,19 +56,10 @@ module.exports = async helper => {
           missingVariable = 'verifiedUser';
         }
 
-        return helper.fail(`
-          It looks like a <span class="highlight">${missingVariable}</span> 
-          variable was not defined in your
-          code. At least, we didn't see it in the global scope of your script.
-          <br/><br/>
-          Did you name the variable 
-          "<span class="highlight">${missingVariable}</span>"? Maybe 
-          double-check your spelling?
-        `);
+        return helper.fail(helper.world.getTranslatedString('javascript.js_declare_variable_multiple.validator.error.notDefined', { missingVariable }));
       } else {
         return helper.fail(`
-          There was a problem validating your code. The error we got was:
-          <br/><br/>
+          ${helper.world.getTranslatedString('javascript.classes.validator.error.validation')}
           ${tq.error}
         `);
       }
@@ -78,17 +68,12 @@ module.exports = async helper => {
     // Check variable types, and provide appropriate feedback
     if (typeof tq.accessLevel !== 'number') {
       let message = `
-        We found your <span class="highlight">accessLevel</span> variable, but
-        it wasn't a Number object as we expected. It looks like it's actually a
+        ${helper.world.getTranslatedString('javascript.js_declare_variable_multiple.validator.error.notNumber')}
         <span class="highlight">${typeof tq.accessLevel}</span> object.
       `;
 
       if (typeof tq.accessLevel === 'string') {
-        message += `<br/><br/>
-          It seems like you accidentally made this variable a string - values
-          like numbers and booleans don't have quotes around them in your code.
-          Check the Help section for an example of declaring number variables.
-        `;
+        message += helper.world.getTranslatedString('javascript.js_declare_variable_multiple.validator.error.string');
       }
 
       return helper.fail(message);
@@ -96,17 +81,12 @@ module.exports = async helper => {
 
     if (typeof tq.verifiedUser !== 'boolean') {
       let message = `
-        We found your <span class="highlight">verifiedUser</span> variable, but
-        it wasn't a Boolean object as we expected. It looks like it's actually a
+        ${helper.world.getTranslatedString('javascript.js_declare_variable_multiple.validator.error.notBoolean')}
         <span class="highlight">${typeof tq.verifiedUser}</span> object.
       `;
 
       if (typeof tq.verifiedUser === 'string') {
-        message += `<br/><br/>
-          It seems like you accidentally made this variable a string - values
-          like numbers and booleans don't have quotes around them in your code.
-          Check the Help section for an example of declaring boolean variables.
-        `;
+        message += helper.world.getTranslatedString('javascript.js_declare_variable_multiple.validator.error.string-boolean');
       }
 
       return helper.fail(message);
@@ -114,8 +94,7 @@ module.exports = async helper => {
 
     if (typeof tq.favoriteRobot !== 'string') {
       let message = `
-        We found your <span class="highlight">favoriteRobot</span> variable, but
-        it wasn't a String object as we expected. It looks like it's actually a
+        ${helper.world.getTranslatedString('javascript.js_declare_variable_multiple.validator.error.notString')}
         <span class="highlight">${typeof tq.favoriteRobot}</span> object.
       `;
 
@@ -125,40 +104,29 @@ module.exports = async helper => {
     // Check variable values, now that we know they exist
     if (tq.accessLevel !== 7) {
       return helper.fail(`
-        We found your <span class="highlight">accessLevel</span> variable, but
-        it wasn't set to the number <span class="highlight">7</span> as we
-        expected. It looks like it was set to 
+        ${helper.world.getTranslatedString('javascript.js_declare_variable_multiple.validator.error.notSeven')}
         <span class="highlight">${tq.accessLevel}</span>.
       `);
     }
 
     if (tq.favoriteRobot !== 'Cedric') {
       return helper.fail(`
-        We found your <span class="highlight">favoriteRobot</span> variable, but
-        it wasn't set to the string <span class="highlight">"Cedric"</span> as we
-        expected. It looks like it was set to 
+        ${helper.world.getTranslatedString('javascript.js_declare_variable_multiple.validator.error.notCedric')} 
         <span class="highlight">"${tq.favoriteRobot}"</span>.
       `);
     }
 
     if (tq.verifiedUser !== true) {
       return helper.fail(`
-        We found your <span class="highlight">verifiedUser</span> variable, but
-        it wasn't set to the boolean <span class="highlight">true</span> as we
-        expected. It looks like it was set to 
+        ${helper.world.getTranslatedString('javascript.js_declare_variable_multiple.validator.error.notTrue')}
         <span class="highlight">${tq.verifiedUser}</span>.
       `);
     }
 
-    helper.success(`
-      Nice! Your configuration override worked, and you now have access to the
-      supplies in the chest.
-    `);
+    helper.success(helper.world.getTranslatedString('javascript.js_declare_variable_multiple.validator.success'));
   } catch (e) {
     helper.fail(`
-      There was an error executing your JavaScript code. Please ensure that you
-      can run it from the command line successfully and try again. Here's the 
-      error we got: <br/><br/>
+      ${helper.world.getTranslatedString('javascript.classes.validator.error.executingJS')} <br/><br/>
       <span class="highlight">${e}</span>
     `);
   }

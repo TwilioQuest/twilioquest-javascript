@@ -18,10 +18,7 @@ module.exports = async (helper) => {
 
   // The player needs to enable the other beams first
   if (!isObjectiveReady) {
-    return helper.fail(`
-      You can't restart this laser until you receive the physicist's 
-      access code. See the objective tab for more information.
-    `);
+    return helper.fail(helper.world.getTranslatedString('javascript.js_split_north_laser.validator.is_objective_ready'));
   }
 
   try {
@@ -34,8 +31,7 @@ module.exports = async (helper) => {
     const exists = await jetpack.existsAsync(programPath);
     if (!exists) {
       helper.fail(`
-        We couldn't find your "targetingSolution.js" script in your 
-        JavaScript code folder. Does the file below exist? <br/><br/>
+        ${helper.world.getTranslatedString('javascript.js_split_north_laser.validator.fail_find_targeting_solution')}
         <span style="word-wrap:break-word">${programPath}</span>
       `);
       return;
@@ -71,19 +67,10 @@ module.exports = async (helper) => {
     if (tq.error) {
       console.log(tq.error);
       if (tq.error.name === "ReferenceError") {
-        return helper.fail(`
-          It looks like a <span class="highlight">TargetingSolution</span> 
-          class was not defined in your
-          code. At least, we didn't see it in the global scope of your script.
-          <br/><br/>
-          Did you name the class 
-          "<span class="highlight">TargetingSolution</span>"? Maybe 
-          double-check your spelling?
-        `);
+        return helper.fail(helper.world.getTranslatedString('javascript.js_split_north_laser.validator.class_not_defined'));
       } else {
         return helper.fail(`
-          There was a problem validating your code. The error we got was:
-          <br/><br/>
+          ${helper.world.getTranslatedString('javascript.classes.validator.error.validation')}
           ${tq.error}
         `);
       }
@@ -91,13 +78,7 @@ module.exports = async (helper) => {
 
     // Check type of the function
     if (!isClassDeclaration(tq.TargetingSolution)) {
-      let message = `
-        We found a variable called 
-        <span class="highlight">TargetingSolution</span>, but it's not a
-        class. Check the Help section for more guidance on creating
-        a JavaScript class.
-      `;
-
+      let message = helper.world.getTranslatedString('javascript.js_split_north_laser.validator.fail_is_class_declaration');
       return helper.fail(message);
     }
 
@@ -110,41 +91,25 @@ module.exports = async (helper) => {
       });
 
       if (!isFunction(result1.target)) {
-        return helper.fail(`
-          Your TargetingSolution should have an "target" function.
-        `);
+        return helper.fail(helper.world.getTranslatedString('javascript.js_split_north_laser.validator.should_have_target'));
       }
 
       const result1Target = result1.target().trim();
 
       if (result1Target !== "(32.891, 120.012, 345.12)") {
-        return helper.fail(`
-          The <span class="highlight">target</span> function of your
-          <span class="highlight">TargetingSolution</span> class did not return
-          a string in the specified format. It should be in the format
-          <span class="highlight">(x, y, z)</span>, including the parens and
-          commas.
-        `);
+        return helper.fail(helper.world.getTranslatedString('javascript.js_split_north_laser.validator.fail_specified_format'));
       }
     } catch (ee) {
       return helper.fail(`
-        There was an error executing your TargetingSolution constructor or functions. Please ensure that you can exercise your function from the command line 
-        successfully and try again. Use the starter code in the Help section if
-        you are stuck. Here's the error we got from trying to call your 
-        function: <br/><br/>
+        ${helper.world.getTranslatedString('javascript.js_split_north_laser.validator.fail_execute_constructor')}
         <span class="highlight">${ee}</span>
       `);
     }
 
-    helper.success(`
-      The laser uses your targeting solution class and emits a beam aimed at
-      the center of the ducktypium crystal. Looks like this laser is back online!
-    `);
+    helper.success(helper.world.getTranslatedString('javascript.js_split_north_laser.validator.success'));
   } catch (e) {
     helper.fail(`
-      There was an error executing your JavaScript code. Please ensure that you
-      can run it from the command line successfully and try again. Here's the 
-      error we got: <br/><br/>
+      ${helper.world.getTranslatedString('javascript.classes.validator.error.executingJS')} <br/><br/>
       <span class="highlight">${e}</span>
     `);
   }

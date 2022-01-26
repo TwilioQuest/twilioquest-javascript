@@ -13,18 +13,11 @@ module.exports = async (helper) => {
 
     const exists = await jetpack.existsAsync(workspacePath);
     if (!exists) {
-      throw new NiceError(`
-        We couldn't find a directory at the path you provided. 
-        Please double check that the directory path you pasted in 
-        the text field is correct.
-      `);
+      throw new NiceError(helper.world.getTranslatedString('javascript.js_node_workspace.validator.error.directoryNotFound'));
     }
 
     helper.success(
-      `
-      JavaScript workspace confirmed. Lab access granted - please proceed
-      through the security gate.
-    `,
+      helper.world.getTranslatedString('javascript.js_node_workspace.validator.success'),
       [
         {
           name: "JAVASCRIPT_WORKSPACE_PATH",
@@ -37,9 +30,7 @@ module.exports = async (helper) => {
     if (e.name === "NiceError") {
       helper.fail(e.message);
     } else {
-      helper.fail(`
-        Sorry! We couldn't successfully find your Node.js workspace path.
-      `);
+      helper.fail(helper.world.getTranslatedString('javascript.js_node_workspace.validator.error.nodeNotFound'));
     }
   }
 };

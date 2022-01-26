@@ -50,8 +50,7 @@ module.exports = async helper => {
     const exists = await jetpack.existsAsync(programPath);
     if (!exists) {
       helper.fail(`
-        We couldn't find your "construction.js" script in your 
-        JavaScript code folder. Does the file below exist? <br/><br/>
+        ${helper.world.getTranslatedString('javascript.instantiation.validator.error.scriptNotFound')}
         <span style="word-wrap:break-word">${programPath}</span>
       `);
       return;
@@ -87,19 +86,10 @@ module.exports = async helper => {
     if (tq.error) {
       console.log(tq.error);
       if (tq.error.name === 'ReferenceError') {
-        return helper.fail(`
-          It looks like a <span class="highlight">construct</span> 
-          function was not defined in your
-          code. At least, we didn't see it in the global scope of your script.
-          <br/><br/>
-          Did you name the function 
-          "<span class="highlight">construct</span>"? Maybe 
-          double-check your spelling?
-        `);
+        return helper.fail(helper.world.getTranslatedString('javascript.instantiation.validator.error.reference'));
       } else {
         return helper.fail(`
-          There was a problem validating your code. The error we got was:
-          <br/><br/>
+          ${helper.world.getTranslatedString('javascript.classes.validator.error.validation')}
           ${tq.error}
         `);
       }
@@ -107,13 +97,7 @@ module.exports = async helper => {
 
     // Check type of the function
     if (!isFunction(tq.construct)) {
-      let message = `
-        We found a variable called 
-        <span class="highlight">construct</span>, but it's not a
-        callable function. Check the Help section for more guidance on creating
-        a JavaScript function.
-      `;
-
+      let message = helper.world.getTranslatedString('javascript.instantiation.validator.error.notCallableFn');
       return helper.fail(message);
     }
 
@@ -123,20 +107,11 @@ module.exports = async helper => {
       const result2 = tq.construct('Irene');
 
       if (result1 === undefined || result1 === null) {
-        return helper.fail(`
-          It looks like your function is not yet returning a value. The final
-          line of code in your function before the "}" should use the
-          <span class="highlight">return</span> keyword to pass back a value of
-          some kind as a result of executing the function. See the example code
-          in the Help section.
-        `);
+        return helper.fail(helper.world.getTranslatedString('javascript.instantiation.validator.error.notReturn'));
       }
 
       if (typeof result1 !== 'object') {
-        return helper.fail(`
-          It looks like your function is not returning an object. Your
-          function must return an object literal.
-        `);
+        return helper.fail(helper.world.getTranslatedString('javascript.instantiation.validator.error.notReturnObj'));
       }
 
       const expected1 = {
@@ -148,11 +123,7 @@ module.exports = async helper => {
 
       const result1MissingKeys = getMissingKeys(expected1, result1);
       if (result1MissingKeys.length > 0) {
-        return helper.fail(`
-          It looks like your returned object is missing some keys.
-          
-          The keys ${result1MissingKeys} were missing!
-        `);
+        return helper.fail(helper.world.getTranslatedString('javascript.instantiation.validator.error.missingKeys', { result1MissingKeys })); 
       }
 
       const result1MismatchedKeys = getObjectKeysWithMismatchedValues(
@@ -161,10 +132,9 @@ module.exports = async helper => {
       );
       if (result1MismatchedKeys.length > 0) {
         return helper.fail(`
-          Not all of the keys for your returned object match correctly.
-          <br/><br/>
+          ${helper.world.getTranslatedString('javascript.instantiation.validator.error.notMatchKeys1')}
           ${result1MismatchedKeys
-            .map(key => `"${key}" should have been ${expected1[key]}.`)
+            .map(key => `"${key}" ${helper.world.getTranslatedString('javascript.instantiation.validator.error.notMatchKeys2')} ${expected1[key]}.`)
             .join('<br/>')}
         `);
       }
@@ -182,33 +152,23 @@ module.exports = async helper => {
       );
       if (result2MismatchedKeys.length > 0) {
         return helper.fail(`
-          Not all of the keys for your returned object match correctly.
-          <br/><br/>
+          ${helper.world.getTranslatedString('javascript.instantiation.validator.error.notMatchKeys1')}
           ${result2MismatchedKeys
-            .map(key => `"${key}" should have been ${expected2[key]}.`)
+            .map(key => `"${key}" ${helper.world.getTranslatedString('javascript.instantiation.validator.error.notMatchKeys2')} ${expected2[key]}.`)
             .join('<br/>')}
         `);
       }
     } catch (ee) {
       return helper.fail(`
-        There was an error executing your construct function. Please 
-        ensure that you can exercise your function from the command line 
-        successfully and try again. Use the starter code in the Help section if
-        you are stuck. Here's the error we got from trying to call your 
-        function: <br/><br/>
+        ${helper.world.getTranslatedString('javascript.instantiation.validator.error.constructFn')}
         <span class="highlight">${ee}</span>
       `);
     }
 
-    helper.success(`
-      That did the trick! The matter instantiator function for this console is
-      repaired.
-    `);
+    helper.success(helper.world.getTranslatedString('javascript.instantiation.validator.success'));
   } catch (e) {
     helper.fail(`
-      There was an error executing your JavaScript code. Please ensure that you
-      can run it from the command line successfully and try again. Here's the 
-      error we got: <br/><br/>
+      ${helper.world.getTranslatedString('javascript.classes.validator.error.executingJS')} <br/><br/>
       <span class="highlight">${e}</span>
     `);
   }

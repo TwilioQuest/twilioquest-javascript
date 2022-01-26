@@ -15,8 +15,7 @@ module.exports = async (helper) => {
     const exists = await jetpack.existsAsync(programPath);
     if (!exists) {
       helper.fail(`
-        We couldn't find your "enhancedLifeDetector.js" script in your 
-        JavaScript code folder. Does the file below exist? <br/><br/>
+        ${helper.world.getTranslatedString('javascript.js_scientist_bridge.validator.error.scriptNotFound')}
         <span style="word-wrap:break-word">${programPath}</span>
       `);
       return;
@@ -28,8 +27,7 @@ module.exports = async (helper) => {
 
     if (result.stdout && result.stdout.trim() !== "other") {
       helper.fail(`
-        When your script is passed a number besides 0, 1, or 2, it should print 
-        "other". Instead, we got:<br/><br/>
+        ${helper.world.getTranslatedString('javascript.js_scientist_bridge.validator.error.printOther')}<br/><br/>
         <strong>${result.stdout}</strong>
         <br/>
       `);
@@ -40,8 +38,7 @@ module.exports = async (helper) => {
 
     if (!result.stdout || result.stdout.trim() !== "alive") {
       helper.fail(`
-        When your script is passed 0, it should print 
-        "alive". Instead, we got:<br/><br/>
+        ${helper.world.getTranslatedString('javascript.js_scientist_bridge.validator.error.printAlive')}<br/><br/>
         <strong>${result.stdout}</strong>
         <br/>
       `);
@@ -52,8 +49,7 @@ module.exports = async (helper) => {
 
     if (!result.stdout || result.stdout.trim() !== "flowering") {
       helper.fail(`
-        When your script is passed 1, it should print 
-        "flowering". Instead, we got:<br/><br/>
+        ${helper.world.getTranslatedString('javascript.js_scientist_bridge.validator.error.printFlowering')}<br/><br/>
         <strong>${result.stdout}</strong>
         <br/>
       `);
@@ -64,25 +60,17 @@ module.exports = async (helper) => {
 
     if (!result.stdout || result.stdout.trim() !== "shedding") {
       helper.fail(`
-        When your script is passed 2, it should print 
-        "shedding". Instead, we got:<br/><br/>
+        ${helper.world.getTranslatedString('javascript.js_scientist_bridge.validator.error.printShedding')}<br/><br/>
         <strong>${result.stdout}</strong>
         <br/>
       `);
       return;
     }
 
-    helper.success(`
-      Your enhancements to the Tree Life Detector appear to be working!
-      The bridge ahead hums to life, and the path to the botanist is
-      finally clear.<br/><br/> 
-      <strong>Onward!</strong>
-    `);
+    helper.success(helper.world.getTranslatedString('javascript.js_scientist_bridge.validator.success'));
   } catch (e) {
     helper.fail(`
-      There was an error executing your JavaScript code. Please ensure that you
-      can run it successfully and try again. Here's the error we got - sorry
-      if the formatting is ugly: <br/><br/>
+      ${helper.world.getTranslatedString('javascript.fizzBuzz.validator.error.executingJS')} <br/><br/>
       ${e}
     `);
   }

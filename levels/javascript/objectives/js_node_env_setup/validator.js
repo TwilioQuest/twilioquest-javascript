@@ -24,18 +24,12 @@ module.exports = async helper => {
     nodeVersion.on('close', code => {
       if (code === 0) {
         helper.success(
-          `
-          Awesome! Looks like you have this version installed: <br/>
-          <span class="highlight">${versionString}</span> <br/><br/>
-          Please proceed to the next security checkpoint.
-        `,
+          helper.world.getTranslatedString('javascript.js_node_env_setup.validator.success', { versionString }),
           [{ name: 'NODE_EXE', value: nodePath }]
         );
+        
       } else {
-        helper.fail(`
-          Welp... something went wrong when we tried to validate this Node.js
-          path. Double check the path and try again.
-        `);
+        helper.fail(helper.world.getTranslatedString('javascript.js_node_env_setup.validator.error.checkPath'));
       }
     });
   } catch (e) {
@@ -43,10 +37,7 @@ module.exports = async helper => {
     if (e.name === 'NiceError') {
       helper.fail(e.message);
     } else {
-      helper.fail(`
-        Sorry! We couldn't validate your Node.js installation. Please try
-        again.
-      `);
+      helper.fail(helper.world.getTranslatedString('javascript.js_node_env_setup.validator.error.nodeInstallation'));
     }
   }
 };

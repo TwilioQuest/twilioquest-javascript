@@ -293,6 +293,10 @@ module.exports = {
   It seems like you accidentally made this variable a string - values
   like numbers and booleans don't have quotes around them in your code.
   Check the Help section for an example of declaring number variables.`,
+  "javascript.js_declare_variable_multiple.validator.error.string-boolean": `<br/><br/>
+  It seems like you accidentally made this variable a string - values
+  like numbers and booleans don't have quotes around them in your code.
+  Check the Help section for an example of declaring boolean variables.`,
   "javascript.js_declare_variable_multiple.validator.error.notBoolean": `We found your <span class='highlight'>verifiedUser</span> variable, but
   it wasn't a Boolean object as we expected. It looks like it's actually a`,
   "javascript.js_declare_variable_multiple.validator.error.notString": `We found your <span class='highlight'>favoriteRobot</span> variable, but
@@ -394,7 +398,7 @@ module.exports = {
   south bridge.`,
   "javascript.js_west_bridge.validator.treeLifeDetector_not_found": "We couldn't find your 'treeLifeDetector.js' script in your JavaScript code folder. Does the file below exist?",
   "javascript.js_west_bridge.validator.other_than_0": "When your script is passed anything other than 0, it should print 'other'. Instead, we got:",
-  "javascript.js_west_bridge.validator.other_than_alive": "When your script is passed 0, it should print 'alive'. Instead, we got",
+  "javascript.js_west_bridge.validator.other_than_alive": "When your script is passed 0, it should print 'alive'. Instead, we got:",
   "javascript.js_west_bridge.validator.success": "You patch the Tree Life Detector with your fix, and in the distance you can hear the western bridge hum to life.<br/><br/> <strong>Continue onward</strong>  to find the botanist!",
   "javascript.js_west_bridge.validator.fail": "There was an error executing your JavaScript code. Please ensure that you can run it successfully and try again. Here's the error we got - sorry if the formatting is ugly: <br/><br/>",
   "javascript.js_unlock_door.validator.fail": "We couldn't find your 'sayPlease.js' script in your JavaScript code folder. Does the file below exist? <br/><br/>",

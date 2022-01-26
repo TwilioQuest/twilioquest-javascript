@@ -293,6 +293,10 @@ module.exports = {
   Parece que você acidentalmente transformou essa variável em uma string. Os valores 
   como números e booleanos não têm aspas no código. 
   Verifique a seção Help (Ajuda) para obter um exemplo de declaração de variáveis numéricas.`,
+  "javascript.js_declare_variable_multiple.validator.error.string-boolean": `<br/><br/>
+  Parece que você acidentalmente transformou essa variável em uma string. Os valores 
+  como números e booleanos não têm aspas no código. 
+  Verifique a seção Help (Ajuda) para obter um exemplo de declaração de variáveis booleanos.`,
   "javascript.js_declare_variable_multiple.validator.error.notBoolean": `Encontramos sua variável <span class='highlight'>verifiedUser</span>, mas
   não era um objeto booleano como esperado. Parece que é realmente um`,
   "javascript.js_declare_variable_multiple.validator.error.notString": `Encontramos sua variável <span class='highlight'>favoriteRobot</span>, mas
@@ -394,7 +398,7 @@ module.exports = {
   ponte sul.`,
   "javascript.js_west_bridge.validator.treeLifeDetector_not_found": "Não foi possível encontrar seu script “treeLifeDetector.js” na pasta de código JavaScript. O arquivo abaixo existe?",
   "javascript.js_west_bridge.validator.other_than_0": "Quando seu script transferir qualquer coisa diferente de 0, ele deve imprimir “other”. Em vez disso, temos:",
-  "javascript.js_west_bridge.validator.other_than_alive": "Quando seu script transferir 0, ele deve imprimir “alive”. Em vez disso, temos",
+  "javascript.js_west_bridge.validator.other_than_alive": "Quando seu script transferir 0, ele deve imprimir “alive”. Em vez disso, temos:",
   "javascript.js_west_bridge.validator.success": "Você repara o Tree Life Detector com sua correção e, à distância, pode ouvir a ponte oeste ganhar vida.<br/><br/> <strong>Siga adiante</strong> para encontrar o botânico!",
   "javascript.js_west_bridge.validator.fail": "Ocorreu um erro ao executar seu código JavaScript. Certifique-se de que você pode executá-lo com êxito e tente novamente. Este é o erro que recebemos. Desculpe se a formatação está feia: <br/><br/>",
   "javascript.js_unlock_door.validator.fail": "Não foi possível encontrar seu script “sayPlease.js” na pasta de código JavaScript. O arquivo abaixo existe? <br/><br/>",

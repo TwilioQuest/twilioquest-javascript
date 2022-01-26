@@ -13,8 +13,7 @@ module.exports = async helper => {
     const exists = await jetpack.existsAsync(programPath);
     if (!exists) {
       helper.fail(`
-        We couldn't find your "laserConfiguration.js" script in your 
-        JavaScript code folder. Does the file below exist? <br/><br/>
+        ${helper.world.getTranslatedString('javascript.validator.js_declare_variable.error.scriptNotFound')} <br/><br/>
         <span style="word-wrap:break-word">${programPath}</span>
       `);
       return;
@@ -46,19 +45,10 @@ module.exports = async helper => {
     if (tq.error) {
       console.log(tq.error);
       if (tq.error.name === 'ReferenceError') {
-        return helper.fail(`
-          It looks like a <span class="highlight">laserStatus</span> 
-          variable was not defined in your
-          code. At least, we didn't see it in the global scope of your script.
-          <br/><br/>
-          Did you name the variable 
-          "<span class="highlight">laserStatus</span>"? Maybe double-check your
-          spelling?
-        `);
+        return helper.fail(helper.world.getTranslatedString('javascript.validator.js_declare_variable.error.varNotDefined'));
       } else {
         return helper.fail(`
-          There was a problem validating your code. The error we got was:
-          <br/><br/>
+          ${helper.world.getTranslatedString('javascript.classes.validator.error.validation')}
           ${tq.error}
         `);
       }
@@ -67,23 +57,14 @@ module.exports = async helper => {
     // Check for the correct value of the string
     if (tq.laserStatus !== 'OFF') {
       return helper.fail(`
-        You declared the <span class="highlight">laserStatus</span> variable,
-        but it was not set to the string value of "OFF". Check the Help section
-        to see how you can declare string variables. The value you set it to
-        was: <strong>"${tq.laserStatus}"</strong>.
+        ${helper.world.getTranslatedString('javascript.validator.js_declare_variable.error.OFFNotSet')} <strong>"${tq.laserStatus}"</strong>.
       `);
     }
 
-    helper.success(`
-      That did it! You override the laser configuration with your own 
-      JavaScript code, and in moments the lasers fade away. <br/><br/>
-      You can now proceed onward to the office.
-    `);
+    helper.success(helper.world.getTranslatedString('javascript.validator.js_declare_variable.success'));
   } catch (e) {
     helper.fail(`
-      There was an error executing your JavaScript code. Please ensure that you
-      can run it from the command line successfully and try again. Here's the 
-      error we got: <br/><br/>
+      ${helper.world.getTranslatedString('javascript.classes.validator.error.executingJS')} <br/><br/>
       <span class="highlight">${e}</span>
     `);
   }

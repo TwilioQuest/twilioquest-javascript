@@ -30,8 +30,7 @@ module.exports = async (helper) => {
     const exists = await jetpack.existsAsync(programPath);
     if (!exists) {
       helper.fail(`
-        We couldn't find your "fizzBuzz.js" script in your 
-        JavaScript code folder. Does the file below exist? <br/><br/>
+        ${helper.world.getTranslatedString('javascript.fizzBuzz.validator.error.scriptNotFound')}
         <span style="word-wrap:break-word">${programPath}</span>
       `);
       return;
@@ -62,22 +61,16 @@ module.exports = async (helper) => {
       let result = results[i];
       let correct = correctDecrypt(testNumbers[i]);
       if (result !== correct) {
-        return helper.fail(`
-          While testing your script, we passed in "${i}" but got "${result}" instead
-          of "${correct}". Please test your script again.
-        `);
+        return helper.fail(helper.world.getTranslatedString('javascript.fizzBuzz.validator.error.testing', { i, result, correct }));
       }
     }
 
-    helper.success(`
-      You did it! No job interview nonsense can fool you.
-    `);
+    helper.success(helper.world.getTranslatedString('javascript.fizzBuzz.validator.success'));
   } catch (e) {
     helper.fail(`
-      There was an error executing your JavaScript code. Please ensure that you
-      can run it successfully and try again. Here's the error we got - sorry
-      if the formatting is ugly: <br/><br/>
+      ${helper.world.getTranslatedString('javascript.fizzBuzz.validator.error.executingJS')} <br/><br/>
       ${e}
     `);
+    
   }
 };
