@@ -1,0 +1,16 @@
+{
+  "title": "JavaScript Lab: Objet de mon affection",
+  "description": "Apprenez à créer des <strong>structures de données</strong> plus complexes à l'aide de la <strong>notation de littéraux d'objets</strong>.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "Créez un programme comme décrit dans l'objectif, puis cliquez sur <span class='highlight'>HACK</span>."
+    }
+  ],
+  "rewards": {
+    "xp": 100,
+    "items": []
+  }
+}

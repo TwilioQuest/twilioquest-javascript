@@ -1,0 +1,16 @@
+{
+  "title": "JavaScript Lab: Suivre son travail",
+  "description": "Sauvegardez votre travail dans un <strong>répertoire Git local</strong>.",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Une fois que vous avez initialisé un répertoire Git dans votre espace de travail JavaScript et effectué votre commit initial, cliquez sur HACK!"
+    }
+  ],
+  "show_ide": false,
+  "rewards": {
+    "xp": 100
+  }
+}

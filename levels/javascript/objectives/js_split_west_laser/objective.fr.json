@@ -1,0 +1,15 @@
+{
+  "title": "JavaScript Lab: Inverser l'expérience",
+  "description": "La dernière tentative de stabilisation du ducktypium s'est conclue par une catastrophe. Maintenant, vous devez remettre les lasers stabilisateurs en ligne pour inverser l'expérience!",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Cliquez sur <em>HACK</em> une fois que vous avez rempli les critères de cet objectif."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "title": "JavaScript Lab: Créer un espace de travail",
+  "description": "Le personnel du laboratoire doit <strong>créer un dossier sur leur ordinateur</strong> où tout leur code JavaScript sera enregistré. Vous aussi, créez un dossier similaire dans ce défi.",
+  "validation_fields": [
+    {
+      "name": "workspacePath",
+      "type": "text",
+      "placeholder": "C:\\Users\\jane\\twilioquest\\js",
+      "label": "Collez le chemin d'accès complet au dossier dans lequel vous conservez tout votre code JavaScript TwilioQuest sur votre ordinateur."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

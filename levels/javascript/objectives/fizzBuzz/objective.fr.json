@@ -1,0 +1,15 @@
+{
+  "title": "JavaScript Lab: Un vieux coffre poussiéreux",
+  "description": "Un mécanisme étrange verrouille ce coffre… Je me demande comment l'ouvrir?",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Rédigez un programme comme indiqué dans l'onglet Objectif, puis cliquez sur <span class='highlight'>HACK</span>."
+    }
+  ],
+  "rewards": {
+    "xp": 500
+  }
+}

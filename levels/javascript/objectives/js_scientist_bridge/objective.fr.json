@@ -1,0 +1,15 @@
+{
+  "title": "JavaScript Lab: Si Arborescence, alors Pont",
+  "description": "Apprenez à créer des branches de logique conditionnelle dans <strong>plusieurs directions</strong> en déployant le pont vers le botaniste.",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Rédigez un programme comme indiqué dans l'onglet Objectif, puis cliquez sur <span class='highlight'>HACK</span>."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

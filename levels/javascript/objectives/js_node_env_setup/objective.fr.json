@@ -1,0 +1,15 @@
+{
+  "title": "JavaScript Lab: Configurer votre environnement Node.js",
+  "description": "Le laboratoire de test JavaScript exige que tout membre du personnel installe <strong>Runtime JavaScript Node.js</strong> avant d'aller plus loin dans le labo. Installez Node.js dans ce défi.",
+  "validation_fields": [
+    {
+      "name": "nodePath",
+      "type": "text",
+      "placeholder": "/usr/local/bin/node",
+      "label": "Collez le chemin d'accès dans votre fichier exécutable Node.js comme décrit dans l'objectif."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

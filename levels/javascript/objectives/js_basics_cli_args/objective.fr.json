@@ -1,0 +1,15 @@
+{
+  "title": "JavaScript Lab: Arguments de script",
+  "description": "Écrivez du code qui utilise les données transmises via les <strong>arguments de ligne de commande</strong>.",
+  "validation_fields": [
+    {
+      "name": "one",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Créez un programme comme décrit dans l'objectif, puis cliquez sur <span class='highlight'>HACK</span>."
+    }
+  ],
+  "rewards": {
+    "xp": 200
+  }
+}

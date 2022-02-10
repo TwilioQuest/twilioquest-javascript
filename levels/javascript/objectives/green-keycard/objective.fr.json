@@ -1,0 +1,12 @@
+{
+  "title": "Checkpoint de la clé verte",
+  "description": "Ce checkpoint requiert une clé verte pour vous laisser passer.",
+  "validation_fields": [
+    {
+      "name": "keyCard",
+      "type": "prompt",
+      "label": "Seuls les détenteurs de clé verte sont autorisés à passer ce stade."
+    }
+  ],
+  "rewards": {}
+}
