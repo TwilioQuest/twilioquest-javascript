@@ -1,0 +1,15 @@
+{
+  "title": "JavaScript Lab: 実験の巻き戻し",
+  "description": "Ducktypiumを安定させるための以前の試みは失敗しました。実験を元に戻すには、4つのスタビライザービームすべてをオンラインに戻します。",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "このオブジェクティブの判定基準を満たした後、[<em>HACK</em>]をクリックしてください!"
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

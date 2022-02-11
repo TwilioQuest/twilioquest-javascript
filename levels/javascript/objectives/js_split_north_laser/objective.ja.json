@@ -1,0 +1,15 @@
+{
+  "title": "JavaScript Lab: ビーム4の有効化",
+  "description": "<strong>理論物理学者のアクティベーションコード</strong>を使い、<strong>オブジェクトとデータ型</strong>に関する知識を活かしてステーシスビームを有効にしてください。",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "左にあるオブジェクティブの手順を完了したら[<em>HACK</em>]をクリックしてください。"
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "title": "JavaScript Lab: スクリプト引数",
+  "description": "<strong>コマンドライン引数</strong>で渡されたデータを使用するコードを作成します。",
+  "validation_fields": [
+    {
+      "name": "one",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "オブジェクティブの記述どおりにプログラムを作成し、[<span class='highlight'>HACK</span>]をクリックします。"
+    }
+  ],
+  "rewards": {
+    "xp": 200
+  }
+}

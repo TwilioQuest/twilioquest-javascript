@@ -1,0 +1,15 @@
+{
+  "title": "JavaScript Lab: ビーム3の有効化",
+  "description": "<strong>電気技師が保持しているアクティベーションコード</strong>を使い、<strong>ループとイテレーション</strong>に関する知識を活かしてこのステーシスビームを有効にしてください。",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "左にあるオブジェクティブの手順を完了したら[<em>HACK</em>]をクリックしてください。"
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

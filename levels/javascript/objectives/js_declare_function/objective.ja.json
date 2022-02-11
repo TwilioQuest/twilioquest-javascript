@@ -1,0 +1,14 @@
+{
+  "title": "JavaScript Lab: どのように機能(Function)しますか?",
+  "description": "ラボをさらに進むために、再利用できるJavaScriptコードのかたまりである<strong>関数を作成する</strong>方法を学習します。",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "オブジェクティブの記述どおりにプログラムを作成し、[<span class='highlight'>HACK</span>]をクリックします。"
+    }
+  ],
+  "rewards": {
+    "xp": 200
+  }
+}

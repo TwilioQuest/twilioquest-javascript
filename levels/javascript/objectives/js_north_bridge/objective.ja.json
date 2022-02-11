@@ -1,0 +1,16 @@
+{
+  "title": "JavaScript Lab: はじめての条件分岐",
+  "description": "プログラミングの基本的な構成要素である<strong>if文</strong>について学習します。",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "[Objective]タブに指示されているとおりにプログラムを作成し、[<span class='highlight'>HACK</span>]をクリックします。"
+    }
+  ],
+  "show_ide": false,
+  "rewards": {
+    "xp": 100
+  }
+}

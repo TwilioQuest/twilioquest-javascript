@@ -1,0 +1,16 @@
+{
+  "title": "JavaScript Lab: 作業の進捗",
+  "description": "作業内容を<strong>ローカルのgitリポジトリ</strong>にバックアップしてください。",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "JavaScriptワークスペースのgitリポジトリを初期化して初期コミットを済ませ、[HACK]をクリックしてください。"
+    }
+  ],
+  "show_ide": false,
+  "rewards": {
+    "xp": 100
+  }
+}

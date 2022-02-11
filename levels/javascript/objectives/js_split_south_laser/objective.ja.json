@@ -1,0 +1,15 @@
+{
+  "title": "JavaScript Lab: ビーム2の有効化",
+  "description": "<strong>植物学者から受け取ったアクティベーションコード</strong>を使い、<strong>ブールロジック</strong>に関する知識を活かしてステーシスビームを有効にしてください。",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "左にあるオブジェクティブの手順を完了したら[<em>HACK</em>]をクリックしてください。"
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

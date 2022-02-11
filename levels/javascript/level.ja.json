@@ -1,0 +1,52 @@
+{
+  "title": "JavaScriptテストラボ",
+  "description": "TwilioQuestプログラムでは、最新のJavaScriptテクノロジーの進歩を研究するこのハイテク研究施設を用意しています。オペレーターは、このステーションを訪問し、セキュリティ体制を確認するよう依頼されています。",
+  "questTitle": "JavaScriptテストラボ",
+  "questDescription": "ステーションを調査し、調査チームを助けてください!",
+  "navMap": {
+    "x": 25,
+    "y": 25,
+    "sprite": "nav_map/javascript_lab.png"
+  },
+  "is_mission": false,
+  "priority": 3,
+  "backgroundMusic": "fascinatingarea_108253b",
+  "backgroundEffect": {
+    "key": "starfield",
+    "options": {
+      "baseSpeed": 0.03,
+      "direction": "rightToLeft"
+    }
+  },
+  "flavorTextOverrides": {
+    "bookshelf": "うーん...何とも古典的なものばかり。「You Don't Know JS」に、「JavaScript: The Good Parts」...",
+    "ducktypium": "これは、純度100%のDucktypium。強力で非常に不安定。このラボのJavaScriptがこれを使用しているとしたら、たびたび保険が請求されるのも不思議ではありません。",
+    "passwordDeskNote": "デスクのメモ: 「ステイシスビームパスワード: <span class=\"highlight\">PEW PEW PEW!</span>」",
+    "officeTerminal": "この画面はDucktypium貯蔵室の温度を示しています。ほどよく21℃です。",
+    "officeBookshelf": "これまでの実験ノートがたくさん。変形、変換、試作品、その他諸々。",
+    "opensMar2020": "このように冒険は<span class=\"highlight\">2020年5月上旬</span>まで続いています。今月中に後で確認する、<a href=\"https://twitter.com/TwilioQuest\">CedricのTwitter</a>をフォローする、<a href=\"https://www.twilio.com/quest#email\">ニュースレターに登録</a>するなどしていただければ、このエリアがいつ始まるかをいち早く知ることができます!",
+    "playerPlantedTree": "あなたが植えた木です!オーストラリアで最近の山火事の後に植えられる本物の木です。",
+    "loopLockInfo": "この奇妙な部屋には、ちょうど船に積まれている秘密の荷に記されていたような番号が表示されています。つながりがあるのだろうか?<span class=\"highlight\">部屋をひとまわり</span>して様子を見ましょう...",
+    "infiniteLoopNotReady": "科学実験船「無限ループ」はここに停泊していたはずだ!この科学者を救うためには、<span class=\"highlight\">ゲームが新たに更新されるのを待つ</span>必要がある。"
+  },
+  "objectives": [
+    "js_node_env_setup",
+    "classes",
+    "fizzBuzz",
+    "instantiation",
+    "js_basics_cli_args",
+    "js_declare_function",
+    "js_declare_variable",
+    "js_enable_laser",
+    "js_function_arguments",
+    "js_declare_variable_multiple",
+    "js_node_workspace",
+    "js_north_bridge",
+    "js_scientist_bridge",
+    "js_south_bridge",
+    "js_split_north_laser",
+    "js_split_south_laser",
+    "js_unlock_door",
+    "js_west_bridge"
+  ]
+}

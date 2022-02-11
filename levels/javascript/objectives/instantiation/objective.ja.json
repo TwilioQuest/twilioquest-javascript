@@ -1,0 +1,16 @@
+{
+  "title": "JavaScript Lab: お勧めのオブジェクト",
+  "description": "<strong>オブジェクトリテラル表記</strong>を使用し、さらに複雑な<strong>データ構造</strong>を作成する方法を学習します。",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "オブジェクティブの記述どおりにプログラムを作成し、[<span class='highlight'>HACK</span>]をクリックします。"
+    }
+  ],
+  "rewards": {
+    "xp": 100,
+    "items": []
+  }
+}
