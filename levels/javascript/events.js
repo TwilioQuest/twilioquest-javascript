@@ -143,9 +143,8 @@ module.exports = function (event, world) {
   renderLaserState(world, worldState, event);
 
   updateQuestLogWhenComplete({
-    notification:
-      'I\'ve completed everything in the <span class="highlight">JavaScript Test Lab</span> for now!',
-    log: "I've completed everything in the JavaScript Test Lab for now!",
+    notification: world.getTranslatedString('javascript.events.notification'),
+    log: world.getTranslatedString('javascript.events.log'),
     event,
     world,
     worldStateKey: WORLD_STATE_KEY,
