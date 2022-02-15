@@ -1,0 +1,15 @@
+{
+  "title": "JavaScript Lab: 大試験の開始",
+  "description": "<strong>Ducktypium</strong>調査チームはあわや爆発の危機にみまわれています!実験再開のために力を貸してください。",
+  "validation_fields": [
+    {
+      "name": "laserPassword",
+      "type": "text",
+      "placeholder": "",
+      "label": "レーザー起動パスワードを入力してください。分からないことは(この部屋の)主任サイエンティストに聞いてください。"
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

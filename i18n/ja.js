@@ -440,5 +440,7 @@ module.exports = {
   "javascript.js_split_east_laser.validator.returned_wrong_number": "関数から数値が返されましたが、必要とする数値ではありません。[Help]タブと[Objective]タブの説明をよく確認し、正しい数値を返していることを確かめてください。",
   "javascript.js_split_east_laser.validator.error_running_calculatePower": "calculatePower関数の実行中にエラーが発生しました。コマンドラインから関数を正しく実行できることを確認し、もう一度試してください。ヘルプセクションのスターターコードを使うとよいでしょう。こちらが関数の呼び出しで発生したエラーです。 <br/><br/>",
   "javascript.js_split_east_laser.validator.success": "ゴー!レーザーは勢いよく放出され、まもなく実験が反転します。",
-  "javascript.js_split_east_laser.validator.general_error": "JavaScriptコードの実行中にエラーが発生しました。コマンドラインから正しく実行できることを確認し、もう一度試してください。こちらが発生したエラーです。 <br/><br/>"
+  "javascript.js_split_east_laser.validator.general_error": "JavaScriptコードの実行中にエラーが発生しました。コマンドラインから正しく実行できることを確認し、もう一度試してください。こちらが発生したエラーです。 <br/><br/>",
+  "javascript.events.notification": "<span class='highlight'>JavaScriptテストラボ</span>でできることはすべて完了できた!",
+  "javascript.events.log": "JavaScriptテストラボでできることはすべて完了できた!",
 }

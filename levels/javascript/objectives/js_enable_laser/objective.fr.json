@@ -1,0 +1,15 @@
+{
+  "title": "JavaScript Lab: Que le grand test commence",
+  "description": "L'équipe effectuant des recherches sur le <strong>ducktypium</strong> est sur le point de faire une découverte retentissante! Aidez-les à relancer leur expérience qui a atteint un point mort.",
+  "validation_fields": [
+    {
+      "name": "laserPassword",
+      "type": "text",
+      "placeholder": "",
+      "label": "Saisissez le mot de passe d'activation du laser ci-dessous. Adressez-vous à la scientifique en chef (dans cette salle) pour obtenir de l'aide."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

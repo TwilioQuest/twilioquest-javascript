@@ -1,0 +1,14 @@
+{
+  "title": "JavaScript Lab: Vous n'avez pas dit «please» («merci»)",
+  "description": "Apaisez un bureaucrate de bas étage et <strong>exécutez votre premier programme JavaScript</strong> pour franchir cette barrière.",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "Créez un programme comme décrit dans l'objectif, puis cliquez sur <span class='highlight'>HACK</span>."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

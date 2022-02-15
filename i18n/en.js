@@ -448,5 +448,7 @@ module.exports = {
   "javascript.js_split_east_laser.validator.returned_wrong_number": "Your function returned a number, but not the number we were looking  for. Check the Help and Objective tabs to ensure you are returning the right numeric value.",
   "javascript.js_split_east_laser.validator.error_running_calculatePower": "There was an error executing your calculatePower function. Please  ensure that you can exercise your function from the command line  successfully and try again. Use the starter code in the Help section if you are stuck. Here's the error we got from trying to call your  function: <br/><br/>",
   "javascript.js_split_east_laser.validator.success": "Boomshakalaka! The laser roars to life, and you're that much closer to reversing the experiment.",
-  "javascript.js_split_east_laser.validator.general_error": "There was an error executing your JavaScript code. Please ensure that you can run it from the command line successfully and try again. Here's the  error we got: <br/><br/>"
+  "javascript.js_split_east_laser.validator.general_error": "There was an error executing your JavaScript code. Please ensure that you can run it from the command line successfully and try again. Here's the  error we got: <br/><br/>",
+  "javascript.events.notification": "I\'ve completed everything in the <span class='highlight'>JavaScript Test Lab</span> for now!",
+  "javascript.events.log": "I've completed everything in the JavaScript Test Lab for now!"
 }
