@@ -62,7 +62,7 @@ module.exports = {
   Você pode entrar neste módulo de laboratório seguindo pelo corredor atrás
   do cache de armazenamento de líquido recreativo desta unidade.<br/><br/>
   <i>Depois de olhar interrogativamente para o robô por um momento, você conclui que ele 
-  quer dizer que você deve passar pela porta atrás do bar.]</i>`,
+  quer dizer que você deve passar pela porta atrás do bar.</i>`,
   "javascript.libation_bot.about_text": `Erro. Esta plataforma está autorizada a fornecer informações 
   direcionais e tecnologia de alívio da sede apropriada para a situação.
   Quer experimentar uma INFUSÃO DE LÍQUIDO DE PITAYA E MANGA? Posso
