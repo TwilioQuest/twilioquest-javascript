@@ -1,8 +1,13 @@
-\<% const worldState = levelState.TQ_JAVASCRIPT_WORLD_STATE; const isObjectiveReady = worldState.beamTwoOnline \&\& worldState.beamThreeOnline \&\& worldState.beamFourOnline; %>
+<%
+const worldState = levelState.TQ_JAVASCRIPT_WORLD_STATE;
+const isObjectiveReady = worldState.beamTwoOnline &&
+worldState.beamThreeOnline &&
+worldState.beamFourOnline;
+%>
 
 # Ajuda objetiva
 
-\<% if (isObjectiveReady) { %>
+<% if (isObjectiveReady) { %>
 
 Esta tarefa exigirá tudo o que você aprendeu sobre JavaScript até agora! Classes, métodos de matriz e lógica booleana serão necessários.
 
@@ -44,11 +49,11 @@ Após implementar a classe `Ducktypium` conforme descrito no objetivo, clique em
 - [JavaScript.info – Referência completa](https://javascript.info/)
 - [Referência de JavaScript MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction)
 
-\<% } else { %> Você não poderá concluir este objetivo até:
+<% } else { %> Você não poderá concluir este objetivo até:
 
 1. Encontrar os três cientistas perdidos
 2. Usar os códigos de ativação para ativar os três outros feixes nesta sala
 
 Explorar o resto do laboratório. Cada cientista pode ser encontrado nas áreas ao sul, leste e oeste da sala de experimentos principal (na qual você está agora).
 
-Quando os outros três feixes forem ativados novamente, **volte aqui para ativar o feixe final**. \<% } %>
+Quando os outros três feixes forem ativados novamente, **volte aqui para ativar o feixe final**. <% } %>

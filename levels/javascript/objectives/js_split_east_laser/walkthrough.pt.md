@@ -1,8 +1,12 @@
-\<% const worldState = levelState.TQ_JAVASCRIPT_WORLD_STATE; const isObjectiveReady = worldState.eastWing \&\& worldState.eastWing.hadSavedConversation; %>
+<%
+const worldState = levelState.TQ_JAVASCRIPT_WORLD_STATE;
+const isObjectiveReady = worldState.eastWing &&
+worldState.eastWing.hadSavedConversation;
+%>
 
 # Ajuda objetiva
 
-\<% if (isObjectiveReady) { %>
+<% if (isObjectiveReady) { %>
 
 Para concluir este objetivo, você deve combinar várias técnicas aprendidas enquanto salva o engenheiro elétrico do **Loop infinito**.
 
@@ -37,7 +41,7 @@ Depois que sua função `calculatePower` estiver funcionando como descrito no ob
 - [JavaScript.info – Como retornar valores das funções](https://javascript.info/function-basics#returning-a-value)
 - [MDN – Guia de funções](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
 
-\<% } else { %>
+<% } else { %>
 
 Você examina os controles desse feixe, mas eles estão bloqueados no momento. Você precisará do **código de acesso do engenheiro elétrico** para ativar esse laser.
 
@@ -45,4 +49,4 @@ O engenheiro elétrico provavelmente está a bordo do cargueiro de suprimentos a
 
 **Fale com o engenheiro elétrico** para receber o código de acesso para este feixe.
 
-\<% } %>
+<% } %>
