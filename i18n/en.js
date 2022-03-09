@@ -6,8 +6,8 @@ module.exports = {
   "javascript.cedric.saved_day_speech": `It would appear the dimensional rift caused by the lab explosion has
   been eliminated. Well done! I knew you were up to the task.`,
   "javascript.cedric.please_hurry_text": `Operator - our intelligence indicates that the
-  #[span.red dimensional rift] caused by the explosion in the lab is
-  still expanding.<br/><br/>Please #[span.highlight coordinate with the lead scientist] 
+  <span class='red'>dimensional rift</span> caused by the explosion in the lab is
+  still expanding.<br/><br/>Please <span class='highlight'>coordinate with the lead scientist</span>
   in the room to the right. She is currently working on a
   solution.`,
   "javascript.cedric.please_hurry_speech": `Our intelligence indicates that the
@@ -17,14 +17,14 @@ module.exports = {
   solution.`,
   "javascript.cedric.what_can_i_learn_text": `Navigating the laboratory will require that you become familiar with
   the JavaScript programming language. In doing so, you will also install
-  the #[a(href='https://www.nodejs.org') Node.js] JavaScript runtime on
+  the <a href='https://www.nodejs.org'>Node.js</a> JavaScript runtime on
   your computer, enabling you to write and execute JavaScript code.`,
   "javascript.cedric.what_can_i_learn_speech": `Navigating the laboratory will require that you become familiar with
   the JavaScript programming language. In doing so, you will also install
   the node jay S JavaScript runtime on
   your computer, enabling you to write and execute JavaScript code.`,
   "javascript.cedric.what_research_text": `Presently, our research team is studying the energy-producing
-  properties of #[span.highlight ducktypium], a newly discovered element
+  properties of <span class='highlight'>ducktypium</span>, a newly discovered element
   that we believe is the source of JavaScript's power. Proceed through the
   security barriers on the right to examine our research data yourself.`,
   "javascript.cedric.what_research_speech": `Presently, our research team is studying the energy-producing
@@ -33,7 +33,7 @@ module.exports = {
   the security barriers on the right to examine our research data 
     yourself.`,
   "javascript.cedric.default_text": `Operator - I am pleased you have come to observe our work at the
-  #[span.highlight JavaScript Test Lab]. TwilioQuest scientists are making
+  <span class='highlight'>JavaScript Test Lab</span>. TwilioQuest scientists are making
   significant progress unlocking the potential of the JavaScript
   programming language.`,
   "javascript.cedric.default_speech": `Operator. I am pleased you have come to observe our work at the
@@ -44,18 +44,18 @@ module.exports = {
   "javascript.botanist_distant.how_do_i_do_it": "I'll help you if I can - how do I make it over to you?",
   "javascript.botanist_distant.second_thought": "You know, on second thought, I might just leave you there and let spacetime crumble to pieces - at least then I'd be free of your attitude.",
   "javascript.botanist_distant.can_you_just_tell": "Listen, we're a bit pressed for time - reality unraveling and all that - can't you just tell me your access code?",
-  "javascript.botanist_distant.how_do_i_do_it_statement": "How?! Well, isn't it obvious! You'll need to #[span.highlight extend the energy bridges] connecting the different sections of the lab. There should be a control panel by each bridge section you can use to do it.<br/><br/>It will probably require that you be clever enough to write #[span.highlight JavaScript code that uses conditional logic] - so I won't hold my breath.",
-  "javascript.botanist_distant.can_you_just_tell_statement": "The only reality you need concern yourself with is that I, an irreplaceable engine of scientific discovery, have been trapped here due to the inferiority of my colleagues!<br/><br/>Aside from that, my access code is encrypted on a hardware token - #[span.highlight you'll need to retrieve it from me] if you insist on carrying out this fool's errand. Though I suppose that's the only errand you're capable of.",
+  "javascript.botanist_distant.how_do_i_do_it_statement": "How?! Well, isn't it obvious! You'll need to <span class='highlight'>extend the energy bridges</span> connecting the different sections of the lab. There should be a control panel by each bridge section you can use to do it.<br/><br/>It will probably require that you be clever enough to write <span class='highlight'>JavaScript code that uses conditional logic</span> - so I won't hold my breath.",
+  "javascript.botanist_distant.can_you_just_tell_statement": "The only reality you need concern yourself with is that I, an irreplaceable engine of scientific discovery, have been trapped here due to the inferiority of my colleagues!<br/><br/>Aside from that, my access code is encrypted on a hardware token - <span class='highlight'>you'll need to retrieve it from me</span> if you insist on carrying out this fool's errand. Though I suppose that's the only errand you're capable of.",
   "javascript.botanist_distant.second_thought_statement": "You can't. You wouldn't! I'm... This is... Please don't.",
-  "javascript.botanist_distant.what_was_that_statement": "Do you imagine that your humour is endearing? Let me assure you that it is not, and that your juvenile prattle will earn you a #[span.red stern reprimand] from your superiors!",
-  "javascript.botanist_distant.need_code_statement": "Hah. Working on a solution, is she? If I had been placed in charge of this project, you can be sure we'd never have ended up in this situation to begin with.<br/><br/>If you want to waste your time helping her, be my guest. I'll happily #[span.highlight give you my access code once you clear the path] for my escape.",
+  "javascript.botanist_distant.what_was_that_statement": "Do you imagine that your humour is endearing? Let me assure you that it is not, and that your juvenile prattle will earn you a <span class='red'>stern reprimand</span> from your superiors!",
+  "javascript.botanist_distant.need_code_statement": "Hah. Working on a solution, is she? If I had been placed in charge of this project, you can be sure we'd never have ended up in this situation to begin with.<br/><br/>If you want to waste your time helping her, be my guest. I'll happily <span class='highlight'>give you my access code once you clear the path</span> for my escape.",
   "javascript.botanist_distant.had_intro_conversation_statement": "This is an outrage! 20 years as a tenured professor of botany, dozens of published works, and left to rot in a burning husk of a lab...<br/><br/>You there! You haven't forgotten about me, have you? Rescue me at once or I'll... You'll...",
   "javascript.botanist_distant.had_intro_conversation_response": "Did I hear something? Darn it, must be that selective hearing loss triggered by self-important whining.",
   "javascript.botanist_distant.had_intro_conversation_true": "I say - you! You over there!<br/><br/>As the most senior and accomplished scientist in this facility, I demand that you assist me this instant!",
   "javascript.botanist.funny_way": "You have a funny way of showing gratitude.",
   "javascript.botanist.funny_way_statement": "What, do you want a medal for demonstrating you're not a complete simpleton? I have none to give, so my acknowledgment of your not-useless programming skills will have to suffice.",
-  "javascript.botanist.hadSavedConversation": "You already have #[span.highlight my access code for Beam 2] in the main experiment room. Do you need something else, or do you intend to waste even more of my time while I try to collect my research materials?",
-  "javascript.botanist.hadSavedConversation_true": "Well it's about time. Here - #[span.highlight take my access code for Beam 2] in the main experiment room, if you must. I will remain a moment longer to collect my research materials before I evacuate.<br/><br/>... I'll admit that you're not as hopeless as I originally suspected.",
+  "javascript.botanist.hadSavedConversation": "You already have <span class='highlight'>my access code for Beam 2</span> in the main experiment room. Do you need something else, or do you intend to waste even more of my time while I try to collect my research materials?",
+  "javascript.botanist.hadSavedConversation_true": "Well it's about time. Here - <span class='highlight'>take my access code for Beam 2</span> in the main experiment room, if you must. I will remain a moment longer to collect my research materials before I evacuate.<br/><br/>... I'll admit that you're not as hopeless as I originally suspected.",
   "javascript.libation_bot.where_should_go": "Do you know where I should go next?",
   "javascript.libation_bot.about": "What kind of research are you doing aboard the station?",
   "javascript.libation_bot.where_should_go_text": `Your current access card enables travel to the Ducktypium lab module.
@@ -70,67 +70,67 @@ module.exports = {
   "javascript.libation_bot.default": `Greetings. I am Libation Bot. I am authorized to dispense directional 
   information and situationally appropriate thirst mitigation technology.`,
   "javascript.scientist-default.default": "Hello! Nice to meet you!",
-  "javascript.scientist1_disaster.other_scientists": "They were as of a few minutes after the accident. Right now, I can't be sure - we've lost all communications in the lab. We should assume my colleagues are #[span.highlight stranded in other areas of the facility].",
+  "javascript.scientist1_disaster.other_scientists": "They were as of a few minutes after the accident. Right now, I can't be sure - we've lost all communications in the lab. We should assume my colleagues are <span class='highlight'>stranded in other areas of the facility</span>.",
   "javascript.scientist1_disaster.get_to_safety": "We need to find them and get all of you to safety.",
-  "javascript.scientist1_disaster.get_to_safety_statement": "So here's the thing about 'safety'... From what I can tell, that explosion created a dimensional rift that is expanding by the minute. Unless we can #[span.highlight reverse the experiment and mend the rift], nowhere in The Cloud will be safe.",
+  "javascript.scientist1_disaster.get_to_safety_statement": "So here's the thing about 'safety'... From what I can tell, that explosion created a dimensional rift that is expanding by the minute. Unless we can <span class='highlight'>reverse the experiment and mend the rift</span>, nowhere in The Cloud will be safe.",
   "javascript.scientist1_disaster.get_to_safety.fix_it": "So reverse the experiment, or all of existence is doomed. Got it. How do we go about doing that?",
-  "javascript.scientist1_disaster.fix_it": "I think I know how to adjust the stabilizer beams to reverse the reaction, but in order to do that, we'll need to #[span.highlight reactivate all four beams]. And I won't be able to do that myself - my colleagues have the activation codes for the other lasers.",
+  "javascript.scientist1_disaster.fix_it": "I think I know how to adjust the stabilizer beams to reverse the reaction, but in order to do that, we'll need to <span class='highlight'>reactivate all four beams</span>. And I won't be able to do that myself - my colleagues have the activation codes for the other lasers.",
   "javascript.scientist1_disaster.fix_it.on_it": "I'm on it! I'll find your colleagues and get their activation codes.",
-  "javascript.scientist1_disaster.on_it_statement": "I still need some time to calibrate the equipment for the reversal attempt. Let me know when you have #[span.highlight found my colleagues and collected their activation codes]. We can still fix this if we move quickly.",
-  "javascript.scientist1_disaster.default.statement": "The #[span.highlight ducktypium crystal destablized] after we turned on the fourth beam - but that shouldn't have been possible! Our... MY... calculations were perfect, I know it!<br/><br/>And technically, parts of the lab aren't missing, they've just transitioned to a previously undiscovered fifth phase of matter outside our spacetime continuum.<br/><br/>As for the fires... yeah, that part is still pretty bad.",
+  "javascript.scientist1_disaster.on_it_statement": "I still need some time to calibrate the equipment for the reversal attempt. Let me know when you have <span class='highlight'>found my colleagues and collected their activation codes</span>. We can still fix this if we move quickly.",
+  "javascript.scientist1_disaster.default.statement": "The <span class='highlight'>ducktypium crystal destablized</span> after we turned on the fourth beam - but that shouldn't have been possible! Our... MY... calculations were perfect, I know it!<br/><br/>And technically, parts of the lab aren't missing, they've just transitioned to a previously undiscovered fifth phase of matter outside our spacetime continuum.<br/><br/>As for the fires... yeah, that part is still pretty bad.",
   "javascript.scientist1_disaster.default.other_scientists": "What happened to the other scientists that were inside the test chamber? Are they safe?",
   "javascript.scientist1_final.welcome": "All in a day's work!",
   "javascript.scientist1_final.sabotage": "When I was fixing the final laser, it appeared to have been sabotaged.",
   "javascript.scientist1_final.last_response.welcome": "I hope not! How many reality-threatening crises do you deal with in an average work week?",
-  "javascript.scientist1_final.last_response.sabotage": "You're right - we went over the lab's security footage and discovered it was that cranky botanist who monkeyed with the laser! And now he's conveniently fled the station. We're still investigating the incident, but we suspect that the #[span.red Legacy Systems] helped him infiltrate the station to sabotage our research.<br/><br/> It's a good thing you showed up when you did - the #[span.red Legacy Systems] almost succeeded. I doubt they accounted for an Operator with your skills.",
-  "javascript.scientist1_final.else": "This is incredible - the #[span.highlight ducktypium] molecule is stable. You did it!<br/><br/>I know you must hear this all the time, but you're a real hero! Our team, and every resident of The Cloud owes you a debt we can never repay.",
-  "javascript.scientist1_initial.oh_no": "Oh, it's nothing really - it's just... we need to #[span.highlight activate all four of the molecular stasis beams] in the center of the room to stabilize the #[span.highlight ducktypium]. The process is fully automated, but it does require a password. Which I, ah, don't currently remember.",
+  "javascript.scientist1_final.last_response.sabotage": "You're right - we went over the lab's security footage and discovered it was that cranky botanist who monkeyed with the laser! And now he's conveniently fled the station. We're still investigating the incident, but we suspect that the <span class='red'>Legacy Systems</span> helped him infiltrate the station to sabotage our research.<br/><br/> It's a good thing you showed up when you did - the <span class='red'>Legacy Systems</span> almost succeeded. I doubt they accounted for an Operator with your skills.",
+  "javascript.scientist1_final.else": "This is incredible - the <span class='highlight'>ducktypium</span> molecule is stable. You did it!<br/><br/>I know you must hear this all the time, but you're a real hero! Our team, and every resident of The Cloud owes you a debt we can never repay.",
+  "javascript.scientist1_initial.oh_no": "Oh, it's nothing really - it's just... we need to <span class='highlight'>activate all four of the molecular stasis beams</span> in the center of the room to stabilize the <span class='highlight'>ducktypium</span>. The process is fully automated, but it does require a password. Which I, ah, don't currently remember.",
   "javascript.scientist1_initial.oh_no.reset_password": "Oof. Is there any way to reset the password?",
-  "javascript.scientist1_initial.reset_password.statement": "There is, but I'll never hear the end of it around the lab if word gets out that I forgot the stasis beam password again! I actually #[span.highlight wrote it down on a piece of paper] in my office down the passage behind me...",
+  "javascript.scientist1_initial.reset_password.statement": "There is, but I'll never hear the end of it around the lab if word gets out that I forgot the stasis beam password again! I actually <span class='highlight'>wrote it down on a piece of paper</span> in my office down the passage behind me...",
   "javascript.scientist1_initial.reset_password.also_forgot": "But you're still standing out here, so might I assume...",
-  "javascript.scientist1_initial.also_forgot.statement": "Okay, so, I maybe ALSO managed to trigger all the #[span.highlight security barriers] leading to my office when I went in to retrieve the password. Don't judge me - I'm a very busy scientist! You're not judging me, are you?",
+  "javascript.scientist1_initial.also_forgot.statement": "Okay, so, I maybe ALSO managed to trigger all the <span class='highlight'>security barriers</span> leading to my office when I went in to retrieve the password. Don't judge me - I'm a very busy scientist! You're not judging me, are you?",
   "javascript.scientist1_initial.also_forgot.its_okay": "No, of course not - we all make mistakes.",
-  "javascript.scientist1_initial.its_okay.statement": "Thank you - you know, I've heard Operators are pretty good at solving problems like this - do you think you could #[span.highlight get into my office and retrieve the password]? I'd owe you big time.",
+  "javascript.scientist1_initial.its_okay.statement": "Thank you - you know, I've heard Operators are pretty good at solving problems like this - do you think you could <span class='highlight'>get into my office and retrieve the password</span>? I'd owe you big time.",
   "javascript.scientist1_initial.its_okay.you_bet": "You bet - I'll see what I can do.",
-  "javascript.scientist1_initial.you_bet": "You're a life saver! Once you get past the security barriers behind me, the password for the stasis beam #[span.highlight is written on a piece of paper on my desk].",
-  "javascript.scientist1_initial.default.statement": "Oh, hi there - you must be the Operator sent to observe our research. You've come at an exciting time! We're moments away from stabilizing a single molecule of #[span.highlight ducktypium] for the first time in history! <br/><br/>Though there is currently a #[span.highlight small, almost insignificant, snag] in the testing process...",
+  "javascript.scientist1_initial.you_bet": "You're a life saver! Once you get past the security barriers behind me, the password for the stasis beam <span class='highlight'>is written on a piece of paper on my desk</span>.",
+  "javascript.scientist1_initial.default.statement": "Oh, hi there - you must be the Operator sent to observe our research. You've come at an exciting time! We're moments away from stabilizing a single molecule of <span class='highlight'>ducktypium</span> for the first time in history! <br/><br/>Though there is currently a <span class='highlight'>small, almost insignificant, snag/span> in the testing process...",
   "javascript.scientist1_initial.default_oh_no": "Uh oh - what happened?",
   "javascript.scientist1.how_get_job": "I understand that this is an important project - how did you end up doing this kind of research?",
   "javascript.scientist1.how_get_job.statement": "It's definitely not what I imagined I'd be doing after a PhD in molecular biology. And I can tell you it's nowhere near as lucrative as the offers I received from pharmaceutical companies.<br/><br/>But I've never been able to resist the chance to solve a mystery. When the TwilioQuest program recruited me to study a previously unknown substance, how could I refuse?",
   "javascript.scientist1.lucky_to_have": "Well, they're lucky to have you.",
   "javascript.scientist1.lucky_to_have.statement": "You're not wrong there ;)<br/><br/>And I don't mind saying, we're lucky to have your help as well. Let's get back to it, shall we?",
-  "javascript.scientist1.what_happened.else_if.statement": "The #[span.red dimensional rift created by the explosion] is getting worse. I think I can reverse it, but we need to #[span.highlight get the beams in this room back online].<br/><br/>#[span.highlight Find my colleagues] stranded around the lab - they will have the activation codes we need to get the beams running again. We can still fix this if we act quickly.",
+  "javascript.scientist1.what_happened.else_if.statement": "The <span class='red'>dimensional rift created by the explosion</span> is getting worse. I think I can reverse it, but we need to <span class='highlight'>get the beams in this room back online</span>.<br/><br/><span class='highlight'>Find my colleagues</span> stranded around the lab - they will have the activation codes we need to get the beams running again. We can still fix this if we act quickly.",
   "javascript.scientist1.what_happened.else_if.response": "Can you go over what happened one more time? Specifically the part where half the lab is missing and everything is on fire?",
   "javascript.scientist1.what_happened.else.statement": "This is bad. Really quite bad.",
   "javascript.scientist1.what_happened.else.response": "Uh, yeah - half the lab is missing and everything is on fire! What happened?",
-  "javascript.scientist1.room1.passwordFound": "You found the #[span.highlight stasis beam password]! You're the best! <br/><br/> It seems only fitting that you do the honors and re-start our big experiment. #[span.highlight Head over to the beam controls in the center of the room] and use the password there. I am so excited - I just know we're going to uncover the 'big bang' moment of JavaScript!",
-  "javascript.scientist1.room1.scientistInitalConvo": "Thanks again for your help #[span.highlight retreiving the password] for the stasis beam in the center of this room. When you find it, we can #[span.highlight continue our ducktypium research]! <br/><br/>Once you get past the security barriers behind me, the password for the stasis beam #[span.highlight is written on a piece of paper on my desk].",
+  "javascript.scientist1.room1.passwordFound": "You found the <span class='highlight'>stasis beam password</span>! You're the best! <br/><br/> It seems only fitting that you do the honors and re-start our big experiment. <span class='highlight'>Head over to the beam controls in the center of the room</span> and use the password there. I am so excited - I just know we're going to uncover the 'big bang' moment of JavaScript!",
+  "javascript.scientist1.room1.scientistInitalConvo": "Thanks again for your help <span class='highlight'>retreiving the password</span> for the stasis beam in the center of this room. When you find it, we can <span class='highlight'>continue our ducktypium research</span>! <br/><br/>Once you get past the security barriers behind me, the password for the stasis beam <span class='highlight'>is written on a piece of paper on my desk</span>.",
   "javascript.scientist3_final.welcome": "I was happy to help.",
   "javascript.scientist3_final.follow_up": "Were you able to salvage the freight from the Infinite Loop?",
   "javascript.scientist3_final.welcome.lastResponse": "Well, The Cloud needs more people like you. If there's ever anything we can do to help you out, don't hesitate to let us know.",
   "javascript.scientist3_final.follow_up.statement": "Thankfully, the cargo bound for the lab managed to escape relatively unscathed. Now that our project has shifted into high gear, I'll have my work cut out for me building the tools the research team needs. But I'd rather be busy than trapped aboard that freighter - I owe you one.",
-  "javascript.scientist3_final.follow_up.else.statement": "So - you stabilized the #[span.highlight ducktypium] molecule and saved the day. I'd expect nothing less from an Operator with your reputation!",
+  "javascript.scientist3_final.follow_up.else.statement": "So - you stabilized the <span class='highlight'>ducktypium</span> molecule and saved the day. I'd expect nothing less from an Operator with your reputation!",
   "javascript.scientist3.thanks": "Thanks - it was a bit of a run-around, but I'm glad I could help.",
   "javascript.scientist3.thanks.lastResponse": "Bonus points for a loop pun, on top of it all! I'll head out to the experiment room after I finish up in here.",
-  "javascript.scientist3.thanks.else_if.statement": "It looks like you already have #[span.highlight my access code for Beam 3] in the main experiment room. I'll join you there eventually, but I should probably ensure that our supplies weren't damaged in the explosion. Awesome work once again, I owe you big time.",
+  "javascript.scientist3.thanks.else_if.statement": "It looks like you already have <span class='highlight'>my access code for Beam 3</span> in the main experiment room. I'll join you there eventually, but I should probably ensure that our supplies weren't damaged in the explosion. Awesome work once again, I owe you big time.",
   "javascript.scientist3.thank.else.statement": `How did you get in here? I mean, I'm glad you made it, but I thought it would be days before a rescue team figured out the Infinite Loop's security system!<br/><br/>
   ...You need my code to reset the laser in the experiment room? By all means - 
-  here's #[span.highlight the hardware token you'll need to activate Beam 3]. You must be something else, even for an Operator.`,
+  here's <span class='highlight'>the hardware token you'll need to activate Beam 3</span>. You must be something else, even for an Operator.`,
   "javascript.scientist4_final.welcome": "It was my pleasure.",
   "javascript.scientist4_final.follow_up": "Are you feeling okay? You've been through more than your fair share of reality-bending lately.",
   "javascript.scientist4_final.lastResponse.welcome": "Hah, that seems unlikely. Unless manipulating spacetime like a hunk of Play Doh is your idea of a good time. Though to be fair, that is *my* idea of a good time.",
   "javascript.scientist4_final.lastResponse.follow_up": "I feel fine, though I am 99% sure my eyes were brown before all this started. I've asked my mom to text me some baby pictures for reference, but I kind of don't care. The applications of this technology could be amazing!<br/><br/> But despite the bumps and bruises, I'm here, in one piece, thanks to you.",
-  "javascript.scientist4_final.lastResponse.else": "The #[span.highlight ducktypium] molecule is stable! Not only did you save The Cloud and all of us, we're that much closer to unlocking the mysteries of JavaScript. You, my friend, are a legend.",
+  "javascript.scientist4_final.lastResponse.else": "The <span class='highlight'>ducktypium</span> molecule is stable! Not only did you save The Cloud and all of us, we're that much closer to unlocking the mysteries of JavaScript. You, my friend, are a legend.",
   "javascript.scientist4.yes_cant_see": "Yes, but I can't see you... what's going on here?",
   "javascript.scientist4.how_do_that": "Losing your corporeal form sounds unpleasant... How can I help?",
   "javascript.scientist4.need_key": "The lead scientist sent me to retrieve your activation code for a laser in the ducktypium experiment room. Do you have it?",
-  "javascript.scientist4.lastResponse.yes_cant_see": `Thank goodness, finally, someone noticed I was still in here! The ducktypium explosion caused this matter instantiator to go haywire. I was trying to stabilize it when the machine engaged by mistake, causing #[span.highlight my body to slip out of phase with this plane of the multiverse]!<br/><br/>
+  "javascript.scientist4.lastResponse.yes_cant_see": `Thank goodness, finally, someone noticed I was still in here! The ducktypium explosion caused this matter instantiator to go haywire. I was trying to stabilize it when the machine engaged by mistake, causing <span class='highlight'>my body to slip out of phase with this plane of the multiverse</span>!<br/><br/>
       The science behind this is actually quite fascinating, but if you wouldn't mind, I'd prefer to discuss it with you after you've returned my body to normal.`,
-  "javascript.scientist4.lastResponse.how_do_that": "There are control terminals down the hallways to the east and west of this chamber - they must have been damaged during the explosion. If you can #[span.highlight get those terminals back online], the matter instantiator should reassemble my physical body.",
-  "javascript.scientist4.lastResponse.need_key": "I do, though my hardware key has gone through the same transformation as the rest of my body. If you can #[span.highlight restore my physical form], the activation code is all yours.",
-  "javascript.scientist4.lastResponse.summonAnimFinished.if": "Thank you once again for #[span.highlight restoring my physical form]. I believe you already have #[span.highlight the activation code you need] for the north laser in the experiment room. I'll join you there shortly.",
-  "javascript.scientist4.lastResponse.summonAnimFinished.else": "Wait... Can you see me? You can see me! You did it, you #[span.highlight restored my physical form]!<br/><br/> Here - please #[span.highlight take my activation code] for the north laser in the experiment room. I'll join you there shortly, I should probably ensure all my internal organs rematerialized properly first. Also, I could have sworn I was a few inches taller...",
-  "javascript.scientist4.lastResponse.hadIntroConversation": "Hello? Can you still hear me? If you can #[span.highlight restore my physical form], I'll gladly provide that activation code you need.",
+  "javascript.scientist4.lastResponse.how_do_that": "There are control terminals down the hallways to the east and west of this chamber - they must have been damaged during the explosion. If you can <span class='highlight'>get those terminals back online</span>, the matter instantiator should reassemble my physical body.",
+  "javascript.scientist4.lastResponse.need_key": "I do, though my hardware key has gone through the same transformation as the rest of my body. If you can <span class='highlight'>restore my physical form</span>, the activation code is all yours.",
+  "javascript.scientist4.lastResponse.summonAnimFinished.if": "Thank you once again for <span class='highlight'>restoring my physical form</span>. I believe you already have <span class='highlight'>the activation code you need</span> for the north laser in the experiment room. I'll join you there shortly.",
+  "javascript.scientist4.lastResponse.summonAnimFinished.else": "Wait... Can you see me? You can see me! You did it, you <span class='highlight'>restored my physical form</span>!<br/><br/> Here - please <span class='highlight'>take my activation code</span> for the north laser in the experiment room. I'll join you there shortly, I should probably ensure all my internal organs rematerialized properly first. Also, I could have sworn I was a few inches taller...",
+  "javascript.scientist4.lastResponse.hadIntroConversation": "Hello? Can you still hear me? If you can <span class='highlight'>restore my physical form</span>, I'll gladly provide that activation code you need.",
   "javascript.scientist4.lastResponse.else": "Help! Help! Can you hear me?!?!",
   "javascript.visitor-signin-scientists.security_tight": "Security seems pretty tight aboard the station - why's that?",
   "javascript.visitor-signin-scientists.about": "What kind of research are you doing aboard the station?",
@@ -150,7 +150,7 @@ module.exports = {
   "javascript.visitor-signin-scientists.statements.default_alt": "Hi Operator! Thanks for your help inspecting our security systems!",
   "javascript.visitor-signin-scientists.statements.default": `Hello, Operator! Welcome to the JavaScript Test Lab! We've been expecting 
   you. I understand you'll be inspecting our security system?<br/><br/>
-  To get you started, I can provide you a #[span.highlight green keycard]. 
+  To get you started, I can provide you a <span class='highlight'>green keycard</span>. 
   This should enable you to access the main concourse, and the Ducktypium 
   research module.`,
   "javascript.events.scienceVessel.notification": "The science vessel the 'Infinite Loop' should've been docked right here! I must need to <span class='highlight'>wait for a new game update</span> to finish saving this scientist.",

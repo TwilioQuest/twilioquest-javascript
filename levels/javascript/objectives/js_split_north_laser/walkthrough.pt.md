@@ -1,8 +1,12 @@
-\<% const worldState = levelState.TQ_JAVASCRIPT_WORLD_STATE; const isObjectiveReady = worldState.northWing \&\& worldState.northWing.hadSavedConversation; %>
+<%
+const worldState = levelState.TQ_JAVASCRIPT_WORLD_STATE;
+const isObjectiveReady = worldState.northWing &&
+worldState.northWing.hadSavedConversation;
+%>
 
 # Ajuda objetiva
 
-\<% if (isObjectiveReady) { %>
+<% if (isObjectiveReady) { %>
 
 Neste objetivo, você deve combinar o que aprendeu sobre objetos e classes na ala norte do laboratório para criar uma solução.
 
@@ -43,7 +47,7 @@ Quando a função estiver funcionando como indicado no objetivo, clique no botã
 - [JavaScript.info – Notação literal do objeto](https://javascript.info/object#literals-and-properties)
 - [MDN – Inicialização de objeto](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
 
-\<% } else { %>
+<% } else { %>
 
 Você examina os controles desse feixe, mas eles estão bloqueados no momento. Você precisará do **código de acesso do físico teórico** para ativar esse laser.
 
@@ -51,4 +55,4 @@ O físico teórico provavelmente está na **ala norte do laboratório**, onde el
 
 **Fale com o físico teórico** para receber o código de acesso para este feixe.
 
-\<% } %>
+<% } %>

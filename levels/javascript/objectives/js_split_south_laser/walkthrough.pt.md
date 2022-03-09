@@ -1,8 +1,12 @@
-\<% const worldState = levelState.TQ_JAVASCRIPT_WORLD_STATE; const isObjectiveReady = worldState.southWing \&\& worldState.southWing.hadSavedConversation; %>
+<%
+const worldState = levelState.TQ_JAVASCRIPT_WORLD_STATE;
+const isObjectiveReady = worldState.southWing &&
+worldState.southWing.hadSavedConversation;
+%>
 
 # Reiniciar o laser
 
-\<% if (isObjectiveReady) { %>
+<% if (isObjectiveReady) { %>
 
 Após aprender sobre a lógica condicional na ala sul, você estará pronto para enfrentar este desafio! Crie um arquivo chamado `sortOrder.js` na pasta de códigos, localizada aqui:
 
@@ -48,7 +52,7 @@ Clique em _HACK_ quando o script se comportar como descrito no objetivo. Você c
 - [Referência dos condicionais MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
 - [JavaScript.info – comparação de string](https://javascript.info/comparison#string-comparison)
 
-\<% } else { %>
+<% } else { %>
 
 Você examina os controles desse feixe, mas eles estão bloqueados no momento. Você precisará **do código de acesso do botânico** para ativar este laser.
 
@@ -56,4 +60,4 @@ O botânico provavelmente está na **ala sul do laboratório**, onde eles haviam
 
 **Fale com o botânico** para receber o código de acesso para este feixe.
 
-\<% } %>
+<% } %>
