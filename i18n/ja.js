@@ -443,4 +443,5 @@ module.exports = {
   "javascript.js_split_east_laser.validator.general_error": "JavaScriptコードの実行中にエラーが発生しました。コマンドラインから正しく実行できることを確認し、もう一度試してください。こちらが発生したエラーです。 <br/><br/>",
   "javascript.events.notification": "<span class='highlight'>JavaScriptテストラボ</span>でできることはすべて完了できた!",
   "javascript.events.log": "JavaScriptテストラボでできることはすべて完了できた!",
+  "javascript.objects.keycard-terminal.accessLevel": "私には、このチェックポイントの通過に必要な'{accessLevel}'アクセスレベルがありません。"
 }
