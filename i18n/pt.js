@@ -450,5 +450,6 @@ module.exports = {
   "javascript.js_split_east_laser.validator.success": "Boomshakalaka! O laser ganha vida e você está muito mais perto de reverter o experimento.",
   "javascript.js_split_east_laser.validator.general_error": "Ocorreu um erro ao executar seu código JavaScript. Verifique se você consegue executá-lo da linha de comando com êxito e tente novamente. Aqui está o erro que recebemos: <br/><br/>",
   "javascript.events.notification": "Já concluí tudo no <span class='highlight'>laboratório de teste JavaScript</span> por enquanto!",
-  "javascript.events.log": "Já concluí tudo no laboratório de teste JavaScript por enquanto!"
+  "javascript.events.log": "Já concluí tudo no laboratório de teste JavaScript por enquanto!",
+  "javascript.objects.keycard-terminal.accessLevel": "Eu não tenho o nível de acesso necessário '{accessLevel}' para passar por este ponto de verificação!",
 }

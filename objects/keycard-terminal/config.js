@@ -39,9 +39,7 @@ module.exports = {
       const accessLevelState = accessLevels[self.accessLevel];
       if (!accessLevelState) {
         // Player does not have access level (or access level doesn't exist)
-        world.showNotification(
-          `I don't have the requisite access level "${self.accessLevel}" to pass this checkpoint!`
-        );
+        world.showNotification(world.getTranslatedString('javascript.objects.keycard-terminal.accessLevel', { accessLevel: self.accessLevel }));
         return;
       }
 
