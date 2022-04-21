@@ -1,0 +1,16 @@
+{
+  "title": "JavaScript Lab: Classe",
+  "description": "Vous avez utilisé des objets intégrés tels que des chaînes (strings) et des chiffres (numbers). Maintenant, apprenez à créer <strong>vos propres objets</strong> avec leur propre comportement.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "Créez un programme comme décrit dans l'objectif, puis cliquez sur <span class='highlight'>HACK</span>."
+    }
+  ],
+  "rewards": {
+    "xp": 100,
+    "items": []
+  }
+}

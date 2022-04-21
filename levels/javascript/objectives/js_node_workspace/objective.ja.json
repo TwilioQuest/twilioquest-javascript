@@ -1,0 +1,15 @@
+{
+  "title": "JavaScript Lab: ワークスペースの作成",
+  "description": "ラボのスタッフは、すべてのJavaScriptコードを保存する<strong>フォルダをコンピューターに作成</strong>しなければなりません。この課題では、このフォルダを作成します。",
+  "validation_fields": [
+    {
+      "name": "workspacePath",
+      "type": "text",
+      "placeholder": "C:\\Users\\jane\\twilioquest\\js",
+      "label": "すべてのTwilioQuest JavaScriptコードを保存するフォルダの完全パスを貼り付けてください。"
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "title": "JavaScript Lab: 「お願いします」は?",
+  "description": "下級役人を手なずけ、<strong>最初のJavaScriptプログラムを実行</strong>してこのバリアをクリアしましょう。",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "オブジェクティブの記述どおりにプログラムを作成し、[<span class='highlight'>HACK</span>]をクリックします。"
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "title": "JavaScript Lab: If「木がある」Then「橋を架ける」",
+  "description": "橋を植物学者に向けて延長するために、条件付きロジックを<strong>複数方向に</strong>分岐する方法を学習します。",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "[Objective]タブに指示されているとおりにプログラムを作成し、[<span class='highlight'>HACK</span>]をクリックします。"
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

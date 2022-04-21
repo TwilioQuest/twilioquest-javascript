@@ -1,0 +1,52 @@
+{
+  "title": "Laboratoire de test JavaScript",
+  "description": "Le programme TwilioQuest gère ce centre de recherche high-tech qui étudie les dernières avancées de la technologie JavaScript. Ils ont demandé à un Opérateur de se rendre dans la station et d'examiner leur niveau de sécurité.",
+  "questTitle": "Labo de test JavaScript",
+  "questDescription": "Enquêtez dans la station et aidez l'équipe de recherche!",
+  "navMap": {
+    "x": 25,
+    "y": 25,
+    "sprite": "nav_map/javascript_lab.png"
+  },
+  "is_mission": false,
+  "priority": 3,
+  "backgroundMusic": "fascinatingarea_108253b",
+  "backgroundEffect": {
+    "key": "starfield",
+    "options": {
+      "baseSpeed": 0.03,
+      "direction": "rightToLeft"
+    }
+  },
+  "flavorTextOverrides": {
+    "bookshelf": "Hmmm… Il y a beaucoup de classiques ici. «You Don't Know JS», «JavaScript: The Good Parts», et bien plus encore.",
+    "ducktypium": "Ouah, c'est du Ducktypium pur. Puissant, mais très instable. Si JavaScript est alimenté par ce truc dans ce labo, pas étonnant qu'il y ait des sinistres d'assurance de temps en temps.",
+    "passwordDeskNote": "Écrit sur un post-it sur son bureau: «Mot de passe du faisceau de stabilisation: <span class=\"highlight\">PEW PEW PEW!</span>»",
+    "officeTerminal": "Cet écran contrôle la température dans la salle du Ducktypium. 21°C, la température idéale.",
+    "officeBookshelf": "Il y a beaucoup de carnets sur différentes expériences effectuées ici. Mutations, transformations, prototypes et bien plus encore.",
+    "opensMar2020": "L'aventure continue ici <span class=\"highlight\">début mai 2020</span>. Revenez plus tard ce mois-ci, <a href=\"https://twitter.com/TwilioQuest\">suivez Cédric sur Twitter</a> et <a href=\"https://www.twilio.com/quest#email\">inscrivez-vous</a> à notre newsletter pour être le premier informé de l'ouverture de cette zone!",
+    "playerPlantedTree": "Votre propre arborescence! Elle représente un véritable arbre qui sera planté pour aider l'Australie à se reconstruire après les récents incendies de forêt qui y ont sévi.",
+    "loopLockInfo": "Cette étrange salle affiche un numéro, similaire aux chiffres situés à l'extérieur de la cargaison sécurisée sur le navire. Je me demande s'ils sont connectés. Je devrais <span class=\"highlight\">faire le tour de cette pièce</span> pour voir ce qu'il se passe…",
+    "infiniteLoopNotReady": "Le vaisseau scientifique «Boucle infinie» aurait dû être amarré ici! Je dois <span class=\"highlight\">attendre une nouvelle mise à jour du jeu</span> pour sauver ce scientifique."
+  },
+  "objectives": [
+    "js_node_env_setup",
+    "classes",
+    "fizzBuzz",
+    "instantiation",
+    "js_basics_cli_args",
+    "js_declare_function",
+    "js_declare_variable",
+    "js_enable_laser",
+    "js_function_arguments",
+    "js_declare_variable_multiple",
+    "js_node_workspace",
+    "js_north_bridge",
+    "js_scientist_bridge",
+    "js_south_bridge",
+    "js_split_north_laser",
+    "js_split_south_laser",
+    "js_unlock_door",
+    "js_west_bridge"
+  ]
+}

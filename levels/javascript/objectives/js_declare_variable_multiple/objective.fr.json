@@ -1,0 +1,14 @@
+{
+  "title": "JavaScript Lab: Variable multiple",
+  "description": "Entraînez-vous à <strong>déclarer des variables</strong> à l'aide de plusieurs types de données JavaScript pour déverrouiller le coffre.",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "Créez un programme comme décrit dans l'objectif, puis cliquez sur <span class='highlight'>HACK</span>."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

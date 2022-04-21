@@ -1,0 +1,15 @@
+{
+  "title": "JavaScript Lab: Node.js環境の設定",
+  "description": "JavaScriptテストラボのスタッフは全員、<strong>Node.js JavaScriptランタイム</strong>をインストールしてからラボに進む必要があります。この課題ではNode.jsをインストールします。",
+  "validation_fields": [
+    {
+      "name": "nodePath",
+      "type": "text",
+      "placeholder": "/usr/local/bin/node",
+      "label": "オブジェクティブに記されたNode.js実行ファイルをパスに貼り付けてください。"
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

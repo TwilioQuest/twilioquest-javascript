@@ -1,0 +1,15 @@
+{
+  "title": "JavaScript Lab: 水の用意",
+  "description": "<strong>さらに複雑な条件</strong>をif文に使用します。",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "[Objective]タブに指示されているとおりにプログラムを作成し、[<span class='highlight'>HACK</span>]をクリックします。"
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

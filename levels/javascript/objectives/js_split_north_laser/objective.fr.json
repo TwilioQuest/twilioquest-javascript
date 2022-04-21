@@ -1,0 +1,15 @@
+{
+  "title": "JavaScript Lab: Activer le faisceau 4",
+  "description": "Utilisez le <strong>code d'activation du physicien théoricien</strong> et vos connaissances des <strong>objets et des types de données</strong> pour activer ce faisceau statique.",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Lorsque vous avez atteint l'objectif, comme décrit à gauche, cliquez sur <em>HACK</em>."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

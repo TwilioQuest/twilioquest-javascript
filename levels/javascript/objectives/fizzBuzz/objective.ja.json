@@ -1,0 +1,15 @@
+{
+  "title": "JavaScript Lab: ほこりまみれの宝箱",
+  "description": "宝箱は妙な仕掛けでロックされている...どうすれば開くのだろう?",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "[Objective]タブに指示されているとおりにプログラムを作成し、[<span class='highlight'>HACK</span>]をクリックします。"
+    }
+  ],
+  "rewards": {
+    "xp": 500
+  }
+}

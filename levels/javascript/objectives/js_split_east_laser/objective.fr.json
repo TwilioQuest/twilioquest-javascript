@@ -1,0 +1,15 @@
+{
+  "title": "JavaScript Lab: Activer le laser 3",
+  "description": "Utilisez le <strong>code d'activation de l'ingénieur électricien</strong> et vos connaissances des <strong>boucles et itérations</strong> pour activer ce laser de stase.",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Lorsque vous avez atteint l'objectif, comme décrit à gauche, cliquez sur <em>HACK</em>."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "title": "JavaScript Lab: 関数の引数",
+  "description": "<strong>引数</strong>を受け入れる関数を作成する方法を学習します。再利用可能なコードにより、いろいろな入力でさまざまな結果を生成できます。",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "オブジェクティブの記述どおりにプログラムを作成し、[<span class='highlight'>HACK</span>]をクリックします。"
+    }
+  ],
+  "rewards": {
+    "xp": 200
+  }
+}

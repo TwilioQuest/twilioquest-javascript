@@ -1,0 +1,15 @@
+{
+  "title": "JavaScript Lab: If「生存」Then「橋を架ける」",
+  "description": "条件付きロジックで<strong>else文</strong>を使用する方法を学んで東側の橋を延長します。",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "[Objective]タブに指示されているとおりにプログラムを作成し、[<span class='highlight'>HACK</span>]をクリックします。"
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

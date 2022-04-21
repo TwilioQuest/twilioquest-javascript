@@ -1,0 +1,15 @@
+{
+  "title": "JavaScript Lab: Arroser si nécessaire",
+  "description": "Apprenez à utiliser <strong>des conditions plus complexes</strong> dans vos instructions IF.",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Rédigez un programme comme indiqué dans l'onglet Objectif, puis cliquez sur <span class='highlight'>HACK</span>."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

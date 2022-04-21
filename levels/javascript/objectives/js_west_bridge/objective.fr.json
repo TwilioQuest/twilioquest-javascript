@@ -1,0 +1,15 @@
+{
+  "title": "JavaScript Lab: Étendre un pont sous condition",
+  "description": "Pour étendre le pont est, apprenez à utiliser une <strong>instruction else</strong> dans votre logique conditionnelle.",
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Rédigez un programme comme indiqué dans l'onglet Objectif, puis cliquez sur <span class='highlight'>HACK</span>."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}
