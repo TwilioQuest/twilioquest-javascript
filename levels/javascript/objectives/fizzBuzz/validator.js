@@ -63,7 +63,7 @@ module.exports = async (helper) => {
       let correct = correctDecrypt(testNumbers[i]);
       if (result !== correct) {
         return helper.fail(`
-          While testing your script, we passed in "${i}" but got "${result}" instead
+          While testing your script, we passed in "${testNumbers[i]}" but got "${result}" instead
           of "${correct}". Please test your script again.
         `);
       }
