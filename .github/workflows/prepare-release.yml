@@ -1,0 +1,17 @@
+on:
+  workflow_dispatch:
+    inputs:
+      release_type:
+        type: choice
+        options:
+        - major
+        - minor
+        - patch
+        default: patch
+        required: true
+
+jobs:
+  setup:
+    uses: twilioquest/twilioquest-base/.github/workflows/prepare-release.yml@main
+    with:
+      release_type: ${{ inputs.release_type }}
