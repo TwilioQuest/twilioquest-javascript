@@ -1,8 +1,4 @@
 function scheduleSummonAnim(world, worldState) {
-  if (worldState.northWing.summonAnimStarted) {
-    return;
-  }
-
   worldState.northWing.summonAnimStarted = true;
 
   // tween camera to viewpoint

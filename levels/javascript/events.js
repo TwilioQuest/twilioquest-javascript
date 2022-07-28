@@ -81,7 +81,7 @@ module.exports = function (event, world) {
   }
 
   if (
-    !worldState.northWing.summonAnimStarted &&
+    !worldState.northWing.summonAnimFinished &&
     world.isObjectiveCompleted("instantiation") &&
     world.isObjectiveCompleted("classes") &&
     event.name === "objectiveDidClose"
