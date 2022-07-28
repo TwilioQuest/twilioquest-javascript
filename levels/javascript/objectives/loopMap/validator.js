@@ -1,23 +1,23 @@
-const vm = require('vm');
-const path = require('path');
-const jetpack = require('fs-jetpack');
+const vm = require("vm");
+const path = require("path");
+const jetpack = require("fs-jetpack");
 
-const isFunction = function(obj) {
+const isFunction = function (obj) {
   return !!(obj && obj.constructor && obj.call && obj.apply);
 };
 
-module.exports = async helper => {
+module.exports = async (helper) => {
   try {
     const { TQ_JAVASCRIPT_WORKSPACE_PATH } = helper.env;
     const programPath = path.join(
-      TQ_JAVASCRIPT_WORKSPACE_PATH, 
-      'freightMutator.js'
+      TQ_JAVASCRIPT_WORKSPACE_PATH,
+      "freightTransformer.js"
     );
 
     const exists = await jetpack.existsAsync(programPath);
     if (!exists) {
       helper.fail(`
-        We couldn't find your "freightMutator.js" script in your 
+        We couldn't find your "freightTransformer.js" script in your 
         JavaScript code folder. Does the file below exist? <br/><br/>
         <span style="word-wrap:break-word">${programPath}</span>
       `);
@@ -27,13 +27,13 @@ module.exports = async helper => {
     const userCode = await jetpack.readAsync(programPath);
     const scriptContext = {
       process: process,
-      __TQ: {} 
+      __TQ: {},
     };
     const testCode = `
       ${userCode};
       
       try {
-        __TQ.mutate = mutate;
+        __TQ.transform = transform;
       } catch(e) {
         __TQ.error = e;
       }
@@ -53,14 +53,14 @@ module.exports = async helper => {
 
     if (tq.error) {
       console.log(tq.error);
-      if (tq.error.name === 'ReferenceError') {
+      if (tq.error.name === "ReferenceError") {
         return helper.fail(`
-          It looks like a <span class="highlight">mutate</span> 
+          It looks like a <span class="highlight">transform</span> 
           function was not defined in your
           code. At least, we didn't see it in the global scope of your script.
           <br/><br/>
           Did you name the function 
-          "<span class="highlight">mutate</span>"? Maybe 
+          "<span class="highlight">transform</span>"? Maybe 
           double-check your spelling?
         `);
       } else {
@@ -73,10 +73,10 @@ module.exports = async helper => {
     }
 
     // Check type of the function
-    if (!isFunction(tq.mutate)) {
+    if (!isFunction(tq.transform)) {
       let message = `
         We found a variable called 
-        <span class="highlight">mutate</span>, but it's not a
+        <span class="highlight">transform</span>, but it's not a
         callable function. Check the Help section for more guidance on creating
         a JavaScript function.
       `;
@@ -86,10 +86,8 @@ module.exports = async helper => {
 
     // Check functionality
     try {
-      const result = tq.mutate([]);
-      const result2 = tq.mutate(
-        ['loud', 'noises']
-      );
+      const result = tq.transform([]);
+      const result2 = tq.transform(["loud", "noises"]);
 
       if (result === undefined || result === null) {
         return helper.fail(`
@@ -104,17 +102,15 @@ module.exports = async helper => {
       if (!Array.isArray(result)) {
         return helper.fail(`
           It looks like your function is not returning an array. Your
-          function must return an array of mutated strings.
+          function must return an array of transformed strings.
         `);
       }
 
       if (
         result.length !== 0 ||
-        (
-          result2.length !== 2 || 
-          result2[0] !== 'LOUD' || 
-          result2[1] !== 'NOISES'
-        )
+        result2.length !== 2 ||
+        result2[0] !== "LOUD" ||
+        result2[1] !== "NOISES"
       ) {
         return helper.fail(`
           Your function returned an array, but not the array we were looking 
@@ -122,10 +118,9 @@ module.exports = async helper => {
           the right contents in your output array.
         `);
       }
-
-    } catch(ee) {
+    } catch (ee) {
       return helper.fail(`
-        There was an error executing your mutate function. Please 
+        There was an error executing your transform function. Please 
         ensure that you can exercise your function from the command line 
         successfully and try again. Use the starter code in the Help section if
         you are stuck. Here's the error we got from trying to call your 
