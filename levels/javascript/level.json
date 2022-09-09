@@ -9,7 +9,7 @@
     "sprite": "nav_map/javascript_lab.png"
   },
   "is_mission": false,
-  "priority": 3,
+  "priority": 0,
   "backgroundMusic": "fascinatingarea_108253b",
   "backgroundEffect": {
     "key": "starfield",
