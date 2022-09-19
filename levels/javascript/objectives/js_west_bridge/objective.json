@@ -1,6 +1,6 @@
 {
   "title": "JavaScript Lab: If Alive Then Bridge",
-  "description": "Extend the east bridge by learning to use an <strong>else statement</strong> in your conditional logic.",
+  "description": "Extend the west bridge by learning to use an <strong>else statement</strong> in your conditional logic.",
   "validation_fields": [
     {
       "name": "prompt",
